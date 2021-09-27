@@ -17,7 +17,6 @@ public class SC_TPSController : MonoBehaviour
     Vector3 moveDirection = Vector3.zero;
     Vector2 rotation = Vector2.zero;
 
-    [HideInInspector]
     public bool canMove = true;
 
     void Start()
@@ -28,6 +27,7 @@ public class SC_TPSController : MonoBehaviour
 
     void Update()
     {
+        
         if (characterController.isGrounded)
         {
             // We are grounded, so recalculate move direction based on axes

@@ -12,6 +12,14 @@ public class IslandControlPoint : MonoBehaviour
     public GameObject FirstCam;
     public int CamMode;
     private bool triggeractive = false;
+    public GameObject triggerguiactive;
+    public GameObject triggerguideactive;
+
+    void Start()
+    {
+        triggerguiactive.SetActive(false);
+        triggerguideactive.SetActive(false);
+    }
 
     void Update()
     {
@@ -19,19 +27,23 @@ public class IslandControlPoint : MonoBehaviour
         {
             if (Input.GetKeyDown("r"))
             {
-                triggeractive = true;
+                triggerguiactive.SetActive(false);
+                triggerguideactive.SetActive(true);
                 Debug.Log("Player has activated Trigger.");
-                characterController.canMove = false;
+                characterController.speed = 0.0f;
+                characterController.jumpSpeed = 0.0f;
                 IslandMovement.islandMove = 1;
                 ThirdCam.SetActive(false);
                 FirstCam.SetActive(true);
 
             }
-            else if (Input.GetKeyDown("f") && triggeractive == true)
+            else if (Input.GetKeyDown("f") && FirstCam.activeSelf)
             {
-                triggeractive = false;
+                triggerguiactive.SetActive(true);
+                triggerguideactive.SetActive(false);
                 Debug.Log("Player has deactivated Trigger.");
-                characterController.canMove = true;
+                characterController.speed = 15f;
+                characterController.jumpSpeed = 15f;
                 IslandMovement.islandMove = 0;
                 ThirdCam.SetActive(true);
                 FirstCam.SetActive(false);
@@ -43,6 +55,7 @@ public class IslandControlPoint : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            triggerguiactive.SetActive(true);
             triggeractive = true;
             Debug.Log("Player is on Trigger.");
         }
@@ -52,6 +65,8 @@ public class IslandControlPoint : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            triggerguiactive.SetActive(false);
+            triggerguideactive.SetActive(false);
             triggeractive = false;
             Debug.Log("Player is on Trigger.");
         }

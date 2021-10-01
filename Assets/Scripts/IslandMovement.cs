@@ -27,11 +27,11 @@ public class IslandMovement : MonoBehaviour
             }
             else if (moveY)
             {
-                x = Input.GetAxis("Horizontal");
+                x = 0;
                 z = Input.GetAxis("Vertical"); ;
             }
 
-                Vector3 move = transform.right * x + transform.forward * z;
+                Vector3 move = transform.forward * x + transform.right * z;
 
                 islandController.Move(move * speed * Time.deltaTime);
             

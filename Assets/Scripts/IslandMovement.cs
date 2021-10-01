@@ -5,7 +5,7 @@ using UnityEngine;
 public class IslandMovement : MonoBehaviour
 {
     public CharacterController islandController;
-    public GameObject phoebe;
+    public GameObject controlPoint;
 
     public float speed = 8f;
     public static int islandMove = 0;
@@ -16,9 +16,13 @@ public class IslandMovement : MonoBehaviour
     private float x;
     private float z;
 
+    
+
+
     // Update is called once per frame
     void Update()
     {
+        
         if (islandMove == 1)
         {
             if (moveX)
@@ -32,7 +36,7 @@ public class IslandMovement : MonoBehaviour
                 z = Input.GetAxis("Vertical"); ;
             }
 
-                Vector3 move = phoebe.transform.right * x + phoebe.transform.forward * z;
+                Vector3 move = controlPoint.transform.right * x + controlPoint.transform.forward * z;
 
                 islandController.Move(move * speed * Time.deltaTime);
             

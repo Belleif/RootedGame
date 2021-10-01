@@ -8,18 +8,33 @@ public class IslandMovement : MonoBehaviour
 
     public float speed = 8f;
     public static int islandMove = 0;
+    
+    public bool moveX;
+    public bool moveY;
+
+    private float x;
+    private float z;
 
     // Update is called once per frame
     void Update()
     {
         if (islandMove == 1)
         {
-            float x = Input.GetAxis("Horizontal");
-            float z = Input.GetAxis("Vertical");
+            if (moveX)
+            {
+                x = Input.GetAxis("Horizontal");
+                z = 0;
+            }
+            else if (moveY)
+            {
+                x = Input.GetAxis("Horizontal");
+                z = Input.GetAxis("Vertical"); ;
+            }
 
-            Vector3 move = transform.right * x + transform.forward * z;
+                Vector3 move = transform.right * x + transform.forward * z;
 
-            islandController.Move(move * speed * Time.deltaTime);
+                islandController.Move(move * speed * Time.deltaTime);
+            
 
         }
     }

@@ -4,23 +4,23 @@ using UnityEngine;
 
 public class IslandMovement : MonoBehaviour
 {
-    public CharacterController islandController;
+    public Rigidbody islandController;
     public GameObject controlPoint;
 
     public float speed = 8f;
     public static int islandMove = 0;
     
     public bool moveX;
+    public bool moveZ;
     public bool moveY;
 
     private float x;
     private float z;
-
-    
+    private float y;
 
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         
         if (islandMove == 1)
@@ -29,16 +29,23 @@ public class IslandMovement : MonoBehaviour
             {
                 x = Input.GetAxis("Horizontal");
                 z = 0;
+                y = 0;
+            }
+            else if (moveZ)
+            {
+                x = 0;
+                z = Input.GetAxis("Vertical");
+                y = 0;
             }
             else if (moveY)
             {
                 x = 0;
-                z = Input.GetAxis("Vertical"); ;
+                z = 0;
+                y = Input.GetAxis("Vertical");
             }
 
-                Vector3 move = controlPoint.transform.right * x + controlPoint.transform.forward * z;
-
-                islandController.Move(move * speed * Time.deltaTime);
+            Vector3 move = controlPoint.transform.right * x + controlPoint.transform.up * y + controlPoint.transform.forward * z;
+            islandController.MovePosition(transform.position + move * speed * Time.deltaTime);
             
 
         }

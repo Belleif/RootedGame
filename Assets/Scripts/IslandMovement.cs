@@ -9,6 +9,7 @@ public class IslandMovement : MonoBehaviour
 
     public float speed = 8f;
     public static int islandMove = 0;
+    public bool isMoving = false;
     
     public bool moveX;
     public bool moveZ;
@@ -23,7 +24,7 @@ public class IslandMovement : MonoBehaviour
     void FixedUpdate()
     {
         
-        if (islandMove == 1)
+        if (islandMove == 1 && isMoving)
         {
             if (moveX)
             {

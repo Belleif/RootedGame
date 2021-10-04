@@ -25,7 +25,7 @@ public class IslandControlPoint : MonoBehaviour
     {
         if (triggeractive == true)
         {
-            if (Input.GetKeyDown("r"))
+            if (Input.GetKeyDown("e") && ThirdCam.activeSelf)
             {
                 triggerguiactive.SetActive(false);
                 triggerguideactive.SetActive(true);
@@ -33,11 +33,13 @@ public class IslandControlPoint : MonoBehaviour
                 characterController.speed = 0.0f;
                 characterController.jumpSpeed = 0.0f;
                 IslandMovement.islandMove = 1;
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.Locked;
                 ThirdCam.SetActive(false);
                 FirstCam.SetActive(true);
 
             }
-            else if (Input.GetKeyDown("f") && FirstCam.activeSelf)
+            else if (Input.GetKeyDown("e") && FirstCam.activeSelf)
             {
                 triggerguiactive.SetActive(true);
                 triggerguideactive.SetActive(false);
@@ -45,6 +47,8 @@ public class IslandControlPoint : MonoBehaviour
                 characterController.speed = 15f;
                 characterController.jumpSpeed = 15f;
                 IslandMovement.islandMove = 0;
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
                 ThirdCam.SetActive(true);
                 FirstCam.SetActive(false);
             }

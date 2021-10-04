@@ -3,7 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
-
+//////
+/*
+ * This script is for the Settings Menu. The controls here are meant to add a volume
+ * 
+ * REQUIREMENTS:
+ *              - Audio Mixer that controls the general sound of the game
+ *              - dropdown box for a Resolution list
+ * How to use:
+ *              - Place the script on the placeholder empty for the Settings Menu.
+ *              - Drag the intended Audio Mixer into 
+ * 
+ */
+//////
 public class SettingsMenu : MonoBehaviour
 {
     public AudioMixer audioMixer;

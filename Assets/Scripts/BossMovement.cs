@@ -9,6 +9,7 @@ public class BossMovement : MonoBehaviour
     public float health;
     public bool playerSeen;
     public bool attackPlayer;
+    public Transform target;
     GameObject playerDetect = new GameObject();
 
     //Attacking
@@ -37,9 +38,11 @@ public class BossMovement : MonoBehaviour
         if (other.tag == "Player")
         {
             //Set Bool of boss sees player to true and use it in boss movement to make the boss face player
+            //Place this in detection script for playerSeen specifically and in this script check bool playerSeen
             playerSeen = true;
         }
     }
+    
 
     private void Idle()
     {
@@ -53,6 +56,7 @@ public class BossMovement : MonoBehaviour
         //Once player is in range this method makes it so the boss faces towards them
         if(playerSeen == true)
         {
+            transform.LookAt(target);
             Debug.Log("Boss sees Player.");
         }
     }

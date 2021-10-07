@@ -6,11 +6,10 @@ using UnityEngine.AI;
 public class BossMovement : MonoBehaviour
 {
     public Transform player;
-    public float health;
     public bool playerSeen;
     public bool attackPlayer;
+    public float speed = 1.0f;
     public Transform target;
-    GameObject playerDetect = new GameObject();
 
     //Attacking
     public float timeBetweenAttacks;
@@ -23,25 +22,40 @@ public class BossMovement : MonoBehaviour
         playerSeen = false;
     }
 
-    private void Update()
-    {
-        if (!playerSeen && !attackPlayer) 
-            Idle();
-        if (playerSeen && !attackPlayer)
-            FollowPlayer();
-        if (playerSeen && attackPlayer)
-            AttackPlayer();
-    }
-
-    private void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
             //Set Bool of boss sees player to true and use it in boss movement to make the boss face player
             //Place this in detection script for playerSeen specifically and in this script check bool playerSeen
             playerSeen = true;
+            Debug.Log("Player Spotted");
         }
     }
+
+    public void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            //Set Bool of boss sees player to true and use it in boss movement to make the boss face player
+            //Place this in detection script for playerSeen specifically and in this script check bool playerSeen
+            playerSeen = false;
+            Debug.Log("Player Lost");
+        }
+    }
+
+    private void Update()
+    {
+        
+        if (!playerSeen && !attackPlayer) 
+            Idle();
+        if (playerSeen && !attackPlayer)
+            FollowPlayer();
+        //if (playerSeen && attackPlayer)
+         //   AttackPlayer();
+    }
+
+
     
 
     private void Idle()
@@ -57,11 +71,14 @@ public class BossMovement : MonoBehaviour
         if(playerSeen == true)
         {
             transform.LookAt(target);
-            Debug.Log("Boss sees Player.");
+            Vector3 targetDirection = target.position - transform.position;
+            float singleStep = speed * Time.deltaTime;
+            Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, singleStep, 0.0f);
+            transform.rotation = Quaternion.LookRotation(newDirection);
         }
     }
 
-    private void AttackPlayer()
+   /* private void AttackPlayer()
     {
         if (!alreadyAttacked)
         {
@@ -92,7 +109,7 @@ public class BossMovement : MonoBehaviour
     private void DestroyEnemy()
     {
         Destroy(gameObject);
-    }
+    }  */
 }
 /* This script should handle boss' AI pathfinding
  * Need to make sure to link boss damage and islands being used to damage the boss*/

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1180643318}
-  m_IndirectSpecularColor: {r: 0.4711172, g: 0.5079546, b: 0.28968218, a: 1}
+  m_IndirectSpecularColor: {r: 0.47111642, g: 0.50795436, b: 0.28968203, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -135,9 +135,11 @@ GameObject:
   - component: {fileID: 127688564}
   - component: {fileID: 127688563}
   - component: {fileID: 127688562}
+  - component: {fileID: 127688566}
+  - component: {fileID: 127688565}
   m_Layer: 0
   m_Name: BossTestIsland_2
-  m_TagString: Untagged
+  m_TagString: Island
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -218,6 +220,41 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 127688560}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &127688565
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127688560}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &127688566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127688560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16421a77a5ee55d42b6801df625b6352, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  islandController: {fileID: 127688565}
+  controlPoint: {fileID: 449366246}
+  speed: 8
+  isMoving: 0
+  moveX: 1
+  moveZ: 0
+  moveY: 0
 --- !u!1 &141954607
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,9 +267,11 @@ GameObject:
   - component: {fileID: 141954611}
   - component: {fileID: 141954610}
   - component: {fileID: 141954609}
+  - component: {fileID: 141954613}
+  - component: {fileID: 141954612}
   m_Layer: 0
   m_Name: BossTestIsland_1
-  m_TagString: Untagged
+  m_TagString: Island
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -313,6 +352,41 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 141954607}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &141954612
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141954607}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &141954613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141954607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16421a77a5ee55d42b6801df625b6352, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  islandController: {fileID: 141954612}
+  controlPoint: {fileID: 449366246}
+  speed: 8
+  isMoving: 0
+  moveX: 1
+  moveZ: 0
+  moveY: 0
 --- !u!1 &145741678
 GameObject:
   m_ObjectHideFlags: 0
@@ -1519,9 +1593,11 @@ GameObject:
   - component: {fileID: 675689712}
   - component: {fileID: 675689711}
   - component: {fileID: 675689710}
+  - component: {fileID: 675689714}
+  - component: {fileID: 675689713}
   m_Layer: 0
   m_Name: BossTestIsland_4
-  m_TagString: Untagged
+  m_TagString: Island
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1602,6 +1678,41 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 675689708}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &675689713
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675689708}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &675689714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675689708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16421a77a5ee55d42b6801df625b6352, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  islandController: {fileID: 675689713}
+  controlPoint: {fileID: 449366246}
+  speed: 8
+  isMoving: 0
+  moveX: 1
+  moveZ: 0
+  moveY: 0
 --- !u!1 &719136014
 GameObject:
   m_ObjectHideFlags: 3
@@ -3397,6 +3508,8 @@ Transform:
   - {fileID: 127688561}
   - {fileID: 1450552057}
   - {fileID: 675689709}
+  - {fileID: 2021342226}
+  - {fileID: 1747342214}
   m_Father: {fileID: 1180559940}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3664,9 +3777,11 @@ GameObject:
   - component: {fileID: 1450552060}
   - component: {fileID: 1450552059}
   - component: {fileID: 1450552058}
+  - component: {fileID: 1450552062}
+  - component: {fileID: 1450552061}
   m_Layer: 0
   m_Name: BossTestIsland_3
-  m_TagString: Untagged
+  m_TagString: Island
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3747,6 +3862,41 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1450552056}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1450552061
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450552056}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &1450552062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450552056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16421a77a5ee55d42b6801df625b6352, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  islandController: {fileID: 1450552061}
+  controlPoint: {fileID: 449366246}
+  speed: 8
+  isMoving: 0
+  moveX: 1
+  moveZ: 0
+  moveY: 0
 --- !u!1 &1520492609
 GameObject:
   m_ObjectHideFlags: 0
@@ -4459,6 +4609,121 @@ Transform:
   m_Father: {fileID: 1180559940}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1747342213
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1747342214}
+  - component: {fileID: 1747342218}
+  - component: {fileID: 1747342217}
+  - component: {fileID: 1747342216}
+  - component: {fileID: 1747342215}
+  m_Layer: 0
+  m_Name: BossIslandCP
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1747342214
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1747342213}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0.36171395, y: 0.5677021, z: -0.033769473}
+  m_LocalScale: {x: 0.12182676, y: 0.1991937, z: 0.12685272}
+  m_Children: []
+  m_Father: {fileID: 1415697536}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &1747342215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1747342213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d4e476e9efbd8842a3c31a92f5afd1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  islands: []
+  characterController: {fileID: 1597719819}
+  ThirdCam: {fileID: 1191294645}
+  FirstCam: {fileID: 1572090769}
+  CamMode: 0
+  triggerguiactive: {fileID: 1897739206}
+  triggerguideactive: {fileID: 1868289647}
+--- !u!65 &1747342216
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1747342213}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9810359, y: 4.0622554, z: 0.99207604}
+  m_Center: {x: 0.00661295, y: 1.5311277, z: -0.0023491324}
+--- !u!23 &1747342217
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1747342213}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1747342218
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1747342213}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1778207678
 GameObject:
   m_ObjectHideFlags: 0
@@ -4469,6 +4734,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1778207679}
   - component: {fileID: 1778207680}
+  - component: {fileID: 1778207681}
   m_Layer: 0
   m_Name: BossSight
   m_TagString: Untagged
@@ -4485,7 +4751,7 @@ Transform:
   m_GameObject: {fileID: 1778207678}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.2604121, y: 0.064, z: -0.0071480623}
-  m_LocalScale: {x: 2.30734, y: 1.2650195, z: 1.7757734}
+  m_LocalScale: {x: 1.5044208, y: 1.2650195, z: 0.876504}
   m_Children: []
   m_Father: {fileID: 2001845950}
   m_RootOrder: 1
@@ -4503,6 +4769,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1778207681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778207678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34c70ef926d80c649ba7d0f73190d24c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1597719815}
+  health: 0
+  playerSeen: 0
+  attackPlayer: 0
+  speed: 1
+  target: {fileID: 1597719815}
+  timeBetweenAttacks: 0
 --- !u!1 &1810644381
 GameObject:
   m_ObjectHideFlags: 0
@@ -5065,6 +5350,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1932631744}
   - component: {fileID: 1932631745}
+  - component: {fileID: 1932631746}
   m_Layer: 0
   m_Name: BossAttack
   m_TagString: Untagged
@@ -5081,7 +5367,7 @@ Transform:
   m_GameObject: {fileID: 1932631743}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.638, y: 0.064, z: -0.0071480623}
-  m_LocalScale: {x: 1.0500331, y: 1.2650195, z: 1.7757734}
+  m_LocalScale: {x: 0.8569215, y: 1.2650195, z: 2.078543}
   m_Children: []
   m_Father: {fileID: 2001845950}
   m_RootOrder: 2
@@ -5099,6 +5385,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1932631746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932631743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49c0a0562ce7ddf4d881dfd6074007e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alreadyAttacked: 0
+  attackPlayer: 0
+  timeBetweenAttacks: 3
 --- !u!1 &1943783387
 GameObject:
   m_ObjectHideFlags: 0
@@ -5410,6 +5711,7 @@ GameObject:
   - component: {fileID: 2001845948}
   - component: {fileID: 2001845947}
   - component: {fileID: 2001845951}
+  - component: {fileID: 2001845952}
   m_Layer: 0
   m_Name: BossCube
   m_TagString: Boss
@@ -5509,11 +5811,136 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1597719815}
-  health: 0
+  health: 4
   playerSeen: 0
   attackPlayer: 0
+  speed: 1
   target: {fileID: 1597719815}
   timeBetweenAttacks: 0
+--- !u!54 &2001845952
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001845946}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!1 &2021342225
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2021342226}
+  - component: {fileID: 2021342229}
+  - component: {fileID: 2021342228}
+  - component: {fileID: 2021342227}
+  - component: {fileID: 2021342230}
+  m_Layer: 0
+  m_Name: BossDamageZone
+  m_TagString: DamageBoss
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2021342226
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021342225}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.0003370487, y: 2.1592598, z: 0.002363853}
+  m_LocalScale: {x: 0.13485223, y: 0.7968345, z: 0.13508803}
+  m_Children: []
+  m_Father: {fileID: 1415697536}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2021342227
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021342225}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &2021342228
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021342225}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &2021342229
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021342225}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2021342230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021342225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb88e4a9e23983e4b8594bb580bfba5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2107322659
 GameObject:
   m_ObjectHideFlags: 0

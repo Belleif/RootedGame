@@ -23,7 +23,17 @@ public class IslandMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        
+        if (isMoving)
+        {
+            islandController.constraints = RigidbodyConstraints.None;
+            islandController.constraints = RigidbodyConstraints.FreezeRotation;
+        }
+        else
+        {
+            islandController.constraints = RigidbodyConstraints.FreezePosition;
+            islandController.constraints = RigidbodyConstraints.FreezeRotation;
+        }
+
         if (islandMove == 1 && isMoving)
         {
             if (moveX)

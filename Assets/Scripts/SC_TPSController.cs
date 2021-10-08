@@ -31,6 +31,7 @@ public class SC_TPSController : MonoBehaviour
     public Transform playerCameraParent;
     public float lookSpeed = 2.0f;
     public float lookXLimit = 60.0f;
+    private float vSpeed = 0f;
 
     //Variables set for the Character Controller and its direction and rotation.
     CharacterController characterController;
@@ -58,17 +59,19 @@ public class SC_TPSController : MonoBehaviour
             float curSpeedX = canMove ? speed * Input.GetAxis("Vertical") : 0;
             float curSpeedY = canMove ? speed * Input.GetAxis("Horizontal") : 0;
             moveDirection = (forward * curSpeedX) + (right * curSpeedY);
+            vSpeed = 0;
 
             if (Input.GetButton("Jump") && canMove)
             {
-                moveDirection.y = jumpSpeed;
+                vSpeed = jumpSpeed;
             }
         }
 
         // Apply gravity. Gravity is multiplied by deltaTime twice (once here, and once below
         // when the moveDirection is multiplied by deltaTime). This is because gravity should be applied
         // as an acceleration (ms^-2)
-        moveDirection.y -= gravity * Time.deltaTime;
+        vSpeed -= gravity * Time.deltaTime;
+        moveDirection.y = vSpeed;
 
         // Move the controller
         characterController.Move(moveDirection * Time.deltaTime);

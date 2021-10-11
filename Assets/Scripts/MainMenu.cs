@@ -17,6 +17,7 @@ public class MainMenu : MonoBehaviour
 
     public void QuitGame()
     {
+        Application.OpenURL("https://forms.gle/hJ4uXLn4VRNBkhpD7");
         Debug.Log("Program Quitting...");
         Application.Quit();
     }

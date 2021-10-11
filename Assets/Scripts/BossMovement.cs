@@ -33,6 +33,11 @@ public class BossMovement : MonoBehaviour
         }
     }
 
+    public void OnTriggerStay(Collider other)
+    {
+
+    }
+
     public void OnTriggerExit(Collider other)
     {
         if (other.tag == "Player")

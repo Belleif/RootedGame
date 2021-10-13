@@ -5017,7 +5017,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 87567627}
   m_LocalRotation: {x: 0.22291213, y: -0.0029849107, z: 0.0006825551, w: 0.9748337}
-  m_LocalPosition: {x: 0.09102843, y: 9.804212, z: -15.702325}
+  m_LocalPosition: {x: 0.09102842, y: 9.804212, z: -15.702325}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 659534105}
@@ -21137,6 +21137,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Isle_Controllable_V5x5 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6680d425054e2b84d8b77c41c063953b, type: 3}
+      propertyPath: m_TagString
+      value: Island
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6680d425054e2b84d8b77c41c063953b, type: 3}
 --- !u!1 &789404943 stripped
@@ -21186,7 +21190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   islandController: {fileID: 789404945}
-  controlPoint: {fileID: 0}
+  controlPoint: {fileID: 432527645}
   speed: 8
   isMoving: 0
   moveX: 0
@@ -21316,6 +21320,49 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7921835581382040027, guid: 8b6f6a19042b35a4d97cfd7c7dc2dd66, type: 3}
   m_PrefabInstance: {fileID: 838704886}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &842674295
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 842674297}
+  - component: {fileID: 842674296}
+  m_Layer: 0
+  m_Name: ClickerManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &842674296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 842674295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60923c5e26e215c4aa5ecf4cd3ba0c38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &842674297
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 842674295}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -12595.187, y: 44.716553, z: 4355.727}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &876314780
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31078,6 +31125,36 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!1 &1095614317
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1095614318}
+  m_Layer: 0
+  m_Name: RespawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1095614318
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1095614317}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -12592.35, y: 37.63, z: 4346.68}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1118647088
 GameObject:
   m_ObjectHideFlags: 0
@@ -75317,7 +75394,7 @@ Transform:
   - {fileID: 1579637340}
   - {fileID: 1488874386}
   m_Father: {fileID: 7693372175133503072}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1686087164
 GameObject:
@@ -80432,6 +80509,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Isle_Controllable_V5x5 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6680d425054e2b84d8b77c41c063953b, type: 3}
+      propertyPath: m_TagString
+      value: Island
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6680d425054e2b84d8b77c41c063953b, type: 3}
 --- !u!1 &1794147049 stripped
@@ -80481,7 +80562,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   islandController: {fileID: 1794147051}
-  controlPoint: {fileID: 0}
+  controlPoint: {fileID: 432527645}
   speed: 8
   isMoving: 0
   moveX: 0
@@ -80667,7 +80748,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1847104307}
   m_LocalRotation: {x: 0.22291213, y: -0.0029849107, z: 0.0006825551, w: 0.9748337}
-  m_LocalPosition: {x: 0.09102843, y: 9.804212, z: -15.702325}
+  m_LocalPosition: {x: 0.09102842, y: 9.804212, z: -15.702325}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 444858606}
@@ -81033,6 +81114,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Isle_Controllable_V5x5 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6680d425054e2b84d8b77c41c063953b, type: 3}
+      propertyPath: m_TagString
+      value: Island
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6680d425054e2b84d8b77c41c063953b, type: 3}
 --- !u!1 &1975829218 stripped
@@ -81082,7 +81167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   islandController: {fileID: 1975829220}
-  controlPoint: {fileID: 0}
+  controlPoint: {fileID: 432527645}
   speed: 8
   isMoving: 0
   moveX: 0
@@ -91195,7 +91280,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7693372175133503072}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1406646225719969103
 Transform:
@@ -91209,7 +91294,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7693372175133503072}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1660816735785902928
 GameObject:
@@ -91344,13 +91429,42 @@ GameObject:
   - component: {fileID: 2805789774047748622}
   - component: {fileID: 7626329331803950887}
   - component: {fileID: 1914057975034255890}
+  - component: {fileID: 2364694639663174111}
+  - component: {fileID: 2364694639663174110}
   m_Layer: 0
-  m_Name: Isle_GameCleaner_Floor
+  m_Name: DeathCube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2364694639663174110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2364694639663174109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6791c6354017044cae868023da4ce0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1443362018}
+  respawn: {fileID: 1095614317}
+--- !u!65 &2364694639663174111
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2364694639663174109}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 147.25098, y: 1, z: 115.00635}
+  m_Center: {x: 79.47998, y: 0.5, z: -27.457764}
 --- !u!23 &2510204922186541658
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -91407,12 +91521,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2364694639663174109}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6394.5312, y: -2682.9424, z: 2169.003}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -12669.758, y: 11.257568, z: 4373.626}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 7693372175133503072}
-  m_RootOrder: 3
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2928635406778618415
 MeshFilter:
@@ -91581,7 +91695,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7693372175133503072}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4922797607173760978
 MeshFilter:
@@ -91703,7 +91817,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7693372175133503072}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &6849215014925592956
 MeshRenderer:
@@ -91818,7 +91932,6 @@ Transform:
   - {fileID: 186521845}
   - {fileID: 4504839012000651221}
   - {fileID: 4664347280580825260}
-  - {fileID: 2805789774047748622}
   - {fileID: 1406646225719969103}
   - {fileID: 8268134453767407758}
   - {fileID: 8539572917443065404}
@@ -91841,7 +91954,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7693372175133503072}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &8497767663196906024
 MeshRenderer:
@@ -91896,5 +92009,5 @@ Transform:
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 7693372175133503072}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

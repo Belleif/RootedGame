@@ -7,13 +7,14 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(5);
     }
 
-    public void LoadLevel(int levelnum)
+    public void LoadLevel()
     {
-        SceneManager.LoadScene(levelnum);
+        SceneManager.LoadScene(2);
     }
+
 
     public void QuitGame()
     {

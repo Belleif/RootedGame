@@ -16,6 +16,19 @@ public class PauseMenu2 : MonoBehaviour
         //gameObject.enabled = false;
     }
 
+    public void LoadLevel()
+    {
+        SceneManager.LoadScene(2);
+    }
+
+    public void ResetLevel(int CurrentLevel)
+    {
+       //----------Input Fade To Black Call Method
+
+        CurrentLevel = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(CurrentLevel);
+    }
+
     public void QuitGame()
     {
         Debug.Log("Program Quitting...");

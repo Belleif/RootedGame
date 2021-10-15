@@ -5,47 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class LevelSelect : MonoBehaviour
 {
-    public void LevelOne()
+    public void LoadLevel(int level)
     {
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene(level);
     }
-
-    public void LevelTwo()
-    {
-        SceneManager.LoadScene(6);
-    }
-
-    public void LevelThree()
-    {
-        SceneManager.LoadScene(7);
-    }
-
-    public void LevelGrandmas()
-    {
-        SceneManager.LoadScene(8);
-    }
-
-    public void LevelBoss()
-    {
-        SceneManager.LoadScene(9);
-    }
-
-    public void TestLevelOne()
-    {
-        SceneManager.LoadScene(10);
-    }
-
-    public void TestLevelTwo()
-    {
-        SceneManager.LoadScene(11);
-    }
-
-    public void Back()
-    {
-        SceneManager.LoadScene(0);
-    }
-
-
-
 
 }

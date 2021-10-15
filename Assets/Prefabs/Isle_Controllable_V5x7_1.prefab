@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 7648665465559056522}
   - component: {fileID: 6740304392861060911}
   - component: {fileID: 8822173901278542821}
+  - component: {fileID: 687363377826395069}
+  - component: {fileID: 5070217554813080106}
+  - component: {fileID: 3022893170129525283}
   m_Layer: 0
   m_Name: Isle_Controllable_V5x7_1
   m_TagString: Untagged
@@ -25,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7020641347996637744}
-  m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -79.00991, y: 73.453186, z: -121.41403}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -82,3 +85,51 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &687363377826395069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7020641347996637744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16421a77a5ee55d42b6801df625b6352, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  islandController: {fileID: 5070217554813080106}
+  controlPoint: {fileID: 0}
+  speed: 8
+  isMoving: 0
+  moveX: 0
+  moveZ: 0
+  moveY: 1
+--- !u!54 &5070217554813080106
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7020641347996637744}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
+--- !u!65 &3022893170129525283
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7020641347996637744}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.0125384, y: 5, z: 7.701244}
+  m_Center: {x: 0.7667587, y: 2.97, z: -2.3362257}

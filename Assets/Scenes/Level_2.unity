@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3146,6 +3146,115 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1943232541
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1943232546}
+  - component: {fileID: 1943232545}
+  - component: {fileID: 1943232544}
+  - component: {fileID: 1943232543}
+  - component: {fileID: 1943232542}
+  m_Layer: 0
+  m_Name: NextLevel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1943232542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943232541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 252687aee20993d428c3a7d142fe30d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelChange: 0
+--- !u!65 &1943232543
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943232541}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1943232544
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943232541}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1943232545
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943232541}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1943232546
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943232541}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -24.88, y: 23.36, z: -0.65}
+  m_LocalScale: {x: 3.5459526, y: 0.42852, z: 4.9311824}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2108513028
 GameObject:
   m_ObjectHideFlags: 0
@@ -3707,8 +3816,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.045358762, y: 0.023828011, z: 0.045358766}
-  m_Center: {x: 0.02850342, y: -0.002067347, z: -0.0000000046566138}
+  m_Size: {x: 4.5358763, y: 2.382801, z: 4.5358763}
+  m_Center: {x: 2.850342, y: -0.20673472, z: -0.0000004768373}
 --- !u!114 &919132147556182647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3740,7 +3849,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
@@ -3776,8 +3885,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.04535875, y: 0.023828011, z: 0.045358755}
-  m_Center: {x: 0.028503412, y: -0.002067347, z: -0.000000004656613}
+  m_Size: {x: 4.5358753, y: 2.382801, z: 4.5358753}
+  m_Center: {x: 2.8503413, y: -0.20673472, z: -0.00000047683716}
 --- !u!114 &919132147632702048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3809,7 +3918,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
@@ -3825,8 +3934,8 @@ GameObject:
   - component: {fileID: 3469287837913197343}
   - component: {fileID: 1711813855194570709}
   - component: {fileID: 919132147725991427}
-  - component: {fileID: 919132147725991426}
   - component: {fileID: 919132147725991425}
+  - component: {fileID: 919132147725991426}
   m_Layer: 0
   m_Name: Isle_Controllable_H5x5 (2)
   m_TagString: Island
@@ -3846,7 +3955,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
@@ -3861,8 +3970,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.045358762, y: 0.023828011, z: 0.045358766}
-  m_Center: {x: 0.02850342, y: -0.002067347, z: -0.0000000046566138}
+  m_Size: {x: 4.5358763, y: 2.382801, z: 4.5358763}
+  m_Center: {x: 2.850342, y: -0.20673472, z: -0.0000004768373}
 --- !u!114 &919132147725991427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3947,8 +4056,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.045358762, y: 0.023828011, z: 0.045358766}
-  m_Center: {x: 0.02850342, y: -0.002067347, z: -0.0000000046566138}
+  m_Size: {x: 4.5358763, y: 2.382801, z: 4.5358763}
+  m_Center: {x: 2.850342, y: -0.20673472, z: -0.0000004768373}
 --- !u!114 &919132147842993318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3980,7 +4089,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
@@ -3995,9 +4104,9 @@ GameObject:
   - component: {fileID: 543450653067026144}
   - component: {fileID: 3469287837051687237}
   - component: {fileID: 1711813856212051343}
-  - component: {fileID: 919132148612711517}
   - component: {fileID: 919132148612711516}
   - component: {fileID: 919132148612711515}
+  - component: {fileID: 919132148612711517}
   m_Layer: 0
   m_Name: Isle_Controllable_H5x5 (3)
   m_TagString: Island
@@ -4036,7 +4145,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
@@ -4051,8 +4160,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.045358762, y: 0.023828011, z: 0.045358766}
-  m_Center: {x: 0.02850342, y: -0.002067347, z: -0.0000000046566138}
+  m_Size: {x: 4.5358763, y: 2.382801, z: 4.5358763}
+  m_Center: {x: 2.850342, y: -0.20673472, z: -0.0000004768373}
 --- !u!1 &919132149106667826
 GameObject:
   m_ObjectHideFlags: 0
@@ -4195,8 +4304,8 @@ GameObject:
   - component: {fileID: 3469287837399820789}
   - component: {fileID: 1711813855754870079}
   - component: {fileID: 919132149346729197}
-  - component: {fileID: 919132149346729196}
   - component: {fileID: 919132149346729195}
+  - component: {fileID: 919132149346729196}
   m_Layer: 0
   m_Name: Isle_Controllable_V5x5 static
   m_TagString: Island
@@ -4234,8 +4343,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.04535875, y: 0.030263845, z: 0.045358755}
-  m_Center: {x: 0, y: 0.019088926, z: -0.0000000027939677}
+  m_Size: {x: 4.5358753, y: 3.0263844, z: 4.5358753}
+  m_Center: {x: 0, y: 1.9088926, z: -0.00000023841858}
 --- !u!54 &919132149346729197
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4248,7 +4357,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
@@ -4285,7 +4394,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
@@ -4319,8 +4428,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.04535875, y: 0.023828011, z: 0.045358755}
-  m_Center: {x: 0.028503412, y: -0.002067347, z: -0.000000004656613}
+  m_Size: {x: 4.5358753, y: 2.382801, z: 4.5358753}
+  m_Center: {x: 2.8503413, y: -0.20673472, z: -0.00000047683716}
 --- !u!33 &992903588371767734
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6559,7 +6668,6 @@ GameObject:
   - component: {fileID: 1198715771712324401}
   - component: {fileID: 992903589834518072}
   - component: {fileID: 4620984030125948548}
-  - component: {fileID: 8340916391736992981}
   m_Layer: 0
   m_Name: Isle_Controllable_H5x5_MainRoot
   m_TagString: Untagged
@@ -6567,19 +6675,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &8340916391736992981
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8340916391736992980}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.9999998, y: 0.002527135, z: 0.002527461}
-  m_Center: {x: -0.988176, y: -0.000000074564014, z: -0.0000002355664}
 --- !u!1 &8340916391813516543
 GameObject:
   m_ObjectHideFlags: 0
@@ -6655,7 +6750,6 @@ GameObject:
   - component: {fileID: 1198715772369996991}
   - component: {fileID: 992903588371767734}
   - component: {fileID: 4620984031884816650}
-  - component: {fileID: 8340916392695999323}
   m_Layer: 0
   m_Name: Isle_Controllable_H5x5_MainRoot
   m_TagString: Untagged
@@ -6663,19 +6757,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &8340916392695999323
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8340916392695999322}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.9999998, y: 0.002527135, z: 0.002527461}
-  m_Center: {x: -0.988176, y: -0.000000074564014, z: -0.0000002355664}
 --- !u!1 &8340916392904532688
 GameObject:
   m_ObjectHideFlags: 0

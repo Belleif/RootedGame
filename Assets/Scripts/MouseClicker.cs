@@ -28,10 +28,12 @@ public class MouseClicker : MonoBehaviour
                     if (currentIsle != null)
                     {
                         currentIsle.GetComponent<IslandMovement>().isMoving = false;
+                        currentIsle.GetComponent<Rigidbody>().isKinematic = true;
                     }
 
                     Debug.Log("Moveable Island Hit");
                     currentIsle = hitInfo.transform.gameObject;
+                    currentIsle.GetComponent<Rigidbody>().isKinematic = false;
                     currentIsle.GetComponent<IslandMovement>().isMoving = true;
                 }
                 else
@@ -39,6 +41,7 @@ public class MouseClicker : MonoBehaviour
                     Debug.Log("Not Moveable Island");
                     if (currentIsle != null)
                     {
+                        currentIsle.GetComponent<Rigidbody>().isKinematic = true;
                         currentIsle.GetComponent<IslandMovement>().isMoving = false;
                     }
                 }

@@ -34,7 +34,7 @@ public class IslandControlPoint : MonoBehaviour
                 characterController.jumpSpeed = 0.0f;
                 IslandMovement.islandMove = 1;
                 Cursor.visible = true;
-                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.lockState = CursorLockMode.Confined;
                 ThirdCam.SetActive(false);
                 FirstCam.SetActive(true);
 
@@ -44,8 +44,8 @@ public class IslandControlPoint : MonoBehaviour
                 triggerguiactive.SetActive(true);
                 triggerguideactive.SetActive(false);
                 Debug.Log("Player has deactivated Trigger.");
-                characterController.speed = 15f;
-                characterController.jumpSpeed = 11f;
+                characterController.speed = 8f;
+                characterController.jumpSpeed = 10f;
                 IslandMovement.islandMove = 0;
                 Cursor.visible = false;
                 Cursor.lockState = CursorLockMode.Locked;

@@ -7,6 +7,7 @@ public class IslandControlPoint : MonoBehaviour
     public float[] islands;
     private int currentIslandIndex;
     public SC_TPSController characterController;
+    public MouseClicker rayClick;
 
     public GameObject ThirdCam;
     public GameObject FirstCam;
@@ -30,8 +31,7 @@ public class IslandControlPoint : MonoBehaviour
                 triggerguiactive.SetActive(false);
                 triggerguideactive.SetActive(true);
                 Debug.Log("Player has activated Trigger.");
-                characterController.speed = 0.0f;
-                characterController.jumpSpeed = 0.0f;
+                characterController.canMove = false;
                 IslandMovement.islandMove = 1;
                 Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.Confined;
@@ -44,8 +44,9 @@ public class IslandControlPoint : MonoBehaviour
                 triggerguiactive.SetActive(true);
                 triggerguideactive.SetActive(false);
                 Debug.Log("Player has deactivated Trigger.");
-                characterController.speed = 8f;
-                characterController.jumpSpeed = 10f;
+                characterController.canMove = true;
+                rayClick.currentIsle.GetComponent<Rigidbody>().isKinematic = true;
+                rayClick.currentIsle.GetComponent<IslandMovement>().isMoving = false;
                 IslandMovement.islandMove = 0;
                 Cursor.visible = false;
                 Cursor.lockState = CursorLockMode.Locked;

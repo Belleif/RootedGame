@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MouseClicker : MonoBehaviour
 {
-    private GameObject currentIsle;
+    public GameObject currentIsle;
     // Start is called before the first frame update
     void Start()
     {

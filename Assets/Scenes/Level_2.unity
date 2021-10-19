@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -362,6 +362,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 1174343990}
+  charControl: {fileID: 0}
 --- !u!114 &47954908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2722,6 +2723,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60923c5e26e215c4aa5ecf4cd3ba0c38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentIsle: {fileID: 0}
 --- !u!4 &1851838957
 Transform:
   m_ObjectHideFlags: 0
@@ -6239,6 +6241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   islands: []
   characterController: {fileID: 70052809}
+  rayClick: {fileID: 0}
   ThirdCam: {fileID: 317007455}
   FirstCam: {fileID: 344165227}
   CamMode: 0
@@ -6469,8 +6472,8 @@ AudioSource:
   m_GameObject: {fileID: 8033035910620869128}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9f49b03f967aa41439acb8199e1a7974, type: 3}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 5fbbf6c65d7ba4b4aaaacf09537c944c, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 0b260bbfd12109949b1c695616db710d, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.36
   m_Pitch: 1

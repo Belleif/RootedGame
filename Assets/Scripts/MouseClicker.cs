@@ -6,12 +6,12 @@ public class MouseClicker : MonoBehaviour
 
 {
     public GameObject currentIsle;
-    public GameObject particles;
+    public ParticleSystem particles;
     private Vector3 savedPosition;
     // Start is called before the first frame update
     void Start()
     {
-        particles.SetActive(false);
+        particles.Stop();
     }
 
     // Update is called once per frame
@@ -32,9 +32,8 @@ public class MouseClicker : MonoBehaviour
                     {
                      currentIsle.GetComponent<IslandMovement>().isMoving = false;
                      currentIsle.GetComponent<Rigidbody>().isKinematic = true;
-                     savedPosition = currentIsle.transform.position;
-                     particles.SetActive(true);
-                     particles.transform.position = savedPosition;
+                     particles.enableEmission = true;
+                     particles.Play();
 
                     }
 
@@ -42,7 +41,6 @@ public class MouseClicker : MonoBehaviour
                     currentIsle = hitInfo.transform.gameObject;
                     currentIsle.GetComponent<Rigidbody>().isKinematic = false;
                     currentIsle.GetComponent<IslandMovement>().isMoving = true;
-                    //particles.SetActive(false);
                 }
                 else
                 { 
@@ -59,6 +57,12 @@ public class MouseClicker : MonoBehaviour
                 Debug.Log("No hit");
             }
         }
+    }
+    private void LateUpdate()
+    {
+
+        savedPosition = currentIsle.transform.position;
+        particles.transform.position = savedPosition;
     }
 
 }

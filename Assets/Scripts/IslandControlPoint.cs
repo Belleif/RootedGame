@@ -15,6 +15,7 @@ public class IslandControlPoint : MonoBehaviour
     private bool triggeractive = false;
     public GameObject triggerguiactive;
     public GameObject triggerguideactive;
+    public ParticleSystem particles;
 
     void Start()
     {
@@ -52,6 +53,8 @@ public class IslandControlPoint : MonoBehaviour
                 Cursor.lockState = CursorLockMode.Locked;
                 ThirdCam.SetActive(true);
                 FirstCam.SetActive(false);
+                particles.Stop();
+                particles.enableEmission = false;
             }
         }
     }

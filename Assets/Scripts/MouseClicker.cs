@@ -32,7 +32,6 @@ public class MouseClicker : MonoBehaviour
                     {
                      currentIsle.GetComponent<IslandMovement>().isMoving = false;
                      currentIsle.GetComponent<Rigidbody>().isKinematic = true;
-                     particles.enableEmission = true;
                      particles.Play();
 
                     }

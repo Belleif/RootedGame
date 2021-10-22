@@ -54,7 +54,6 @@ public class IslandControlPoint : MonoBehaviour
                 ThirdCam.SetActive(true);
                 FirstCam.SetActive(false);
                 particles.Stop();
-                particles.enableEmission = false;
             }
         }
     }

@@ -46,7 +46,7 @@ public class FadeInOut : MonoBehaviour
     void Update()
     {
         //To fade to black use the following. You can adjust the .2 to a larger number for a faster fade
-        StartCoroutine(FadeOutAndInCoroutine(true, .2f));
+        //StartCoroutine(FadeOutAndInCoroutine(true, .2f));
 
         //To fade from black to clear use the following. Adjust the speed as needed
         //StartCoroutine(FadeOutAndInCoroutine(false, .2f));

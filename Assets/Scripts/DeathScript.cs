@@ -16,13 +16,7 @@ public class DeathScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("l"))
-        {
-            Debug.Log("Player Transported");
-            player.GetComponent<CharacterController>().enabled = false;
-            player.GetComponent<CharacterController>().transform.position = respawn.transform.position;
-            player.GetComponent<CharacterController>().enabled = true;
-        }
+
     }
 
     private void OnTriggerEnter(Collider other)

@@ -17,6 +17,7 @@ public class IslandControlPoint : MonoBehaviour
     public GameObject triggerguideactive;
     public ParticleSystem particles;
     public ParticleSystem particlesGlow;
+    public CursorChanger curseChange;
 
     void Start()
     {
@@ -35,6 +36,7 @@ public class IslandControlPoint : MonoBehaviour
                 Debug.Log("Player has activated Trigger.");
                 characterController.canMove = false;
                 IslandMovement.islandMove = 1;
+                curseChange.theHandCursor();
                 Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.Confined;
                 ThirdCam.SetActive(false);
@@ -50,6 +52,7 @@ public class IslandControlPoint : MonoBehaviour
                 rayClick.currentIsle.GetComponent<Rigidbody>().isKinematic = true;
                 rayClick.currentIsle.GetComponent<IslandMovement>().isMoving = false;
                 IslandMovement.islandMove = 0;
+                curseChange.theArrowCursor();
                 Cursor.visible = false;
                 Cursor.lockState = CursorLockMode.Locked;
                 ThirdCam.SetActive(true);

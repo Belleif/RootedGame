@@ -10,6 +10,7 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject pauseMenuUI;
     public SC_TPSController charControl;
+    public GameObject ThirdCam;
 
     // Start is called before the first frame update
     void Start()
@@ -41,7 +42,15 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
-        charControl.canMove = true;
+
+        if (ThirdCam.activeSelf)
+        {
+            charControl.canMove = true;
+        }
+        else
+        {
+            charControl.canMove = false;
+        }
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }

@@ -32,11 +32,15 @@ public class SC_TPSController : MonoBehaviour
     public float lookSpeed = 2.0f;
     public float lookXLimit = 60.0f;
     private float vSpeed = 0f;
+    public bool isGrounded = false;
 
     //Variables set for the Character Controller and its direction and rotation.
     public static CharacterController characterController;
     Vector3 moveDirection = Vector3.zero;
     Vector2 rotation = Vector2.zero;
+    Vector3 dwn;
+    
+
     
     //Boolean that is meant to say if the character can move or not move.
     public bool canMove = true;
@@ -44,6 +48,7 @@ public class SC_TPSController : MonoBehaviour
     //Function meant to initialize anything below on start of the program.
     void Start()
     {
+        dwn = transform.TransformDirection(Vector3.down);
         characterController = GetComponent<CharacterController>();
         rotation.y = transform.eulerAngles.y;
     }
@@ -55,6 +60,20 @@ public class SC_TPSController : MonoBehaviour
         float curSpeedX = canMove ? speed * Input.GetAxis("Vertical") : 0;
         float curSpeedY = canMove ? speed * Input.GetAxis("Horizontal") : 0;
         moveDirection = (forward * curSpeedX) + (right * curSpeedY);
+
+        bool hit = Physics.Raycast(transform.position, dwn, 10);
+
+        if (isGrounded)
+        {
+            // We are grounded, so recalculate move direction based on axes
+            vSpeed = 0;
+
+            if (Input.GetButton("Jump") && canMove)
+            {
+                vSpeed = jumpSpeed;
+
+            }
+        }
 
         if (characterController.isGrounded)
         {

@@ -13,6 +13,7 @@ public class MouseClicker : MonoBehaviour
     void Start()
     {
         particles.Stop();
+        particlesGlow.Stop();
     }
 
     // Update is called once per frame
@@ -34,7 +35,7 @@ public class MouseClicker : MonoBehaviour
                      currentIsle.GetComponent<IslandMovement>().isMoving = false;
                      currentIsle.GetComponent<Rigidbody>().isKinematic = true;
                      particles.Play();
-
+                     particlesGlow.Play();
                     }
 
                     Debug.Log("Moveable Island Hit");

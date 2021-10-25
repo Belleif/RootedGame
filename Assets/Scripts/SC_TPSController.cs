@@ -34,7 +34,7 @@ public class SC_TPSController : MonoBehaviour
     private float vSpeed = 0f;
 
     //Variables set for the Character Controller and its direction and rotation.
-    CharacterController characterController;
+    public static CharacterController characterController;
     Vector3 moveDirection = Vector3.zero;
     Vector2 rotation = Vector2.zero;
     
@@ -57,12 +57,14 @@ public class SC_TPSController : MonoBehaviour
         moveDirection = (forward * curSpeedX) + (right * curSpeedY);
         if (characterController.isGrounded)
         {
+
             // We are grounded, so recalculate move direction based on axes
             vSpeed = 0;
 
             if (Input.GetButton("Jump") && canMove)
             {
                 vSpeed = jumpSpeed;
+
             }
         }
 

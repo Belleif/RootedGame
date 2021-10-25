@@ -22,5 +22,15 @@ public class AnimationControllerScript : MonoBehaviour
         {
             animator.SetBool("IsRunning", false);
         }
+
+        if (Input.GetKey("space"))
+        {
+            animator.SetBool("IsJumping", true);
+            animator.SetBool("IsRunning", false);
+        }
+        if (!Input.GetKey("space"))
+        {
+            animator.SetBool("IsJumping", false);
+        }
     }
 }

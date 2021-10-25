@@ -7,6 +7,7 @@ public class MouseClicker : MonoBehaviour
 {
     public GameObject currentIsle;
     public ParticleSystem particles;
+    public ParticleSystem particlesGlow;
     private Vector3 savedPosition;
     // Start is called before the first frame update
     void Start()
@@ -62,6 +63,7 @@ public class MouseClicker : MonoBehaviour
 
         savedPosition = currentIsle.transform.position;
         particles.transform.position = savedPosition;
+        particlesGlow.transform.position = savedPosition;
     }
 
 }

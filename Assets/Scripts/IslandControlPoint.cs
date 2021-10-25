@@ -16,6 +16,7 @@ public class IslandControlPoint : MonoBehaviour
     public GameObject triggerguiactive;
     public GameObject triggerguideactive;
     public ParticleSystem particles;
+    public ParticleSystem particlesGlow;
 
     void Start()
     {
@@ -54,6 +55,7 @@ public class IslandControlPoint : MonoBehaviour
                 ThirdCam.SetActive(true);
                 FirstCam.SetActive(false);
                 particles.Stop();
+                particlesGlow.Stop();
             }
         }
     }

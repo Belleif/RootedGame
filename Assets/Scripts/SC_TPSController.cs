@@ -55,9 +55,9 @@ public class SC_TPSController : MonoBehaviour
         float curSpeedX = canMove ? speed * Input.GetAxis("Vertical") : 0;
         float curSpeedY = canMove ? speed * Input.GetAxis("Horizontal") : 0;
         moveDirection = (forward * curSpeedX) + (right * curSpeedY);
+
         if (characterController.isGrounded)
         {
-
             // We are grounded, so recalculate move direction based on axes
             vSpeed = 0;
 

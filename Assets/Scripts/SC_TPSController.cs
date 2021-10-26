@@ -70,16 +70,16 @@ public class SC_TPSController : MonoBehaviour
 
         isGrounded = Physics.CheckSphere(groundChecker.position, GroundDistance, Ground, QueryTriggerInteraction.Ignore);
             if (isGrounded)
-        {
+             {
             // We are grounded, so recalculate move direction based on axes
-            vSpeed = 0;
+                vSpeed = 0;
 
-            if (Input.GetButton("Jump") && canMove)
-            {
-                vSpeed = jumpSpeed;
+                if (Input.GetButton("Jump") && canMove)
+                {
+                    vSpeed = jumpSpeed;
 
+                }
             }
-        }
 
         //if (characterController.isGrounded)
         //{

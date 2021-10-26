@@ -81,18 +81,6 @@ public class SC_TPSController : MonoBehaviour
                 }
             }
 
-        //if (characterController.isGrounded)
-        //{
-            // We are grounded, so recalculate move direction based on axes
-          //  vSpeed = 0;
-
-          //  if (Input.GetButton("Jump") && canMove)
-          //  {
-           //     vSpeed = jumpSpeed;
-
-         //   }
-       // }
-
         // Apply gravity. Gravity is multiplied by deltaTime twice (once here, and once below
         // when the moveDirection is multiplied by deltaTime). This is because gravity should be applied
         // as an acceleration (ms^-2)

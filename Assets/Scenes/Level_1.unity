@@ -5148,8 +5148,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 87567627}
-  m_LocalRotation: {x: 0.3978817, y: -0.00052645797, z: 0.00022830066, w: 0.9174366}
-  m_LocalPosition: {x: 0.005733296, y: 7.2953424, z: -5.6239996}
+  m_LocalRotation: {x: 0.40431374, y: -0.0005397498, z: 0.00023861227, w: 0.91462016}
+  m_LocalPosition: {x: 0.005733296, y: 7.2953424, z: -5.4822226}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 659534105}
@@ -5168,7 +5168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referenceTransform: {fileID: 659534105}
-  collisionOffset: 5
+  collisionOffset: 2.15
   cameraSpeed: 15
 --- !u!114 &87567630
 MonoBehaviour:
@@ -5235,7 +5235,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.922
+  near clip plane: 0.13
   far clip plane: 1000
   field of view: 100
   orthographic: 0
@@ -21430,8 +21430,8 @@ MonoBehaviour:
   CameraDistance: 1.22
   CameraCollisionFilter:
     serializedVersion: 2
-    m_Bits: 0
-  IgnoreTag: 
+    m_Bits: 128
+  IgnoreTag: Player
   CameraRadius: 0.2
 --- !u!114 &444858608
 MonoBehaviour:
@@ -83978,8 +83978,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1847104307}
-  m_LocalRotation: {x: 0.3978817, y: -0.00052645797, z: 0.00022830066, w: 0.9174366}
-  m_LocalPosition: {x: 0.005733296, y: 7.2953424, z: -5.6239996}
+  m_LocalRotation: {x: 0.40431374, y: -0.0005397498, z: 0.00023861227, w: 0.91462016}
+  m_LocalPosition: {x: 0.005733296, y: 7.2953424, z: -5.4822226}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 444858606}
@@ -84009,7 +84009,7 @@ MonoBehaviour:
   m_Lens:
     FieldOfView: 100
     OrthographicSize: 5
-    NearClipPlane: 0.922
+    NearClipPlane: 0.13
     FarClipPlane: 1000
     Dutch: 0
     LensShift: {x: 0, y: 0}
@@ -84028,7 +84028,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1847104307}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e501d18bb52cf8c40b1853ca4904654f, type: 3}
   m_Name: 
@@ -84036,21 +84036,21 @@ MonoBehaviour:
   m_CollideAgainst:
     serializedVersion: 2
     m_Bits: 1
-  m_IgnoreTag: 
+  m_IgnoreTag: Player
   m_TransparentLayers:
     serializedVersion: 2
-    m_Bits: 0
-  m_MinimumDistanceFromTarget: 0.1
+    m_Bits: 128
+  m_MinimumDistanceFromTarget: 0.46
   m_AvoidObstacles: 1
   m_DistanceLimit: 0
   m_MinimumOcclusionTime: 0
   m_CameraRadius: 0.1
   m_Strategy: 1
   m_MaximumEffort: 4
-  m_SmoothingTime: 0
-  m_Damping: 0
+  m_SmoothingTime: 0.2
+  m_Damping: 0.29
   m_DampingWhenOccluded: 0
-  m_OptimalTargetDistance: 0
+  m_OptimalTargetDistance: 0.18
 --- !u!1001 &1848612105
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -99778,7 +99778,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 534056704896402000, guid: 53b8ac541ca996a469d41ecb8949b949, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 534056704896402000, guid: 53b8ac541ca996a469d41ecb8949b949, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -99846,7 +99846,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6360092054284468562, guid: 53b8ac541ca996a469d41ecb8949b949, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6360092054284468562, guid: 53b8ac541ca996a469d41ecb8949b949, type: 3}
       propertyPath: m_StaticEditorFlags

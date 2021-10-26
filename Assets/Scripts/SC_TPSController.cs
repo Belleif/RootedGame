@@ -32,7 +32,11 @@ public class SC_TPSController : MonoBehaviour
     public float lookSpeed = 2.0f;
     public float lookXLimit = 60.0f;
     private float vSpeed = 0f;
-    public bool isGrounded = false;
+
+    public float GroundDistance = 0.2f;
+    public LayerMask Ground;
+    public bool isGrounded = true;
+    private Transform groundChecker;
 
     //Variables set for the Character Controller and its direction and rotation.
     public static CharacterController characterController;
@@ -48,6 +52,7 @@ public class SC_TPSController : MonoBehaviour
     //Function meant to initialize anything below on start of the program.
     void Start()
     {
+        groundChecker = transform.GetChild(0);
         dwn = transform.TransformDirection(Vector3.down);
         characterController = GetComponent<CharacterController>();
         rotation.y = transform.eulerAngles.y;
@@ -63,7 +68,8 @@ public class SC_TPSController : MonoBehaviour
 
         bool hit = Physics.Raycast(transform.position, dwn, 10);
 
-        if (isGrounded)
+        isGrounded = Physics.CheckSphere(groundChecker.position, GroundDistance, Ground, QueryTriggerInteraction.Ignore);
+            if (isGrounded)
         {
             // We are grounded, so recalculate move direction based on axes
             vSpeed = 0;
@@ -75,17 +81,17 @@ public class SC_TPSController : MonoBehaviour
             }
         }
 
-        if (characterController.isGrounded)
-        {
+        //if (characterController.isGrounded)
+        //{
             // We are grounded, so recalculate move direction based on axes
-            vSpeed = 0;
+          //  vSpeed = 0;
 
-            if (Input.GetButton("Jump") && canMove)
-            {
-                vSpeed = jumpSpeed;
+          //  if (Input.GetButton("Jump") && canMove)
+          //  {
+           //     vSpeed = jumpSpeed;
 
-            }
-        }
+         //   }
+       // }
 
         // Apply gravity. Gravity is multiplied by deltaTime twice (once here, and once below
         // when the moveDirection is multiplied by deltaTime). This is because gravity should be applied

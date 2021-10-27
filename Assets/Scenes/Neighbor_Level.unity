@@ -15360,6 +15360,8 @@ MonoBehaviour:
   triggerguiactive: {fileID: 184938720}
   triggerguideactive: {fileID: 460222788}
   particles: {fileID: 0}
+  particlesGlow: {fileID: 0}
+  curseChange: {fileID: 0}
 --- !u!65 &299937846
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15493,6 +15495,11 @@ MonoBehaviour:
   playerCameraParent: {fileID: 1265237724}
   lookSpeed: 0.6
   lookXLimit: 60
+  GroundDistance: 0.2
+  Ground:
+    serializedVersion: 2
+    m_Bits: 0
+  isGrounded: 1
   canMove: 1
 --- !u!143 &300806441
 CharacterController:
@@ -15863,6 +15870,8 @@ MonoBehaviour:
   triggerguiactive: {fileID: 184938720}
   triggerguideactive: {fileID: 460222788}
   particles: {fileID: 0}
+  particlesGlow: {fileID: 0}
+  curseChange: {fileID: 0}
 --- !u!65 &392137290
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26403,6 +26412,8 @@ MonoBehaviour:
   triggerguiactive: {fileID: 184938720}
   triggerguideactive: {fileID: 460222788}
   particles: {fileID: 0}
+  particlesGlow: {fileID: 0}
+  curseChange: {fileID: 0}
 --- !u!65 &568704885
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -98256,6 +98267,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentIsle: {fileID: 0}
   particles: {fileID: 0}
+  particlesGlow: {fileID: 0}
 --- !u!4 &2096481570
 Transform:
   m_ObjectHideFlags: 0

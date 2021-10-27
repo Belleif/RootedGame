@@ -368,6 +368,11 @@ MonoBehaviour:
   playerCameraParent: {fileID: 174042707}
   lookSpeed: 0.6
   lookXLimit: 60
+  GroundDistance: 0.2
+  Ground:
+    serializedVersion: 2
+    m_Bits: 0
+  isGrounded: 1
   canMove: 1
 --- !u!143 &70052810
 CharacterController:
@@ -1093,72 +1098,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 586823560}
   m_CullTransparentMesh: 1
---- !u!1 &717194599
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 717194602}
-  - component: {fileID: 717194601}
-  - component: {fileID: 717194600}
-  m_Layer: 0
-  m_Name: EventSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &717194600
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 717194599}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
---- !u!114 &717194601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 717194599}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 10
---- !u!4 &717194602
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 717194599}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 550.5, y: 259.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &914143100
 GameObject:
   m_ObjectHideFlags: 0
@@ -1236,7 +1175,7 @@ PrefabInstance:
       objectReference: {fileID: 70052809}
     - target: {fileID: 4632935439788190573, guid: 5e137c8651b4a614cbf9916590371a65, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4632935439788190573, guid: 5e137c8651b4a614cbf9916590371a65, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1765,6 +1704,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentIsle: {fileID: 0}
+  particles: {fileID: 0}
+  particlesGlow: {fileID: 0}
 --- !u!4 &1851838957
 Transform:
   m_ObjectHideFlags: 0
@@ -1987,7 +1928,7 @@ Transform:
   m_LocalScale: {x: 3.5459526, y: 0.42852, z: 4.9311824}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2141826472
 GameObject:
@@ -4749,6 +4690,9 @@ MonoBehaviour:
   CamMode: 0
   triggerguiactive: {fileID: 1476547748}
   triggerguideactive: {fileID: 1700232540}
+  particles: {fileID: 0}
+  particlesGlow: {fileID: 0}
+  curseChange: {fileID: 0}
 --- !u!65 &6664914102813359370
 BoxCollider:
   m_ObjectHideFlags: 0

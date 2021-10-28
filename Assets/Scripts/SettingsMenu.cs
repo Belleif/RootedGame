@@ -26,20 +26,21 @@ public class SettingsMenu : MonoBehaviour
 
     void Start()
     {
-        resolutions = Screen.resolutions;
-        Debug.Log(resolutions.Length);
+        
         resolutionDropdown.ClearOptions();
 
         List<string> options = new List<string>();
 
+        resolutions = Screen.resolutions;
+        Debug.Log(resolutions.Length);
         int currentResolutionIndex = 0;
         for (int i =0; i < resolutions.Length; i++)
         {
-            string option = resolutions[i].width + " x " + resolutions[i].height;
+            string option = resolutions[i].width + " x " + resolutions[i].height + " : " + resolutions[i].refreshRate + " hz";
             options.Add(option);
             Debug.Log(option);
 
-            if (resolutions[i].width == Screen.currentResolution.width && resolutions[i].height == Screen.currentResolution.height)
+            if (resolutions[i].width == Screen.currentResolution.width && resolutions[i].height == Screen.currentResolution.height && Screen.currentResolution.refreshRate == resolutions[i].refreshRate)
             {
                 currentResolutionIndex = i;
             }

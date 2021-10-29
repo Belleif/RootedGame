@@ -5,10 +5,12 @@ using UnityEngine;
 public class AnimationControllerScript : MonoBehaviour
 {
     Animator animator;
+    private GameObject player;
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
+        player = GameObject.Find("Player");
     }
 
     // Update is called once per frame
@@ -25,12 +27,18 @@ public class AnimationControllerScript : MonoBehaviour
 
         if (Input.GetKey("space"))
         {
-            animator.SetBool("IsJumping", true);
             animator.SetBool("IsRunning", false);
+            animator.SetBool("IsJumping", true);
+            
         }
         if (!Input.GetKey("space"))
         {
             animator.SetBool("IsJumping", false);
         }
+        if (player.transform.position.y < 30)
+            animator.SetBool("IsFalling", true);
+        else
+            animator.SetBool("IsFalling", false);
+        //Fix to utilize isGrounded method
     }
 }

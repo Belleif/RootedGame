@@ -579,6 +579,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1205405047}
   - component: {fileID: 1205405048}
+  - component: {fileID: 1205405049}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -607,7 +608,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1205405046}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d13f35234b3eb164b88f2440f07cc0f1, type: 3}
   m_Name: 
@@ -615,6 +616,19 @@ MonoBehaviour:
   sceneToLoad: 0
   progressBar: {fileID: 756366727}
   percentLoaded: {fileID: 115193092}
+--- !u!114 &1205405049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1205405046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fc0be8912ad1b943a5d228ce6f59a9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progressBar: {fileID: 450752669}
 --- !u!1 &1234142671
 GameObject:
   m_ObjectHideFlags: 0

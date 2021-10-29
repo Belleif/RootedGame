@@ -6,7 +6,8 @@ using UnityEngine.UI;
 
 public class PauseMenu2 : MonoBehaviour
 {
-
+    public GameObject pauseMenuUI;
+    public GameObject settingsMenuUI;
     //public PauseMenu2 gameObject;
 
     public void MainMenu()
@@ -29,6 +30,11 @@ public class PauseMenu2 : MonoBehaviour
         SceneManager.LoadScene(CurrentLevel);
     }
 
+    public void SettingsMenu()
+    {
+        pauseMenuUI.SetActive(false);
+        settingsMenuUI.SetActive(true);
+    }
     public void QuitGame()
     {
         Application.OpenURL("https://forms.gle/tAGG6oq7hMpBAWyx8");

@@ -9,6 +9,7 @@ public class PauseMenu : MonoBehaviour
     public static bool GameIsPaused = false;
 
     public GameObject pauseMenuUI;
+    public GameObject settingsMenuUI;
     public SC_TPSController charControl;
     public GameObject ThirdCam;
 
@@ -40,6 +41,7 @@ public class PauseMenu : MonoBehaviour
     void Resume()
     {
         pauseMenuUI.SetActive(false);
+        settingsMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
 

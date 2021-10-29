@@ -18,6 +18,10 @@ using UnityEngine.UI;
 //////
 public class SettingsMenu : MonoBehaviour
 {
+    //For In-Game Pause Menu ONLY!
+    public GameObject pauseMenuUI;
+    public GameObject settingsMenuUI;
+
     public AudioMixer audioMixer;
 
     public Dropdown resolutionDropdown;
@@ -71,5 +75,12 @@ public class SettingsMenu : MonoBehaviour
     public void SetFullscreen (bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
+    }
+
+    //For In-Game Pause Menu ONLY!
+    public void BackButton()
+    {
+        pauseMenuUI.SetActive(true);
+        settingsMenuUI.SetActive(false);
     }
 }

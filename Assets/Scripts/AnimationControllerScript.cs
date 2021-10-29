@@ -5,6 +5,7 @@ using UnityEngine;
 public class AnimationControllerScript : MonoBehaviour
 {
     Animator animator;
+    public int fallHeight;
     private GameObject player;
     // Start is called before the first frame update
     void Start()
@@ -35,7 +36,7 @@ public class AnimationControllerScript : MonoBehaviour
         {
             animator.SetBool("IsJumping", false);
         }
-        if (player.transform.position.y < 30)
+        if (player.transform.position.y < fallHeight)
             animator.SetBool("IsFalling", true);
         else
             animator.SetBool("IsFalling", false);

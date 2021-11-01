@@ -13,12 +13,14 @@ public class MainMenu : MonoBehaviour
     
     public void PlayGame(int levelNum)
     {
-        StartCoroutine(Waiter(levelNum));
+        SceneManager.LoadScene(levelNum);
+        //StartCoroutine(Waiter(levelNum));
     }
 
     public void LoadLevel(int levelNum)
     {
-        StartCoroutine(Waiter(levelNum));
+        SceneManager.LoadScene(levelNum);
+       // StartCoroutine(Waiter(levelNum));
     }
 
 
@@ -29,13 +31,17 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
-    IEnumerator Waiter(int levelNum)
-    {
+    //IEnumerator Waiter(int levelNum)
+    //{
         //The seconds are hard coded, which isn't the most elegant solution
         //But buttons only allow for a single parameter in OnClick functions
         //You'll have to either find out how long the clip is or play around with the wait
-        yield return new WaitForSeconds(.2f);
-        SceneManager.LoadScene(levelNum);
-    }
+        //while (true)
+        //{
+           // yield return new WaitForSeconds(.2f);
+            //SceneManager.LoadScene(levelNum);
+        //}
+        
+    //}
 }
 

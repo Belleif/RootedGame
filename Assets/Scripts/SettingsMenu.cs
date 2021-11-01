@@ -25,6 +25,7 @@ public class SettingsMenu : MonoBehaviour
     public Dropdown resolutionDropdown;
     public Slider volume;
     public Dropdown qualityDropdown;
+    public Toggle FullscreenToggle;
     int currentResolutionIndex = 0;// Moved this one out of resolution selection
     public int fullscreencheck;
     Resolution[] resolutions;
@@ -32,7 +33,16 @@ public class SettingsMenu : MonoBehaviour
     void Start()
     {
         volume.value = PlayerPrefs.GetFloat("VolumePreference", 0.75f);
-
+        if (PlayerPrefs.GetInt("FullscreenPreference", fullscreencheck) == 1)
+        {
+            Screen.fullScreen = true;
+            FullscreenToggle.isOn = true;
+        }
+        else
+        {
+            Screen.fullScreen = false;
+            FullscreenToggle.isOn = false;
+        }
         resolutionDropdown.ClearOptions();
 
         List<string> options = new List<string>();
@@ -81,12 +91,14 @@ public class SettingsMenu : MonoBehaviour
     {
         Screen.fullScreen = isFullscreen;
         //Should convert true and false to int values
-        if(isFullscreen)
+        if (isFullscreen)
         {
             fullscreencheck = 1;
         }
         else
-        fullscreencheck = 0;
+        {
+            fullscreencheck = 0;
+        }
         PlayerPrefs.SetInt("FullscreenPreference", fullscreencheck);
     }
 
@@ -107,11 +119,13 @@ public class SettingsMenu : MonoBehaviour
         else
             qualityDropdown.value = 5;
 
-        if (PlayerPrefs.HasKey("FullscreenPreference"))
-            fullscreencheck = PlayerPrefs.GetInt("QualityPreference");
+        /*if (PlayerPrefs.HasKey("FullscreenPreference"))
+            fullscreencheck = PlayerPrefs.GetInt("FullscreenPreference");
         else
-            fullscreencheck = 0;
+            fullscreencheck = 0; */
+        PlayerPrefs.Save();
     }
+
 
     //For In-Game Pause Menu ONLY!
     public void BackButton()

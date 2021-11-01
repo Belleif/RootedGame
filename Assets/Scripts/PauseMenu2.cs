@@ -19,7 +19,8 @@ public class PauseMenu2 : MonoBehaviour
 
     public void LoadLevel()
     {
-        SceneManager.LoadScene(2);
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name);
     }
 
     public void ResetLevel(int CurrentLevel)
@@ -40,5 +41,14 @@ public class PauseMenu2 : MonoBehaviour
         Application.OpenURL("https://forms.gle/tAGG6oq7hMpBAWyx8");
         Debug.Log("Program Quitting...");
         Application.Quit();
+    }
+
+    IEnumerator Waiter(int levelNum)
+    {
+        //The seconds are hard coded, which isn't the most elegant solution
+        //But buttons only allow for a single parameter in OnClick functions
+        //You'll have to either find out how long the clip is or play around with the wait
+        yield return new WaitForSeconds(.2f);
+        SceneManager.LoadScene(levelNum);
     }
 }

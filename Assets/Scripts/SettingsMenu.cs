@@ -119,10 +119,10 @@ public class SettingsMenu : MonoBehaviour
         else
             qualityDropdown.value = 5;
 
-        /*if (PlayerPrefs.HasKey("FullscreenPreference"))
+        if (PlayerPrefs.HasKey("FullscreenPreference"))
             fullscreencheck = PlayerPrefs.GetInt("FullscreenPreference");
         else
-            fullscreencheck = 0; */
+            fullscreencheck = 0;    // Is code broken here?------------------------------------------------------------------
         PlayerPrefs.Save();
     }
 

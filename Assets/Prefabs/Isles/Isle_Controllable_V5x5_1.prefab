@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8261206449862294469}
   - component: {fileID: 2801504036514137645}
   - component: {fileID: 7360855993701168959}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Isle_Controllable_V5x5_1_Roots
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,9 +94,10 @@ GameObject:
   - component: {fileID: 7566037757880243636}
   - component: {fileID: 1714173864714687715}
   - component: {fileID: 1364510712213878317}
-  m_Layer: 0
+  - component: {fileID: 100865772}
+  m_Layer: 6
   m_Name: Isle_Controllable_V5x5_1
-  m_TagString: Untagged
+  m_TagString: Island
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108,7 +109,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8358411739125691489}
-  m_LocalRotation: {x: 0.000000081460335, y: 0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -117.609856, y: 6.52, z: 25.93}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -178,7 +179,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 5365348384254878345, guid: 13337d4f49b30cb42835475b36a04404, type: 3}
 --- !u!54 &1364510712213878317
@@ -197,3 +198,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &100865772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8358411739125691489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16421a77a5ee55d42b6801df625b6352, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  islandController: {fileID: 1364510712213878317}
+  controlPoint: {fileID: 0}
+  speed: 8
+  isMoving: 0
+  moveX: 0
+  moveZ: 0
+  moveY: 1

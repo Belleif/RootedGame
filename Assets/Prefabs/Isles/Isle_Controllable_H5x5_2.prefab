@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7943753357531004172}
   - component: {fileID: 1774156342572851005}
   - component: {fileID: 2807360470816382500}
-  - component: {fileID: 5736029694218283466}
+  - component: {fileID: 7923551034508762732}
   m_Layer: 0
   m_Name: Isle_Controllable_H5x5_2_Land
   m_TagString: Untagged
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 527853525813179128}
   m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
   m_LocalPosition: {x: 0.6265452, y: -0.3090663, z: -4.9735165}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4596286934795323887}
   m_RootOrder: 0
@@ -82,7 +82,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5736029694218283466
+--- !u!64 &7923551034508762732
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -105,6 +105,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4596286934795323887}
+  - component: {fileID: 6376803145054904012}
   m_Layer: 0
   m_Name: Isle_Controllable_H5x5_2
   m_TagString: Untagged
@@ -128,6 +129,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &6376803145054904012
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3783756176090387285}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &4072046143016260443
 GameObject:
   m_ObjectHideFlags: 0
@@ -155,7 +172,7 @@ Transform:
   m_GameObject: {fileID: 4072046143016260443}
   m_LocalRotation: {x: 0.000000021855694, y: -9.48019e-17, z: 1.1223664e-16, w: 1}
   m_LocalPosition: {x: 0.6265452, y: -0.3090663, z: -4.9735165}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4596286934795323887}
   m_RootOrder: 1

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5971024897755857286}
   - component: {fileID: 281513770129701953}
   - component: {fileID: 6970995607020805548}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Isle_Controllable_V5x5_2_DetailedRoots
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 3335175027286447923}
   - component: {fileID: 8346978617484040305}
   - component: {fileID: 4521366556601765373}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Isle_Controllable_V5x5_2_Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 1596859023721496279}
   - component: {fileID: 49409619878130952}
   - component: {fileID: 6962009733518563322}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Isle_Controllable_V5x5_2_Roots
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -256,9 +256,10 @@ GameObject:
   - component: {fileID: 7727883078252810441}
   - component: {fileID: 4964046858987885828}
   - component: {fileID: 9038206149530373365}
-  m_Layer: 0
+  - component: {fileID: 1320359406}
+  m_Layer: 6
   m_Name: Isle_Controllable_V5x5_2
-  m_TagString: Untagged
+  m_TagString: Island
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -270,7 +271,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8087911631724310812}
-  m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.9529688, y: 941.6752, z: -512.0145}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -341,7 +342,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 7393473233339039258, guid: 356131ce188cd174d9ab045229da9609, type: 3}
 --- !u!54 &9038206149530373365
@@ -360,3 +361,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &1320359406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8087911631724310812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16421a77a5ee55d42b6801df625b6352, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  islandController: {fileID: 9038206149530373365}
+  controlPoint: {fileID: 0}
+  speed: 8
+  isMoving: 0
+  moveX: 0
+  moveZ: 0
+  moveY: 1

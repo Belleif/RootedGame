@@ -217,35 +217,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7648665465559056522, guid: c45b680deb759d34b8dbe339bde1d9e8, type: 3}
   m_PrefabInstance: {fileID: 726756}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &100865766 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8358411739125691489, guid: 839372207fe868b48859f9c5e271e726, type: 3}
-  m_PrefabInstance: {fileID: 398754747}
-  m_PrefabAsset: {fileID: 0}
---- !u!54 &100865771 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 1364510712213878317, guid: 839372207fe868b48859f9c5e271e726, type: 3}
-  m_PrefabInstance: {fileID: 398754747}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &100865772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100865766}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16421a77a5ee55d42b6801df625b6352, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  islandController: {fileID: 100865771}
-  controlPoint: {fileID: 624294585}
-  speed: 8
-  isMoving: 0
-  moveX: 0
-  moveZ: 0
-  moveY: 1
 --- !u!1 &170890204 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7958581793109505004, guid: d12734272cf879b48bcf91ad5cbb77d2, type: 3}
@@ -274,17 +245,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7152408559258368459, guid: 839372207fe868b48859f9c5e271e726, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
+    - target: {fileID: 100865772, guid: 839372207fe868b48859f9c5e271e726, type: 3}
+      propertyPath: controlPoint
+      value: 
+      objectReference: {fileID: 624294585}
     - target: {fileID: 8358411739125691489, guid: 839372207fe868b48859f9c5e271e726, type: 3}
       propertyPath: m_Name
       value: Isle_Controllable_V5x5_1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8358411739125691489, guid: 839372207fe868b48859f9c5e271e726, type: 3}
-      propertyPath: m_Layer
-      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8697818250932317915, guid: 839372207fe868b48859f9c5e271e726, type: 3}
       propertyPath: m_RootOrder
@@ -452,21 +419,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 527853525813179128, guid: 4ca2c93ac7acf49419cb2e1ebc0c1a8a, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
+    - target: {fileID: 1436224674, guid: 4ca2c93ac7acf49419cb2e1ebc0c1a8a, type: 3}
+      propertyPath: controlPoint
+      value: 
+      objectReference: {fileID: 624294585}
     - target: {fileID: 3783756176090387285, guid: 4ca2c93ac7acf49419cb2e1ebc0c1a8a, type: 3}
       propertyPath: m_Name
       value: Isle_Controllable_H5x5_2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3783756176090387285, guid: 4ca2c93ac7acf49419cb2e1ebc0c1a8a, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4072046143016260443, guid: 4ca2c93ac7acf49419cb2e1ebc0c1a8a, type: 3}
-      propertyPath: m_Layer
-      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4596286934795323887, guid: 4ca2c93ac7acf49419cb2e1ebc0c1a8a, type: 3}
       propertyPath: m_RootOrder
@@ -526,25 +485,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1866764619214655556, guid: b7941611baa85a842b64bd9259ebc6ac, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 5589730064236635199, guid: b7941611baa85a842b64bd9259ebc6ac, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6299716113268075533, guid: b7941611baa85a842b64bd9259ebc6ac, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
+    - target: {fileID: 1320359406, guid: b7941611baa85a842b64bd9259ebc6ac, type: 3}
+      propertyPath: controlPoint
+      value: 
+      objectReference: {fileID: 624294585}
     - target: {fileID: 8087911631724310812, guid: b7941611baa85a842b64bd9259ebc6ac, type: 3}
       propertyPath: m_Name
       value: Isle_Controllable_V5x5_2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8087911631724310812, guid: b7941611baa85a842b64bd9259ebc6ac, type: 3}
-      propertyPath: m_Layer
-      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8896254595649317798, guid: b7941611baa85a842b64bd9259ebc6ac, type: 3}
       propertyPath: m_RootOrder
@@ -680,6 +627,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 7038685455630076302, guid: f7e5b7115d1759b45873ef8558f003f3, type: 3}
+      propertyPath: m_TagString
+      value: Island
+      objectReference: {fileID: 0}
     - target: {fileID: 7702773352250364724, guid: f7e5b7115d1759b45873ef8558f003f3, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -795,35 +746,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 270ba39a46749014e8259d9fbd5d3972, type: 3}
---- !u!1 &1320359400 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8087911631724310812, guid: b7941611baa85a842b64bd9259ebc6ac, type: 3}
-  m_PrefabInstance: {fileID: 867281741}
-  m_PrefabAsset: {fileID: 0}
---- !u!54 &1320359405 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 9038206149530373365, guid: b7941611baa85a842b64bd9259ebc6ac, type: 3}
-  m_PrefabInstance: {fileID: 867281741}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1320359406
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1320359400}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16421a77a5ee55d42b6801df625b6352, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  islandController: {fileID: 1320359405}
-  controlPoint: {fileID: 624294585}
-  speed: 8
-  isMoving: 0
-  moveX: 0
-  moveZ: 0
-  moveY: 1
 --- !u!1 &1344478386 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4995398757265776031, guid: 2a877559d40fb8a4d9cc1d3455ba0456, type: 3}
@@ -834,35 +756,6 @@ ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 4995398757197788107, guid: 2a877559d40fb8a4d9cc1d3455ba0456, type: 3}
   m_PrefabInstance: {fileID: 4995398755925754157}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1436224671 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3783756176090387285, guid: 4ca2c93ac7acf49419cb2e1ebc0c1a8a, type: 3}
-  m_PrefabInstance: {fileID: 822275359}
-  m_PrefabAsset: {fileID: 0}
---- !u!54 &1436224672 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 6376803145054904012, guid: 4ca2c93ac7acf49419cb2e1ebc0c1a8a, type: 3}
-  m_PrefabInstance: {fileID: 822275359}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1436224674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1436224671}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16421a77a5ee55d42b6801df625b6352, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  islandController: {fileID: 1436224672}
-  controlPoint: {fileID: 624294585}
-  speed: 8
-  isMoving: 0
-  moveX: 0
-  moveZ: 1
-  moveY: 0
 --- !u!1001 &1568777674
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1032,6 +925,14 @@ PrefabInstance:
       propertyPath: fallHeight
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7958581793109505002, guid: d12734272cf879b48bcf91ad5cbb77d2, type: 3}
+      propertyPath: m_Center.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7958581793109505002, guid: d12734272cf879b48bcf91ad5cbb77d2, type: 3}
+      propertyPath: m_SlopeLimit
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 7958581793109505004, guid: d12734272cf879b48bcf91ad5cbb77d2, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1144,17 +1045,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1501206138980837073, guid: f7e5b7115d1759b45873ef8558f003f3, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 7038685455630076302, guid: f7e5b7115d1759b45873ef8558f003f3, type: 3}
       propertyPath: m_Name
       value: Isle_Controllable_H5x5_1 (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7038685455630076302, guid: f7e5b7115d1759b45873ef8558f003f3, type: 3}
-      propertyPath: m_Layer
-      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7702773352250364724, guid: f7e5b7115d1759b45873ef8558f003f3, type: 3}
       propertyPath: m_RootOrder
@@ -1754,6 +1647,10 @@ PrefabInstance:
     - target: {fileID: 4995398756713347246, guid: 2a877559d40fb8a4d9cc1d3455ba0456, type: 3}
       propertyPath: m_Name
       value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4995398756713347246, guid: 2a877559d40fb8a4d9cc1d3455ba0456, type: 3}
+      propertyPath: m_TagString
+      value: Island
       objectReference: {fileID: 0}
     - target: {fileID: 4995398757073355962, guid: 2a877559d40fb8a4d9cc1d3455ba0456, type: 3}
       propertyPath: controlPoint

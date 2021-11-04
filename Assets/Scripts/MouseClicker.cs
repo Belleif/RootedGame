@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MouseClicker : MonoBehaviour
 
@@ -8,6 +9,8 @@ public class MouseClicker : MonoBehaviour
     public GameObject currentIsle;
     public ParticleSystem particles;
     public ParticleSystem particlesGlow;
+    public GameObject instructText;
+    public GameObject emptyIsle;
     private Vector3 savedPosition;
     // Start is called before the first frame update
     void Start()
@@ -42,6 +45,23 @@ public class MouseClicker : MonoBehaviour
                     currentIsle = hitInfo.transform.gameObject;
                     currentIsle.GetComponent<Rigidbody>().isKinematic = false;
                     currentIsle.GetComponent<IslandMovement>().isMoving = true;
+
+                    if (currentIsle.GetComponent<IslandMovement>().moveY == true)
+                    {
+                        instructText.GetComponent<TMPro.TextMeshProUGUI>().text = "Click Isle to select \n Use 'W' & 'S' to move Isle \n Press E to exit control";
+                    }
+                    else if (currentIsle.GetComponent<IslandMovement>().moveX == true)
+                    {
+                        instructText.GetComponent<TMPro.TextMeshProUGUI>().text = "Click Isle to select \n Use 'A' & 'D' to move Isle \n Press E to exit control";
+                    }
+                    else if (currentIsle.GetComponent<IslandMovement>().moveZ == true)
+                    {
+                        instructText.GetComponent<TMPro.TextMeshProUGUI>().text = "Click Isle to select \n Use 'W' & 'S' to move Isle \n Press E to exit control";
+                    }
+                    else
+                    {
+                        instructText.GetComponent<TMPro.TextMeshProUGUI>().text = "Click Isle to select \n Press E to exit control";
+                    }
                 }
                 else
                 { 
@@ -50,6 +70,10 @@ public class MouseClicker : MonoBehaviour
                     {
                         currentIsle.GetComponent<Rigidbody>().isKinematic = true;
                         currentIsle.GetComponent<IslandMovement>().isMoving = false;
+                        particles.Stop();
+                        particlesGlow.Stop();
+                        instructText.GetComponent<TMPro.TextMeshProUGUI>().text = "Click Isle to select \n Press E to exit control";
+                        currentIsle = emptyIsle;
                     }
                 }
             }

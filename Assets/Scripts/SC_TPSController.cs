@@ -32,6 +32,8 @@ public class SC_TPSController : MonoBehaviour
     public float lookSpeed = 2.0f;
     public float lookXLimit = 60.0f;
     private float vSpeed = 0f;
+    public bool turnRight;
+    public bool turnLeft;
 
     public float GroundDistance = 0.2f;
     public LayerMask Ground;
@@ -43,9 +45,9 @@ public class SC_TPSController : MonoBehaviour
     Vector3 moveDirection = Vector3.zero;
     Vector2 rotation = Vector2.zero;
     Vector3 dwn;
-    
 
-    
+
+
     //Boolean that is meant to say if the character can move or not move.
     public bool canMove = true;
 
@@ -56,6 +58,8 @@ public class SC_TPSController : MonoBehaviour
         dwn = transform.TransformDirection(Vector3.down);
         characterController = GetComponent<CharacterController>();
         rotation.y = transform.eulerAngles.y;
+        turnRight = false;
+        turnLeft = false;
     }
 
     void Update()
@@ -69,17 +73,17 @@ public class SC_TPSController : MonoBehaviour
         bool hit = Physics.Raycast(transform.position, dwn, 10);
 
         isGrounded = Physics.CheckSphere(groundChecker.position, GroundDistance, Ground, QueryTriggerInteraction.Ignore);
-            if (isGrounded)
-             {
+        if (isGrounded)
+        {
             // We are grounded, so recalculate move direction based on axes
-                vSpeed = 0;
+            vSpeed = 0;
 
-                if (Input.GetButton("Jump") && canMove)
-                {
-                    vSpeed = jumpSpeed;
+            if (Input.GetButton("Jump") && canMove)
+            {
+                vSpeed = jumpSpeed;
 
-                }
             }
+        }
 
         // Apply gravity. Gravity is multiplied by deltaTime twice (once here, and once below
         // when the moveDirection is multiplied by deltaTime). This is because gravity should be applied
@@ -99,5 +103,25 @@ public class SC_TPSController : MonoBehaviour
             playerCameraParent.localRotation = Quaternion.Euler(rotation.x, 0, 0);
             transform.eulerAngles = new Vector2(0, rotation.y);
         }
+/*
+        if ((rotation.x = Mathf.Clamp(rotation.x, -lookXLimit, lookXLimit)) < 0)
+        {
+            turnRight = true;
+        }
+        else
+        if ((rotation.x = Mathf.Clamp(rotation.x, -lookXLimit, lookXLimit)) > 0)
+        {
+            turnLeft = true;
+        }
+        
+        if ((rotation.x = Mathf.Clamp(rotation.x, -lookXLimit, lookXLimit)) == 0)
+        {
+            turnRight = false;
+            turnLeft = false;
+        }
+*/                 //Come back to later
     }
+
+ 
+
 }

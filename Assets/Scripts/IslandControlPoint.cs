@@ -12,7 +12,7 @@ public class IslandControlPoint : MonoBehaviour
     public GameObject ThirdCam;
     public GameObject FirstCam;
     public int CamMode;
-    private bool triggeractive = false;
+    public bool triggeractive = false;
     public GameObject triggerguiactive;
     public GameObject triggerguideactive;
     public ParticleSystem particles;

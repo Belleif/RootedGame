@@ -32,7 +32,7 @@ public class SettingsMenu : MonoBehaviour
 
     void Start()
     {
-        volume.value = PlayerPrefs.GetFloat("VolumePreference", 0.75f);
+        volume.value = PlayerPrefs.GetFloat("VolumePreference");
         if (PlayerPrefs.GetInt("FullscreenPreference", fullscreencheck) == 1)
         {
             Screen.fullScreen = true;
@@ -65,6 +65,7 @@ public class SettingsMenu : MonoBehaviour
         resolutionDropdown.AddOptions(options);
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
+        LoadSettings();
 
     }
 
@@ -73,18 +74,21 @@ public class SettingsMenu : MonoBehaviour
         Resolution resolution = resolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
         PlayerPrefs.SetInt("ResolutionPreference", resolutionDropdown.value);
+        //Debug.Log("Set Res To Prefs");
     }
 
     public void SetVolume (float sliderVolume)
     {
         audioMixer.SetFloat("volume", Mathf.Log10(sliderVolume) * 20);
         PlayerPrefs.SetFloat("VolumePreference", sliderVolume);
+        //Debug.Log("Set Vol To Prefs " + sliderVolume);
     }
 
     public void SetQuality (int qualityIndex)
     {
         QualitySettings.SetQualityLevel(qualityIndex);
         PlayerPrefs.SetInt("QualityPreference", qualityIndex);
+        //Debug.Log("Set Qual To Prefs " + qualityIndex);
     }
 
     public void SetFullscreen (bool isFullscreen)
@@ -100,6 +104,7 @@ public class SettingsMenu : MonoBehaviour
             fullscreencheck = 0;
         }
         PlayerPrefs.SetInt("FullscreenPreference", fullscreencheck);
+        //Debug.Log("Set Full To Prefs " + fullscreencheck);
     }
 
     public void LoadSettings()

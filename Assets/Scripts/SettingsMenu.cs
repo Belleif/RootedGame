@@ -32,17 +32,7 @@ public class SettingsMenu : MonoBehaviour
 
     void Start()
     {
-        volume.value = PlayerPrefs.GetFloat("VolumePreference");
-        if (PlayerPrefs.GetInt("FullscreenPreference", fullscreencheck) == 1)
-        {
-            Screen.fullScreen = true;
-            FullscreenToggle.isOn = true;
-        }
-        else
-        {
-            Screen.fullScreen = false;
-            FullscreenToggle.isOn = false;
-        }
+        
         resolutionDropdown.ClearOptions();
 
         List<string> options = new List<string>();
@@ -66,6 +56,10 @@ public class SettingsMenu : MonoBehaviour
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
         LoadSettings();
+        if (PlayerPrefs.GetInt("FullscreenPreference", fullscreencheck) == 1)
+            FullscreenToggle.isOn = true;
+        else
+            FullscreenToggle.isOn = false;
 
     }
 
@@ -117,7 +111,7 @@ public class SettingsMenu : MonoBehaviour
         if (PlayerPrefs.HasKey("VolumePreference"))
            volume.value = PlayerPrefs.GetFloat("VolumePreference");
         else
-            volume.value = 1.0f;
+            volume.value = 1.0f; 
 
         if (PlayerPrefs.HasKey("QualityPreference"))
             qualityDropdown.value = PlayerPrefs.GetInt("QualityPreference");

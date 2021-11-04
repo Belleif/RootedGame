@@ -33,16 +33,24 @@ public class AnimationControllerScript : MonoBehaviour
         {
             if (currentlyFalling == false)
             {
-                if (Input.GetKey("w") || Input.GetKey("a") || Input.GetKey("s") || Input.GetKey("d"))
+                if (Input.GetKey("w") || Input.GetKey("a") || Input.GetKey("d") && characterController.isGrounded == true)
                 {
                     animator.SetBool("IsRunning", true);
                 }
-                if (!Input.GetKey("w") && !Input.GetKey("a") && !Input.GetKey("s") && !Input.GetKey("d"))
+                if (!Input.GetKey("w") && !Input.GetKey("a") && !Input.GetKey("d"))
                 {
                     animator.SetBool("IsRunning", false);
                 }
+                if (Input.GetKey("s") && characterController.isGrounded == true)
+                {
+                    animator.SetBool("IsRunback", true);
+                }
+                if (!Input.GetKey("s"))
+                {
+                    animator.SetBool("IsRunback", false);
+                }
 
-                if (Input.GetKey("space"))
+                if (Input.GetKey("space") && characterController.isGrounded == true)
                 {
                     animator.SetBool("IsRunning", false);
                     animator.SetBool("IsJumping", true);
@@ -51,6 +59,26 @@ public class AnimationControllerScript : MonoBehaviour
                 if (!Input.GetKey("space"))
                 {
                     animator.SetBool("IsJumping", false);
+                }
+                if (characterController.turnRight == true)
+                {
+                    animator.SetBool("IsRight", true);
+                }
+                else
+                if (characterController.turnRight == false)
+                {
+                    animator.SetBool("IsRight", false);
+                }
+
+                if (characterController.turnLeft == true)
+                {
+                    animator.SetBool("IsLeft", true);
+                }
+                else
+                if (characterController.turnLeft == false)
+                {
+                    animator.SetBool("IsLeft", false);
+
                 }
             }
             if (player.transform.position.y < fallHeight)

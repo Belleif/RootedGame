@@ -11,23 +11,38 @@ public class EmissionGlow : MonoBehaviour
     public Material[] mats; //These are the materials to be manipulated
     public float speedModifier = 3f; //larger the number, slower the speed
     public Color baseColor = Color.yellow; //This is your color at full blast
+    public bool glowStart = false;
     
     
     // Start is called before the first frame update
     void Start()
     {
+        foreach (Material mat in mats)
+        {
+            mat.SetColor("_EmissionColor", Color.black);
+        }
         //mat = GetComponent<Renderer>().material; //You'd use this if the script was private
     }
 
     // Update is called once per frame
     void Update()
     {
-        float emission = Mathf.PingPong(Time.time, 1.0f * speedModifier);
-
-        Color finalColor = baseColor * Mathf.LinearToGammaSpace(emission);
-        foreach (Material mat in mats)
+        if (glowStart == true)
         {
-            mat.SetColor("_EmissionColor", finalColor);
+            float emission = Mathf.PingPong(Time.time, 1.0f * speedModifier);
+
+            Color finalColor = baseColor * Mathf.LinearToGammaSpace(emission);
+            foreach (Material mat in mats)
+            {
+                mat.SetColor("_EmissionColor", finalColor);
+            }
+        }
+        else
+        {
+            foreach (Material mat in mats)
+            {
+                mat.SetColor("_EmissionColor", Color.black);
+            }
         }
     
     }

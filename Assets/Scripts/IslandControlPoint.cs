@@ -8,7 +8,7 @@ public class IslandControlPoint : MonoBehaviour
     private int currentIslandIndex;
     public SC_TPSController characterController;
     public MouseClicker rayClick;
-
+    public EmissionGlow emissionGlow;
     public GameObject ThirdCam;
     public GameObject FirstCam;
     public int CamMode;
@@ -41,7 +41,7 @@ public class IslandControlPoint : MonoBehaviour
                 Cursor.lockState = CursorLockMode.Confined;
                 ThirdCam.SetActive(false);
                 FirstCam.SetActive(true);
-
+                emissionGlow.glowStart = true;
             }
             else if (Input.GetKeyDown("e") && FirstCam.activeSelf)
             {
@@ -59,6 +59,7 @@ public class IslandControlPoint : MonoBehaviour
                 FirstCam.SetActive(false);
                 particles.Stop();
                 particlesGlow.Stop();
+                emissionGlow.glowStart = false;
             }
         }
     }

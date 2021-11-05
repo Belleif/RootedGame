@@ -121,7 +121,7 @@ public class SettingsMenu : MonoBehaviour
         if (PlayerPrefs.HasKey("FullscreenPreference"))
             fullscreencheck = PlayerPrefs.GetInt("FullscreenPreference");
         else
-            fullscreencheck = 0;    // Is code broken here?------------------------------------------------------------------
+            fullscreencheck = 0;    
         PlayerPrefs.Save();
     }
 

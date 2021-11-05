@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class AnimationControllerScript : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class AnimationControllerScript : MonoBehaviour
     public SC_TPSController characterController;
     public bool canAnimate;
     public bool currentlyFalling;
+    public CinemachineFreeLook camera; 
     // Start is called before the first frame update
     void Start()
     {
@@ -94,6 +96,5 @@ public class AnimationControllerScript : MonoBehaviour
             }
 
         }
-        //Fix to utilize isGrounded method
     }
 }

@@ -103,23 +103,23 @@ public class SC_TPSController : MonoBehaviour
             playerCameraParent.localRotation = Quaternion.Euler(rotation.x, 0, 0);
             transform.eulerAngles = new Vector2(0, rotation.y);
         }
-/*
-        if ((rotation.x = Mathf.Clamp(rotation.x, -lookXLimit, lookXLimit)) < 0)
+
+        if (GetComponent<ThirdPersonCamera>().m_XAxis < 0)
         {
             turnRight = true;
         }
         else
-        if ((rotation.x = Mathf.Clamp(rotation.x, -lookXLimit, lookXLimit)) > 0)
+        if (GetComponent<ThirdPersonCamera>().m_XAxis > 0)
         {
             turnLeft = true;
         }
         
-        if ((rotation.x = Mathf.Clamp(rotation.x, -lookXLimit, lookXLimit)) == 0)
+        if (GetComponent<ThirdPersonCamera>().m_XAxis == 0)
         {
             turnRight = false;
             turnLeft = false;
         }
-*/                 //Come back to later
+
     }
 
  

@@ -51,9 +51,6 @@ public class BossMovement : MonoBehaviour
 
     private void Update()
     {
-        
-        if (!playerSeen && !attackPlayer) 
-            Idle();
         if (playerSeen && !attackPlayer)
             FollowPlayer();
         //if (playerSeen && attackPlayer)
@@ -61,12 +58,6 @@ public class BossMovement : MonoBehaviour
     }
 
 
-    
-
-    private void Idle()
-    {
-        //Set Animation Controller in here for possible Idle stance
-    }
 
 
 
@@ -81,7 +72,7 @@ public class BossMovement : MonoBehaviour
             Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, singleStep, 0.0f);
             transform.rotation = Quaternion.LookRotation(newDirection);
         }
-    }
+    }   
 
    /* private void AttackPlayer()
     {

@@ -29,6 +29,7 @@ public class SettingsMenu : MonoBehaviour
     int currentResolutionIndex = 0;// Moved this one out of resolution selection
     public int fullscreencheck;
     Resolution[] resolutions;
+    public Slider sensitivity;
 
     void Start()
     {
@@ -98,8 +99,13 @@ public class SettingsMenu : MonoBehaviour
             fullscreencheck = 0;
         }
         PlayerPrefs.SetInt("FullscreenPreference", fullscreencheck);
-        //Debug.Log("Set Full To Prefs " + fullscreencheck);
     }
+
+ /*   public void SetSensitivity(float sliderSensitivity)
+    {
+        sensitivity = sliderSensitivity.value;
+        PlayerPrefs.SetFloat("SensitivityPreference", sensitivity);
+    } */
 
     public void LoadSettings()
     {
@@ -111,7 +117,12 @@ public class SettingsMenu : MonoBehaviour
         if (PlayerPrefs.HasKey("VolumePreference"))
            volume.value = PlayerPrefs.GetFloat("VolumePreference");
         else
-            volume.value = 1.0f; 
+            volume.value = 1.0f;
+
+       /* if (PlayerPrefs.HasKey("SensitivityPreference"))
+            sensitivity.value = PlayerPrefs.GetFloat("SensitivityPreference");
+        else
+            sensitivity.value = 1.0f; */
 
         if (PlayerPrefs.HasKey("QualityPreference"))
             qualityDropdown.value = PlayerPrefs.GetInt("QualityPreference");

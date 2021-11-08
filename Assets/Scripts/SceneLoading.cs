@@ -26,7 +26,7 @@ public class SceneLoading : MonoBehaviour
 
         //google AsyncOperation for Unity
         //Hard coded scene 2
-        AsyncOperation gameLevel = SceneManager.LoadSceneAsync(0);
+        AsyncOperation gameLevel = SceneManager.LoadSceneAsync(10);
         //check the load
         while (gameLevel.progress < 1)
         {

@@ -9,6 +9,7 @@ public class TurnBack : MonoBehaviour {
 	[Space(10)]
 	[Header("Toggle for the gui on off")]
 	public bool GuiOn;
+	public bool playerActive = false;
 
 
 	[Space(10)]
@@ -24,18 +25,30 @@ public class TurnBack : MonoBehaviour {
 	[Tooltip("To edit the look of the text Go to Assets > Create > GUIskin. Add the new Guiskin to the Custom Skin proptery. If you select the GUIskin in your project tab you can now adjust the font, colour, size etc of the text")]
 	public GUISkin customSkin;
 
+    private void Update()
+    {
+        if (playerActive && Input.GetKeyDown("e"))
+        {
+			GuiOn = true;
+        }
+    }
 
-
-	// if this script is on an object with a collider display the Gui
-	void OnTriggerEnter() 
+    // if this script is on an object with a collider display the Gui
+    void OnTriggerEnter(Collider other) 
 	{
-		GuiOn = true;
+		if (other.tag == "Player")
+        {
+			playerActive = true;
+        }
 	}
 
-
-	void OnTriggerExit() 
+    void OnTriggerExit(Collider other) 
 	{
-		GuiOn = false;
+		if (other.tag == "Player")
+		{
+			GuiOn = false;
+			playerActive = false;
+		}
 	}
 
 	void OnGUI()

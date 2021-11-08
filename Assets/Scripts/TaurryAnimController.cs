@@ -6,30 +6,42 @@ using UnityEngine.AI;
 public class TaurryAnimController : MonoBehaviour
 {
     Animator animator;
-    public BossMovement bossMove;
-    public BossAttacks bossAttack;
     private GameObject taurry;
+    public double idleTime;
+    public double struggleTime;
 
-    //public BossMovement 
 
     // Start is called before the first frame update
-    void Start()
+        void Start()
     {
-        animator = GetComponent<Animator>();
-        taurry = GameObject.Find("Player");
+        animator = gameObject.GetComponent<Animator>();
+        idleTime = 30;
+        struggleTime = 8.342;
     }
+
 
     // Update is called once per frame
     void Update()
     {
-        if (bossMove.playerSeen == true)
+        if(idleTime > 0)
         {
-            animator.SetBool("isStruggling", true);
+            animator.Play("Taurry_Idle");
+            idleTime -= Time.deltaTime;
+            Debug.Log(idleTime);
         }
-        else
+        if(idleTime <= 0)
         {
-            animator.SetBool("isStruggling", false);
+            animator.Play("Taurry_Struggle");
+            struggleTime -= Time.deltaTime;
+            Debug.Log(struggleTime);
+            if (struggleTime <= 0)
+            {
+                idleTime = 30;
+                struggleTime = 8.342;
+                Debug.Log("Reset");
+            }
         }
     }
+    
 
 }

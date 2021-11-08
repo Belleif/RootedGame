@@ -11,7 +11,6 @@ public class AnimationControllerScript : MonoBehaviour
     public SC_TPSController characterController;
     public bool canAnimate;
     public bool currentlyFalling;
-    public CinemachineFreeLook camera; 
     // Start is called before the first frame update
     void Start()
     {

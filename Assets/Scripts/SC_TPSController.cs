@@ -105,21 +105,21 @@ public class SC_TPSController : MonoBehaviour
             transform.eulerAngles = new Vector2(0, rotation.y);
         }
 
-        //if (GetComponent<ThirdPersonCamera>().m_XAxis < 0)
-        //{
-        //    turnRight = true;
-       // }
-       // else
-       // if (GetComponent<ThirdPersonCamera>().m_XAxis > 0)
-       // {
-       //     turnLeft = true;
-       // }
+       /* if (GetComponent<ThirdPersonCamera>().m_XAxis < 0)
+        {
+            turnRight = true;
+        }
+        else
+        if (GetComponent<ThirdPersonCamera>().m_XAxis > 0)
+        {
+            turnLeft = true;
+        }
         
-       // if (GetComponent<ThirdPersonCamera>().m_XAxis == 0)
-       // {
-        //    turnRight = false;
-       //     turnLeft = false;
-       // }
+        if (GetComponent<ThirdPersonCamera>().m_XAxis == 0)
+        {
+            turnRight = false;
+            turnLeft = false;
+        } */
 
     }
 

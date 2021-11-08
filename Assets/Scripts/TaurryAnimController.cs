@@ -27,18 +27,15 @@ public class TaurryAnimController : MonoBehaviour
         {
             animator.Play("Taurry_Idle");
             idleTime -= Time.deltaTime;
-            Debug.Log(idleTime);
         }
         if(idleTime <= 0)
         {
             animator.Play("Taurry_Struggle");
             struggleTime -= Time.deltaTime;
-            Debug.Log(struggleTime);
             if (struggleTime <= 0)
             {
                 idleTime = 30;
                 struggleTime = 8.342;
-                Debug.Log("Reset");
             }
         }
     }

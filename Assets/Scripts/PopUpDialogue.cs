@@ -7,10 +7,12 @@ public class PopUpDialogue : MonoBehaviour
     public bool playerActive = false;
     public GameObject dialogueActiveGUI;
     public GameObject triggerActiveGUI;
+    public DialogueUI dialogueUI;
+    [SerializeField] private DialogueObject testDialogue;
     // Start is called before the first frame update
     void Start()
     {
-        
+       // ShowDialogue(testDialogue);
     }
 
     // Update is called once per frame
@@ -18,8 +20,8 @@ public class PopUpDialogue : MonoBehaviour
     {
         if (playerActive && Input.GetKeyDown("e"))
         {
-            dialogueActiveGUI.SetActive(true);
             triggerActiveGUI.SetActive(false);
+            dialogueUI.ShowDialogue(testDialogue);
         }
     }
 

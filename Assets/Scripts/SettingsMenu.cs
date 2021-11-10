@@ -31,6 +31,7 @@ public class SettingsMenu : MonoBehaviour
     Resolution[] resolutions;
     public Slider sensitivity;
 
+
     void Start()
     {
         

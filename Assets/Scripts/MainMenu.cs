@@ -6,11 +6,18 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public GameObject mainMenu;
+    public GameObject settingsMenu;
+    public SettingsMenu settings;
+
 
     private void Start()
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.Confined;
+        mainMenu.active = true;
+        settingsMenu.active = false;
+        settings.LoadSettings();
     }
     
     public void PlayGame(int levelNum)
@@ -23,6 +30,18 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene(levelNum);
        // StartCoroutine(Waiter(levelNum));
+    }
+
+    public void SettingsMenu()
+    {
+        mainMenu.active = false;
+        settingsMenu.active = true;
+    }
+
+    public void BackButton()
+    {
+        mainMenu.active = true;
+        settingsMenu.active = false;
     }
 
 

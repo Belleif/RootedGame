@@ -26,29 +26,23 @@ public class SettingsMenu : MonoBehaviour
     public Slider volume;
     public Dropdown qualityDropdown;
     public Toggle FullscreenToggle;
-    int currentResolutionIndex = 0;// Moved this one out of resolution selection
+    public int currentResolutionIndex = 0;
     public int fullscreencheck;
     Resolution[] resolutions;
     public Slider sensitivity;
 
 
     void Start()
-    {
-        
+    { 
+        resolutions = Screen.resolutions;
         resolutionDropdown.ClearOptions();
-
         List<string> options = new List<string>();
 
-        resolutions = Screen.resolutions;
-        Debug.Log(resolutions.Length);
-        
-        for (int i =0; i < resolutions.Length; i++)
+        for (int i = 0; i < resolutions.Length; i++)
         {
-            string option = resolutions[i].width + " x " + resolutions[i].height + " : " + resolutions[i].refreshRate + " hz";
+            string option = resolutions[i].width + " x " + resolutions[i].height;
             options.Add(option);
-            Debug.Log(option);
-            //int Current resolution index was moved from here
-            if (resolutions[i].width == Screen.currentResolution.width && resolutions[i].height == Screen.currentResolution.height && Screen.currentResolution.refreshRate == resolutions[i].refreshRate)
+            if (resolutions[i].width == Screen.currentResolution.width && resolutions[i].height == Screen.currentResolution.height)
             {
                 currentResolutionIndex = i;
             }
@@ -58,6 +52,7 @@ public class SettingsMenu : MonoBehaviour
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
         LoadSettings();
+
         if (PlayerPrefs.GetInt("FullscreenPreference", fullscreencheck) == 1)
             FullscreenToggle.isOn = true;
         else
@@ -102,11 +97,12 @@ public class SettingsMenu : MonoBehaviour
         PlayerPrefs.SetInt("FullscreenPreference", fullscreencheck);
     }
 
- /*   public void SetSensitivity(float sliderSensitivity)
-    {
-        sensitivity = sliderSensitivity.value;
-        PlayerPrefs.SetFloat("SensitivityPreference", sensitivity);
-    } */
+    public void SetSensitivity(float sliderSensitivity)
+    {       
+        sensitivity.value = sliderSensitivity;
+        SC_TPSController.lookSpeed = sensitivity.value;
+        PlayerPrefs.SetFloat("SensitivityPreference", sensitivity.value);
+    } 
 
     public void LoadSettings()
     {
@@ -120,10 +116,10 @@ public class SettingsMenu : MonoBehaviour
         else
             volume.value = 1.0f;
 
-       /* if (PlayerPrefs.HasKey("SensitivityPreference"))
+        if (PlayerPrefs.HasKey("SensitivityPreference"))
             sensitivity.value = PlayerPrefs.GetFloat("SensitivityPreference");
         else
-            sensitivity.value = 1.0f; */
+            sensitivity.value = 1.0f; 
 
         if (PlayerPrefs.HasKey("QualityPreference"))
             qualityDropdown.value = PlayerPrefs.GetInt("QualityPreference");

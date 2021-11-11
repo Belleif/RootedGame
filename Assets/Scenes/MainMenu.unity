@@ -5214,8 +5214,10 @@ MonoBehaviour:
   volume: {fileID: 295710624}
   qualityDropdown: {fileID: 1797792734}
   FullscreenToggle: {fileID: 0}
+  currentResolutionIndex: 0
   fullscreencheck: 0
   sensitivity: {fileID: 0}
+  characterController: {fileID: 0}
 --- !u!1 &1121122382
 GameObject:
   m_ObjectHideFlags: 0
@@ -5596,7 +5598,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 065eec19d575a68448e29aae7cb624c8, type: 3}
     - target: {fileID: 7622679938658889554, guid: c3fd00406c19c2b438f6484022e6618d, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7622679938658889554, guid: c3fd00406c19c2b438f6484022e6618d, type: 3}
       propertyPath: m_LocalScale.x
@@ -5723,8 +5725,10 @@ MonoBehaviour:
   volume: {fileID: 1214985926}
   qualityDropdown: {fileID: 1370124986}
   FullscreenToggle: {fileID: 975141691}
+  currentResolutionIndex: 0
   fullscreencheck: 0
   sensitivity: {fileID: 1821735836}
+  characterController: {fileID: 0}
 --- !u!1 &1206983575
 GameObject:
   m_ObjectHideFlags: 0
@@ -6844,15 +6848,11 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Best
-      m_Image: {fileID: 0}
-    - m_Text: High
+    - m_Text: Low
       m_Image: {fileID: 0}
     - m_Text: Medium
       m_Image: {fileID: 0}
-    - m_Text: Low
-      m_Image: {fileID: 0}
-    - m_Text: Lowest
+    - m_Text: High
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
@@ -6978,7 +6978,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Best
+  m_Text: Low
 --- !u!222 &1374810272
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7093,7 +7093,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1920 X 1080
+  m_Text: 600 x 480
 --- !u!222 &1430757778
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8750,10 +8750,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 1750550547}
   m_HandleRect: {fileID: 1178620330}
   m_Direction: 0
-  m_MinValue: 0.0001
-  m_MaxValue: 1
+  m_MinValue: 1
+  m_MaxValue: 4
   m_WholeNumbers: 0
-  m_Value: 0.5
+  m_Value: 2
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -8853,14 +8853,18 @@ MonoBehaviour:
   m_Interactable: 1
   m_TargetGraphic: {fileID: 1847257719}
   m_Template: {fileID: 43696935}
-  m_CaptionText: {fileID: 0}
+  m_CaptionText: {fileID: 1430757777}
   m_CaptionImage: {fileID: 0}
-  m_ItemText: {fileID: 0}
+  m_ItemText: {fileID: 1502070601}
   m_ItemImage: {fileID: 0}
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: 1920 x 1080
+    - m_Text: 600 x 480
+      m_Image: {fileID: 0}
+    - m_Text: 1024 x 800
+      m_Image: {fileID: 0}
+    - m_Text: 1420 x 960
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:

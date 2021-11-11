@@ -29,7 +29,7 @@ public class SC_TPSController : MonoBehaviour
     public float jumpSpeed = 8.0f;
     public float gravity = 20.0f;
     public Transform playerCameraParent;
-    public float lookSpeed = 2.0f;
+    public static float lookSpeed = 2.0f;
     public float lookXLimit = 60.0f;
     private float vSpeed = 0f;
     public bool turnRight;

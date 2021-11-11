@@ -15,8 +15,8 @@ public class MainMenu : MonoBehaviour
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.Confined;
-        mainMenu.active = true;
-        settingsMenu.active = false;
+        mainMenu.SetActive(true);
+        settingsMenu.SetActive(false);
         settings.LoadSettings();
     }
     
@@ -34,14 +34,14 @@ public class MainMenu : MonoBehaviour
 
     public void SettingsMenu()
     {
-        mainMenu.active = false;
-        settingsMenu.active = true;
+        mainMenu.SetActive(false);
+        settingsMenu.SetActive(true);
     }
 
     public void BackButton()
     {
-        mainMenu.active = true;
-        settingsMenu.active = false;
+        mainMenu.SetActive(true);
+        settingsMenu.SetActive(false);
     }
 
 

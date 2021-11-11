@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 public class MainMenu : MonoBehaviour
@@ -9,6 +10,17 @@ public class MainMenu : MonoBehaviour
     public GameObject mainMenu;
     public GameObject settingsMenu;
     public SettingsMenu settings;
+    public GameObject checkpointsDisabled;
+    public GameObject checkpointsEnabled;
+    public static int oneComplete;
+    public static int twoComplete;
+    public static int threeComplete;
+    public static int fourComplete;
+    public static int fiveComplete;
+    public static int sixComplete;
+    public static int sevenComplete;
+    public static int eightComplete;
+    //Not elegant I know
 
 
     private void Start()
@@ -17,6 +29,8 @@ public class MainMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.Confined;
         mainMenu.SetActive(true);
         settingsMenu.SetActive(false);
+        checkpointsDisabled.SetActive(true);
+        checkpointsEnabled.SetActive(false);
         settings.LoadSettings();
     }
     
@@ -29,7 +43,14 @@ public class MainMenu : MonoBehaviour
     public void LoadLevel(int levelNum)
     {
         SceneManager.LoadScene(levelNum);
-       // StartCoroutine(Waiter(levelNum));
+        // StartCoroutine(Waiter(levelNum));
+        if (PlayerPrefs.GetInt("OneDone") == 1)
+        {
+            checkpointsDisabled.SetActive(false);
+            checkpointsEnabled.SetActive(true);
+        }
+
+
     }
 
     public void SettingsMenu()

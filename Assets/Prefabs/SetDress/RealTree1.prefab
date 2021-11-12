@@ -11,8 +11,6 @@ GameObject:
   - component: {fileID: 7680163550998994031}
   - component: {fileID: 6717883673548264394}
   - component: {fileID: 8853585189724317440}
-  - component: {fileID: 6422401751302728652}
-  - component: {fileID: 5790959376439232014}
   - component: {fileID: 2445047177583236330}
   - component: {fileID: 712305543610829495}
   m_Layer: 6
@@ -29,13 +27,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7052281472232900309}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -43.72104, y: 18.441156, z: -2.2978516}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &6717883673548264394
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -85,34 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &6422401751302728652
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7052281472232900309}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.48
-  m_Height: 4.93
-  m_Direction: 2
-  m_Center: {x: -0.42, y: -0.03, z: 2.03}
---- !u!136 &5790959376439232014
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7052281472232900309}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.48
-  m_Height: 2.64
-  m_Direction: 2
-  m_Center: {x: -0.11, y: -0.03, z: 0.53}
 --- !u!136 &2445047177583236330
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -123,10 +93,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.48
-  m_Height: 2.64
+  m_Radius: 0.62
+  m_Height: 4.39
   m_Direction: 2
-  m_Center: {x: -0.71, y: -0.03, z: 3.4}
+  m_Center: {x: -0.29, y: -0.03, z: 1.78}
 --- !u!135 &712305543610829495
 SphereCollider:
   m_ObjectHideFlags: 0

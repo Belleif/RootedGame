@@ -25,16 +25,19 @@ public class NextLevelTransfer : MonoBehaviour
         {
             MainMenu.oneComplete = 1;
             PlayerPrefs.SetInt("OneDone", MainMenu.oneComplete);
+            Debug.Log("Level One Done");
         }
         if (levelBeat == 2)
         {
             MainMenu.twoComplete = 1;
             PlayerPrefs.SetInt("TwoDone", MainMenu.twoComplete);
+            Debug.Log("Level Two Done");
         }
         if (levelBeat == 3)
         {
             MainMenu.threeComplete = 1;
             PlayerPrefs.SetInt("ThreeDone", MainMenu.threeComplete);
+            Debug.Log("Level Three Done");
         }
         if (levelBeat == 4)
         {

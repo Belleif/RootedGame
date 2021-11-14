@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7219660523135031984
+--- !u!1 &5224271124485130836
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,48 +8,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8032928950809231370}
-  - component: {fileID: 6401138750086221743}
-  - component: {fileID: 9165281052198992741}
-  - component: {fileID: 925367285835671625}
-  - component: {fileID: 3312191806599336740}
-  - component: {fileID: 918786037390401858}
+  - component: {fileID: 4885145847764095214}
+  - component: {fileID: 8386931559742775115}
+  - component: {fileID: 6016996675198643073}
+  - component: {fileID: 6116107739597814006}
+  - component: {fileID: 5570603796476094533}
   m_Layer: 6
-  m_Name: Tree5
+  m_Name: LowPolyTree1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8032928950809231370
+--- !u!4 &4885145847764095214
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7219660523135031984}
-  m_LocalRotation: {x: 0.000000081460335, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.031798, y: 96.50339, z: 90.97689}
+  m_GameObject: {fileID: 5224271124485130836}
+  m_LocalRotation: {x: 0.000000081460335, y: 0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.428741, y: 98.43046, z: 92.63268}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &6401138750086221743
+--- !u!33 &8386931559742775115
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7219660523135031984}
-  m_Mesh: {fileID: -434088162920044750, guid: b63a5a5a9ee7423449eb3cc12652d6de, type: 3}
---- !u!23 &9165281052198992741
+  m_GameObject: {fileID: 5224271124485130836}
+  m_Mesh: {fileID: -3142649664740890969, guid: dd8356cda369d014ca08fbff549805df, type: 3}
+--- !u!23 &6016996675198643073
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7219660523135031984}
+  m_GameObject: {fileID: 5224271124485130836}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -84,44 +83,30 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &925367285835671625
+--- !u!136 &6116107739597814006
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7219660523135031984}
+  m_GameObject: {fileID: 5224271124485130836}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.53599644
-  m_Height: 7.404259
+  m_Radius: 0.68
+  m_Height: 4.407753
   m_Direction: 1
-  m_Center: {x: 0.35339832, y: 3.667102, z: -0.04}
---- !u!136 &3312191806599336740
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7219660523135031984}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5883636
-  m_Height: 8.908455
-  m_Direction: 1
-  m_Center: {x: -0.66836363, y: 4.46, z: -0.02}
---- !u!135 &918786037390401858
+  m_Center: {x: -0.08864081, y: 1.8282886, z: -0.02}
+--- !u!135 &5570603796476094533
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7219660523135031984}
+  m_GameObject: {fileID: 5224271124485130836}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.86
-  m_Center: {x: -0.22, y: 7.15, z: 0.33}
+  m_Radius: 1.71
+  m_Center: {x: -0.2, y: 4.99, z: -0.18}

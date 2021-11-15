@@ -445,6 +445,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d12734272cf879b48bcf91ad5cbb77d2, type: 3}
+--- !u!4 &1766342595 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7958581793109504998, guid: d12734272cf879b48bcf91ad5cbb77d2, type: 3}
+  m_PrefabInstance: {fileID: 1766342594}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1835650279
 GameObject:
   m_ObjectHideFlags: 0
@@ -643,7 +648,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f18a60893d0bfd74c96c6d047791bfa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClips: []
+  audioClips:
+  - {fileID: 8300000, guid: eca4cebd0c20b1d478950badb259381e, type: 3}
+  - {fileID: 8300000, guid: 6ae13b50b18936d4da9abf24d9dd802a, type: 3}
+  - {fileID: 8300000, guid: 6369b80ef0abbb748b0a27ea7e7ca349, type: 3}
+  - {fileID: 8300000, guid: c702b9f611c91fe4fa303656075ff5f6, type: 3}
   currentClip: {fileID: 0}
   source: {fileID: 2013577868}
   minWaitBetweenPlays: 1
@@ -661,7 +670,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.204
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -669,7 +678,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.63620377
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -752,12 +761,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2013577866}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 191.26, y: 46.3, z: -51.39}
+  m_LocalRotation: {x: -0, y: 0.70710677, z: -0, w: 0.7071069}
+  m_LocalPosition: {x: -0.004, y: 1.318, z: 0.124}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_Father: {fileID: 1766342595}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2118374403
 GameObject:

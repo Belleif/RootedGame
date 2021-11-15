@@ -9,6 +9,9 @@ public class MainMenu : MonoBehaviour
 {
     public GameObject mainMenu;
     public GameObject settingsMenu;
+    public GameObject checkpointsMenu;
+    public GameObject controlsMenu;
+    public GameObject creditsMenu;
     public SettingsMenu settings;
     public GameObject checkpointsDisabled;
     public GameObject checkpointsEnabled;
@@ -29,8 +32,11 @@ public class MainMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.Confined;
         mainMenu.SetActive(true);
         settingsMenu.SetActive(false);
+        controlsMenu.SetActive(false);
+        creditsMenu.SetActive(false);
+        checkpointsMenu.SetActive(false);
         checkpointsDisabled.SetActive(true);
-        checkpointsEnabled.SetActive(false);
+        //checkpointsEnabled.SetActive(false);
         settings.LoadSettings();
     }
     
@@ -47,7 +53,7 @@ public class MainMenu : MonoBehaviour
         if (PlayerPrefs.GetInt("OneDone") == 1)
         {
             checkpointsDisabled.SetActive(false);
-            checkpointsEnabled.SetActive(true);
+            //checkpointsEnabled.SetActive(true);
         }
 
 
@@ -58,11 +64,29 @@ public class MainMenu : MonoBehaviour
         mainMenu.SetActive(false);
         settingsMenu.SetActive(true);
     }
+    public void CheckpointsMenu()
+    {
+        mainMenu.SetActive(false);
+        checkpointsMenu.SetActive(true);
+    }
+    public void ControlsMenu()
+    {
+        mainMenu.SetActive(false);
+        controlsMenu.SetActive(true);
+    }
+    public  void CreditsMenu()
+    {
+        mainMenu.SetActive(false);
+        creditsMenu.SetActive(true);
+    }
 
     public void BackButton()
     {
         mainMenu.SetActive(true);
         settingsMenu.SetActive(false);
+        controlsMenu.SetActive(false);
+        checkpointsMenu.SetActive(false);
+        creditsMenu.SetActive(false);
     }
 
 

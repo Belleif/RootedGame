@@ -21,35 +21,35 @@ public class NextLevelTransfer : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         int levelBeat = SceneManager.GetActiveScene().buildIndex;
-        if (levelBeat == 1)
+        if (levelBeat == 3)
         {
             MainMenu.oneComplete = 1;
             PlayerPrefs.SetInt("OneDone", MainMenu.oneComplete);
             Debug.Log("Level One Done");
         }
-        if (levelBeat == 2)
+        if (levelBeat == 4)
         {
             MainMenu.twoComplete = 1;
             PlayerPrefs.SetInt("TwoDone", MainMenu.twoComplete);
             Debug.Log("Level Two Done");
         }
-        if (levelBeat == 3)
+        if (levelBeat == 5)
         {
             MainMenu.threeComplete = 1;
             PlayerPrefs.SetInt("ThreeDone", MainMenu.threeComplete);
             Debug.Log("Level Three Done");
         }
-        if (levelBeat == 4)
+        if (levelBeat == 6)
         {
             MainMenu.fourComplete = 1;
             PlayerPrefs.SetInt("FourDone", MainMenu.fourComplete);
         }
-        if (levelBeat == 5)
+        if (levelBeat == 7)
         {
             MainMenu.fiveComplete = 1;
             PlayerPrefs.SetInt("FiveDone", MainMenu.fiveComplete);
         }
-        if (levelBeat == 6)
+        if (levelBeat == 8)
         {
             MainMenu.sixComplete = 1;
             PlayerPrefs.SetInt("SixDone", MainMenu.sixComplete);

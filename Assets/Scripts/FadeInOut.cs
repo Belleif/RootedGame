@@ -29,7 +29,7 @@ public class FadeInOut : MonoBehaviour
     /// </summary>
     /// 
 
-
+    //Maybe use an (ienumerable)  or ienumerator
 
     public Image theImage;
     // Start is called before the first frame update

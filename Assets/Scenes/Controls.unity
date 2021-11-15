@@ -572,6 +572,7 @@ GameObject:
   - component: {fileID: 7488245399091971435}
   - component: {fileID: 8133008626985077840}
   - component: {fileID: 431922273549944856}
+  - component: {fileID: 431922273549944855}
   m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
@@ -579,6 +580,36 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &431922273549944855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431922273549944854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.003921569}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!114 &431922273549944856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -626,7 +657,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 394, y: -336}
-  m_SizeDelta: {x: 174.90002, y: 117.26999}
+  m_SizeDelta: {x: 165.1, y: 64.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1116417729196737840
 MonoBehaviour:
@@ -1827,7 +1858,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -88, y: 45}
+  m_AnchoredPosition: {x: -88, y: 32}
   m_SizeDelta: {x: 201.13, y: 71.87}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &8629085406867818004
@@ -1972,6 +2003,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: affcdfc604c5d3640b51dfb1c4bff3c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainMenu: {fileID: 0}
+  settingsMenu: {fileID: 0}
+  settings: {fileID: 0}
+  checkpointsDisabled: {fileID: 0}
+  checkpointsEnabled: {fileID: 0}
 --- !u!114 &8665477343562479441
 MonoBehaviour:
   m_ObjectHideFlags: 0

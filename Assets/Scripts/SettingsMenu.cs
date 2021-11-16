@@ -62,9 +62,9 @@ public class SettingsMenu : MonoBehaviour
 
     public void SetResolution (int resolutionIndex)
     {
-        Resolution resolution = resolutions[resolutionIndex];
-        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
-        PlayerPrefs.SetInt("ResolutionPreference", resolutionDropdown.value);
+        //Resolution resolution = resolutions[resolutionIndex];
+        //Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+        //PlayerPrefs.SetInt("ResolutionPreference", resolutionDropdown.value);
         //Debug.Log("Set Res To Prefs");
     }
 

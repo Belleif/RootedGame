@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -340,239 +340,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 203873375}
   m_CullTransparentMesh: 1
---- !u!1 &372500925
-GameObject:
+--- !u!1001 &436767726
+PrefabInstance:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 372500926}
-  - component: {fileID: 372500927}
-  m_Layer: 0
-  m_Name: CreditsList
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &372500926
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 372500925}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 211.9252, y: -880, z: 0}
-  m_LocalScale: {x: 108.01111, y: 108.01111, z: 108.01111}
-  m_Children:
-  - {fileID: 1172278351}
-  - {fileID: 1023440431}
-  - {fileID: 1142010475}
-  m_Father: {fileID: 6019741749809963408}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &372500927
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 372500925}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c57c6b0054730034ca337c82c818ba43, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!1 &1023440430
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1023440431}
-  - component: {fileID: 1023440433}
-  - component: {fileID: 1023440432}
-  m_Layer: 5
-  m_Name: Credits 2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1023440431
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1023440430}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.009258307, y: 0.009258307, z: 0.009258307}
-  m_Children: []
-  m_Father: {fileID: 372500926}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.3785858, y: -23.609022}
-  m_SizeDelta: {x: 397.09, y: 6220}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1023440432
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1023440430}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
-    m_FontStyle: 1
-    m_BestFit: 0
-    m_MinSize: 4
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: "\n\n\n\n\n\n\n\nBriana Vnuk\nMatthew Eberle\nAndy Vasquez\n\n\n\n\n\n\nAndrew
-    Vasquez\n\nAndrew Vasquez\nAnthony Banchs\nLauren Estrada\nBriana Vnuk\n\nAndrew
-    Vasquez\nMarco Konradi\nMatthew Eberle\n\nMatthew Eberle\nAndrew Vasquez\nAna
-    Wallace\nBofei Hu\nLauren Estrada\nMarco Torres\n\nBofei Hu\nAnthony Banchs\n\nJoey
-    Meyer\nDeven Zimmer\n\nAndrew Vasquez\n\nAndrew Vasquez\n\nJonathan Sanchez\n\n\n\n\n\n\n\nAndrew
-    Vasquez\nMarco Konradi\n\nMatthew Eberle\n\n\n\n\n\n\n\n\nZachary Hall\n\nZachary
-    Hall\r\nJoseph Meyer\nDeven \rZimmer\nDaniel\r Hernandez\nJustin Candelario\r\n\nJoseph
-    Meyer\nJonathan Sanchez\nJustin Candelario\n\nJohn Trowbridge\n\nJoseph Meyer\n\n\n\n\n\n\n\nJohn
-    Trowbridge\n\nJack Boland\nJustus Nicholas\n\n\n\n\n\n\n\nJohn Trowbridge\n\nDaniel
-    Hernandez\n\nAndrew Vasquez\nMatthew Eberle\nLauren Estrada\n\n\n\n\n\n\n\nMatthew
-    Eberle\n\nMatthew Eberle\n\nMatthew Eberle\n\n\n\nGAME SIM NVC PRODUCTIONS"
---- !u!222 &1023440433
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1023440430}
-  m_CullTransparentMesh: 1
---- !u!1 &1142010474
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1142010475}
-  - component: {fileID: 1142010477}
-  - component: {fileID: 1142010476}
-  m_Layer: 5
-  m_Name: Credits 3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1142010475
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1142010474}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.009258307, y: 0.009258307, z: 0.009258307}
-  m_Children: []
-  m_Father: {fileID: 372500926}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5.25, y: -23.609999}
-  m_SizeDelta: {x: 473.81, y: 6220}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1142010476
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1142010474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
-    m_FontStyle: 1
-    m_BestFit: 0
-    m_MinSize: 4
-    m_MaxSize: 40
-    m_Alignment: 1
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: '
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6019741749809963408}
+    m_Modifications:
+    - target: {fileID: 3525325409628400084, guid: 89b01359bc9bc3542ad77992bd814585, type: 3}
+      propertyPath: m_Text
+      value: '
 
 
 
 
 
-    CAST
 
 
 
+        CAST
 
 
 
 
 
 
-    ART
 
 
 
 
+        ART
 
 
 
@@ -605,11 +402,11 @@ MonoBehaviour:
 
 
 
-    SOUND
 
 
 
 
+        SOUND
 
 
 
@@ -618,13 +415,13 @@ MonoBehaviour:
 
 
 
-    LEVEL
-    DESIGN
 
 
 
 
 
+        LEVEL
+        DESIGN
 
 
 
@@ -642,7 +439,6 @@ MonoBehaviour:
 
 
 
-    PROGRAMMING
 
 
 
@@ -650,11 +446,11 @@ MonoBehaviour:
 
 
 
+        PROGRAMMING
 
 
 
 
-    QA TEAM
 
 
 
@@ -663,13 +459,24 @@ MonoBehaviour:
 
 
 
+        QA
+        TEAM
 
 
 
 
 
 
-    PRODUCTION
+
+
+
+
+
+
+
+
+
+        PRODUCTION
 
 
 
@@ -683,100 +490,87 @@ MonoBehaviour:
 
 
 '
---- !u!222 &1142010477
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+      objectReference: {fileID: 0}
+    - target: {fileID: 3525325409640060904, guid: 89b01359bc9bc3542ad77992bd814585, type: 3}
+      propertyPath: m_Text
+      value: "STUDIO PAPERWIND\n\nROOTED\n\n\n\n\n\n\n\nPhoebe Mae\nTaurry\n\n\n\n\n\n\n\n\nLead
+        Artist\n\nStoryboard Artist\n\n\nAnimator\n\n\n\n3D Modeller\n\n\n\n\n\n\n\n\n\n\nTechnical
+        Artist\n\nGUI Artist\n\nGraphic Artist\n\nLighting Artist\n\n\n\n\n\n\n\n\n\nSound
+        Engineer\n\n\nMusic Composition\n\n\n\n\n\n\n\n\n\nLead Level Designer\n\nLevel
+        Designer\n\n\n\n\n\nLevel Builder\n\n\n\nUnity Developer\n\nAsset Importer\n\n\n\n\n\n\n\n\n\nLead
+        Programmer\n\nProgrammer\n\n\n\n\n\n\n\n\n\nBuild Manager\n\nTesting Manager\n\nQuality
+        Checker\n\n\n\n\n\n\n\n\n\n\nWriter\n\nProducer/Product Owner\n\nProject
+        Manager\n\n\n\nCOPYRIGHT \xA9 2021"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3525325410048863624, guid: 89b01359bc9bc3542ad77992bd814585, type: 3}
+      propertyPath: m_Text
+      value: "\n\n\n\n\n\n\n\n\n\nBriana Vnuk\nMatthew Eberle\n\n\n\n\n\n\n\n\nAndrew
+        Vasquez\n\nLauren Estrada\n\n\nAndrew Vasquez\nMarco Konradi\nMatthew Eberle\n\nMatthew
+        Eberle\nAndrew Vasquez\nAna Wallace\nBofei Hu\nLauren Estrada\nMarco Torres\nMarco
+        Konradi\nAnthony Banchs\nBriana Vnuk\n\n\nJoseph Meyer\n\nAndrew Vasquez\n\nAndrew
+        Vasquez\n\nJonathan Sanchez\n\n\n\n\n\n\n\n\n\nAndrew Vasquez\nMarco Konradi\n\nMatthew
+        Eberle\n\n\n\n\n\n\n\n\n\nZachary Hall\n\nZachary Hall\r\nJoseph Meyer\nDeven
+        \rZimmer\nDaniel\r Hernandez\nJustin Candelario\r\n\nJoseph Meyer\nJonathan
+        Sanchez\nJustin Candelario\n\nJohn Trowbridge\n\nJoseph Meyer\n\n\n\n\n\n\n\n\n\nJohn
+        Trowbridge\n\nJack Boland\nJustus Nicholas\n\n\n\n\n\n\n\n\nJohn Trowbridge\n\nDaniel
+        Hernandez\n\nAndrew Vasquez\nMatthew Eberle\n\n\n\n\n\n\n\n\n\nMatthew Eberle\n\nMatthew
+        Eberle\n\nMatthew Eberle\n\n\n\nGAME SIM NVC PRODUCTIONS"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3525325410402136581, guid: 89b01359bc9bc3542ad77992bd814585, type: 3}
+      propertyPath: m_Name
+      value: CreditsList
+      objectReference: {fileID: 0}
+    - target: {fileID: 3525325410402136582, guid: 89b01359bc9bc3542ad77992bd814585, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3525325410402136582, guid: 89b01359bc9bc3542ad77992bd814585, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 211.9252
+      objectReference: {fileID: 0}
+    - target: {fileID: 3525325410402136582, guid: 89b01359bc9bc3542ad77992bd814585, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -880
+      objectReference: {fileID: 0}
+    - target: {fileID: 3525325410402136582, guid: 89b01359bc9bc3542ad77992bd814585, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3525325410402136582, guid: 89b01359bc9bc3542ad77992bd814585, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3525325410402136582, guid: 89b01359bc9bc3542ad77992bd814585, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3525325410402136582, guid: 89b01359bc9bc3542ad77992bd814585, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3525325410402136582, guid: 89b01359bc9bc3542ad77992bd814585, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3525325410402136582, guid: 89b01359bc9bc3542ad77992bd814585, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3525325410402136582, guid: 89b01359bc9bc3542ad77992bd814585, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3525325410402136582, guid: 89b01359bc9bc3542ad77992bd814585, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 89b01359bc9bc3542ad77992bd814585, type: 3}
+--- !u!4 &436767727 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3525325410402136582, guid: 89b01359bc9bc3542ad77992bd814585, type: 3}
+  m_PrefabInstance: {fileID: 436767726}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1142010474}
-  m_CullTransparentMesh: 1
---- !u!1 &1172278350
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1172278351}
-  - component: {fileID: 1172278353}
-  - component: {fileID: 1172278352}
-  m_Layer: 5
-  m_Name: Credits
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1172278351
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1172278350}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.009258307, y: 0.009258307, z: 0.009258307}
-  m_Children: []
-  m_Father: {fileID: 372500926}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -7.7128296, y: -23.61}
-  m_SizeDelta: {x: 473.81, y: 6220}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1172278352
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1172278350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
-    m_FontStyle: 1
-    m_BestFit: 0
-    m_MinSize: 4
-    m_MaxSize: 40
-    m_Alignment: 2
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: "PAPERWIND STUDIO\n\nROOTED\n\n\n\n\n\nPhoebe\nTaurry\n\n\n\n\n\n\n\nLead
-    Artist\n\nStoryboard Artist\n\n\n\n\nAnimator\n\n\n\n3D Modeller\n\n\n\n\n\n\nTexture
-    Artist\n\n\nTechnical Artist\n\n\nGUI Artist\n\nGraphic Artist\n\nLighting Artist\n\n\n\n\n\n\n\nSound
-    Engineer\n\n\nMusic Composition\n\n\n\n\n\n\n\n\nLead Level Designer\n\nLevel
-    Designer\n\n\n\n\n\nLevel Builder\n\n\n\nUnity Developer\n\nAsset Importer\n\n\n\n\n\n\n\nLead
-    Programmer\n\nProgrammer\n\n\n\n\n\n\n\n\nBuild Manager\n\nTesting Manager\n\nQuality
-    Checker\n\n\n\n\n\n\n\n\n\nWriter\n\nProducer/Product Owner\n\nProject Manager\n\n\n\nCOPYRIGHT
-    \xA9 2021"
---- !u!222 &1172278353
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1172278350}
-  m_CullTransparentMesh: 1
 --- !u!1 &1241680509
 GameObject:
   m_ObjectHideFlags: 0
@@ -1977,7 +1771,7 @@ RectTransform:
   m_Children:
   - {fileID: 203873376}
   - {fileID: 6430205408444433694}
-  - {fileID: 372500926}
+  - {fileID: 436767727}
   - {fileID: 1541927504}
   - {fileID: 1247518853}
   m_Father: {fileID: 6667487284473751380}
@@ -2065,6 +1859,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMenu: {fileID: 0}
   settingsMenu: {fileID: 0}
+  checkpointsMenu: {fileID: 0}
+  controlsMenu: {fileID: 0}
+  creditsMenu: {fileID: 0}
   settings: {fileID: 0}
   checkpointsDisabled: {fileID: 0}
   checkpointsEnabled: {fileID: 0}

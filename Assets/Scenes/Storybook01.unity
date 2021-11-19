@@ -4531,6 +4531,8 @@ PlayableDirector:
     value: {fileID: 978505260}
   - key: {fileID: -9116678681972400189, guid: d5a913ffb8f8330449e253858e20ff32, type: 2}
     value: {fileID: 4153221300296940265}
+  - key: {fileID: -3587155482733860221, guid: d5a913ffb8f8330449e253858e20ff32, type: 2}
+    value: {fileID: 4153221300296940266}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1288179603
@@ -4767,7 +4769,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1466004065}
   m_Layer: 5
-  m_Name: Line
+  m_Name: Lines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5872,6 +5874,7 @@ GameObject:
   - component: {fileID: 5900193626441411845}
   - component: {fileID: 7854533547296429135}
   - component: {fileID: 4153221300296940265}
+  - component: {fileID: 4153221300296940266}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5891,7 +5894,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: 5fbbf6c65d7ba4b4aaaacf09537c944c, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -5975,6 +5978,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &4153221300296940266
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4153221300296940264}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 433744415ae06f343bb9be3f5b0e3422, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!20 &5900193626441411845
 Camera:
   m_ObjectHideFlags: 0
@@ -6025,7 +6047,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4153221300296940264}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []

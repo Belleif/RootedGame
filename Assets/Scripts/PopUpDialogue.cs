@@ -5,7 +5,6 @@ using UnityEngine;
 public class PopUpDialogue : MonoBehaviour
 {
     public bool playerActive = false;
-    public GameObject dialogueActiveGUI;
     public DialogueUI dialogueUI;
     public DialogueObject testDialogue;
     // Start is called before the first frame update

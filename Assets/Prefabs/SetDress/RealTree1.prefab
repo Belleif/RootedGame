@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8853585189724317440}
   - component: {fileID: 2445047177583236330}
   - component: {fileID: 712305543610829495}
+  - component: {fileID: 770230903296326024}
   m_Layer: 6
   m_Name: RealTree1
   m_TagString: Untagged
@@ -95,8 +96,8 @@ CapsuleCollider:
   m_Enabled: 1
   m_Radius: 0.62
   m_Height: 4.39
-  m_Direction: 2
-  m_Center: {x: -0.29, y: -0.03, z: 1.78}
+  m_Direction: 1
+  m_Center: {x: -0.29, y: 1.85, z: 0.01}
 --- !u!135 &712305543610829495
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -109,4 +110,18 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 1.87
-  m_Center: {x: -0.53, y: -0.21, z: 4.58}
+  m_Center: {x: -0.53, y: 4.76, z: 0.12}
+--- !u!64 &770230903296326024
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7052281472232900309}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5544339737444887845, guid: 65d29e859226cc946af6cc3426156d3d, type: 3}

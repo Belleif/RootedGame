@@ -17,27 +17,18 @@ public class PopUpDialogue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerActive == true)
-        {
-            dialogueUI.ShowDialogue(testDialogue);
-        }
+        
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
-            playerActive = true;
-        }
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        if (other.tag == "Player")
-        {
-            //dialogueActiveGUI.SetActive(false);
-            //dialogueUI.CloseDialogueBox();
-            playerActive = false;
+            if (playerActive == false)
+            {
+                dialogueUI.ShowDialogue(testDialogue);
+                playerActive = true;
+            }
         }
     }
 }

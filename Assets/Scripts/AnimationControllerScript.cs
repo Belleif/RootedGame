@@ -11,6 +11,7 @@ public class AnimationControllerScript : MonoBehaviour
     public SC_TPSController characterController;
     public bool canAnimate;
     public bool currentlyFalling;
+    public bool isIdle;
     // Start is called before the first frame update
     void Start()
     {
@@ -63,8 +64,8 @@ public class AnimationControllerScript : MonoBehaviour
                 } */
                 if (characterController.isGrounded == true)
                 {
-                    animator.GetComponent<Animator>().enabled = false;
-                    animator.GetComponent<Animator>().enabled = true;
+                    animator.enabled = false;
+                    animator.enabled = true;
                 }
                 if (characterController.turnRight == true)
                 {

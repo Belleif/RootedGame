@@ -42,7 +42,7 @@ public class IslandMovement : MonoBehaviour
         {
             if (moveX)
             {
-                x = Input.GetAxis("Horizontal");
+                x = Input.GetAxis("Vertical");
                 z = 0;
                 y = 0;
             }

@@ -25,7 +25,9 @@ public class AnimationControllerScript : MonoBehaviour
     {
         //Checks if character is controlling islands
         if (characterController.canMove == false)
+        {
             canAnimate = false;
+        } 
         else 
             canAnimate = true;
 

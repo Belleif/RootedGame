@@ -5,12 +5,13 @@ using UnityEngine;
 public class PopUpDialogue : MonoBehaviour
 {
     public bool playerActive = false;
+    public Animator charAnim;
     public DialogueUI dialogueUI;
     public DialogueObject testDialogue;
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -25,6 +26,7 @@ public class PopUpDialogue : MonoBehaviour
         {
             if (playerActive == false)
             {
+                charAnim.SetBool("IsRunning", false);
                 dialogueUI.ShowDialogue(testDialogue);
                 playerActive = true;
             }

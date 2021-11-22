@@ -7,6 +7,7 @@ public class DialogueUI : MonoBehaviour
 {
     public PopUpDialogue popUpDialogue;
     public SC_TPSController charControl;
+    public AnimationControllerScript charAnimScript;
     [SerializeField] private GameObject dialogueBox;
     [SerializeField] private TMP_Text textLabel;
 

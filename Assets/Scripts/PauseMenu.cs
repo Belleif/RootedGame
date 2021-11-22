@@ -11,6 +11,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuUI;
     public GameObject settingsMenuUI;
     public SC_TPSController charControl;
+    public AnimationControllerScript charAnimScript;
     public GameObject ThirdCam;
 
     // Start is called before the first frame update
@@ -24,16 +25,19 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (charAnimScript.canAnimate == true)
         {
-            Debug.Log("paused");
-            if (GameIsPaused)
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
-                Resume();
-            }
-            else
-            {
-                Pause();
+                Debug.Log("paused");
+                if (GameIsPaused)
+                {
+                    Resume();
+                }
+                else
+                {
+                    Pause();
+                }
             }
         }
     }

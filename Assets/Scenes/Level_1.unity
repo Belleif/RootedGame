@@ -2716,6 +2716,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7958581793109504998, guid: d12734272cf879b48bcf91ad5cbb77d2, type: 3}
   m_PrefabInstance: {fileID: 7958581791666276110}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &284453261 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7958581793109505000, guid: d12734272cf879b48bcf91ad5cbb77d2, type: 3}
+  m_PrefabInstance: {fileID: 7958581791666276110}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 284453257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c510b70ee9f73c4eaaf9a4020288f03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &284453262 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 7958581793109505003, guid: d12734272cf879b48bcf91ad5cbb77d2, type: 3}
@@ -3820,6 +3831,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerActive: 0
   charAnim: {fileID: 284453262}
+  charAnimScript: {fileID: 0}
   dialogueUI: {fileID: 1663503593}
   testDialogue: {fileID: 11400000, guid: fb4308d55fad0df4dbd725349d97559b, type: 2}
 --- !u!65 &385046834
@@ -6241,6 +6253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popUpDialogue: {fileID: 0}
   charControl: {fileID: 0}
+  charAnimScript: {fileID: 0}
   dialogueBox: {fileID: 1501426434}
   textLabel: {fileID: 764061783}
 --- !u!1 &583429501
@@ -8731,6 +8744,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popUpDialogue: {fileID: 893023186}
   charControl: {fileID: 1443362019}
+  charAnimScript: {fileID: 284453261}
   dialogueBox: {fileID: 1075980910}
   textLabel: {fileID: 1246383060}
 --- !u!224 &873111268
@@ -9217,6 +9231,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerActive: 0
   charAnim: {fileID: 284453262}
+  charAnimScript: {fileID: 0}
   dialogueUI: {fileID: 873111267}
   testDialogue: {fileID: 11400000, guid: 66b996dcf0c416f479bd577921d621f1, type: 2}
 --- !u!65 &893023187
@@ -10082,6 +10097,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerActive: 0
   charAnim: {fileID: 0}
+  charAnimScript: {fileID: 0}
   dialogueUI: {fileID: 573653177}
   testDialogue: {fileID: 11400000, guid: 52bc578dcdd6db14ea2449d212a07b90, type: 2}
 --- !u!114 &992011065
@@ -12203,6 +12219,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerActive: 0
   charAnim: {fileID: 284453262}
+  charAnimScript: {fileID: 0}
   dialogueUI: {fileID: 1292484351}
   testDialogue: {fileID: 11400000, guid: 24cd9193128e6054eb1fb5989b707ecb, type: 2}
 --- !u!65 &1176574488
@@ -13780,6 +13797,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popUpDialogue: {fileID: 1176574487}
   charControl: {fileID: 1443362019}
+  charAnimScript: {fileID: 284453261}
   dialogueBox: {fileID: 2040929027}
   textLabel: {fileID: 264433098}
 --- !u!224 &1292484352
@@ -17647,6 +17665,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popUpDialogue: {fileID: 385046833}
   charControl: {fileID: 1443362019}
+  charAnimScript: {fileID: 284453261}
   dialogueBox: {fileID: 1487997956}
   textLabel: {fileID: 1713428256}
 --- !u!224 &1663503594
@@ -22688,6 +22707,10 @@ PrefabInstance:
       propertyPath: charControl
       value: 
       objectReference: {fileID: 1443362019}
+    - target: {fileID: 5934670582338147809, guid: 2a877559d40fb8a4d9cc1d3455ba0456, type: 3}
+      propertyPath: charAnimScript
+      value: 
+      objectReference: {fileID: 284453261}
     - target: {fileID: 6082241319408999471, guid: 2a877559d40fb8a4d9cc1d3455ba0456, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

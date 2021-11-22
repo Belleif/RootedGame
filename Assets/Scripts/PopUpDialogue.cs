@@ -6,6 +6,7 @@ public class PopUpDialogue : MonoBehaviour
 {
     public bool playerActive = false;
     public Animator charAnim;
+    public AnimationControllerScript charAnimScript;
     public DialogueUI dialogueUI;
     public DialogueObject testDialogue;
     // Start is called before the first frame update

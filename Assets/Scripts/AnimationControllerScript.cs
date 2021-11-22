@@ -54,12 +54,17 @@ public class AnimationControllerScript : MonoBehaviour
                 if (Input.GetKey("space") && characterController.isGrounded == true)
                 {
                     animator.SetBool("IsRunning", false);
-                    animator.SetBool("IsJumping", true);
-
+                    //animator.SetBool("IsJumping", true);
+                    animator.Play("Phoebe_Jump");
                 }
-                if (!Input.GetKey("space"))
+                /*if (!Input.GetKey("space"))
                 {
                     animator.SetBool("IsJumping", false);
+                } */
+                if (characterController.isGrounded == true)
+                {
+                    animator.GetComponent<Animator>().enabled = false;
+                    animator.GetComponent<Animator>().enabled = true;
                 }
                 if (characterController.turnRight == true)
                 {

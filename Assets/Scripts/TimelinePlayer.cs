@@ -11,7 +11,7 @@ public class TimelineInitiate : MonoBehaviour
 
     private void Awake()
     {
-        director = GetComponent<PlayableDirector>()
+        director = GetComponent<PlayableDirector>();
         director.played += Director_Played;
         director.stopped += Director_Stopped;
     }

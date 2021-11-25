@@ -25,7 +25,7 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (charAnimScript.canAnimate == true)
+        if (charAnimScript.canAnimate == true || pauseMenuUI.activeSelf)
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {

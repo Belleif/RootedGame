@@ -124,7 +124,7 @@ public class SettingsMenu : MonoBehaviour
         if (PlayerPrefs.HasKey("QualityPreference"))
             qualityDropdown.value = PlayerPrefs.GetInt("QualityPreference");
         else
-            qualityDropdown.value = 5;
+            qualityDropdown.value = 1;
 
         if (PlayerPrefs.HasKey("FullscreenPreference"))
             fullscreencheck = PlayerPrefs.GetInt("FullscreenPreference");

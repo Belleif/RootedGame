@@ -52,7 +52,7 @@ public class MouseClicker : MonoBehaviour
                     }
                     else if (currentIsle.GetComponent<IslandMovement>().moveX == true)
                     {
-                        instructText.GetComponent<TMPro.TextMeshProUGUI>().text = "Click Isle to select \n Use 'A' & 'D' to move Isle \n Press E to exit control";
+                        instructText.GetComponent<TMPro.TextMeshProUGUI>().text = "Click Isle to select \n Use 'W' & 'S' to move Isle \n Press E to exit control";
                     }
                     else if (currentIsle.GetComponent<IslandMovement>().moveZ == true)
                     {

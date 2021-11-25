@@ -11,6 +11,7 @@ public class MouseClicker : MonoBehaviour
     public ParticleSystem particlesGlow;
     public GameObject instructText;
     public GameObject emptyIsle;
+    public GameObject pauseMenuUI;
     private Vector3 savedPosition;
     // Start is called before the first frame update
     void Start()
@@ -22,70 +23,72 @@ public class MouseClicker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (pauseMenuUI.activeSelf == false)
         {
-            Debug.Log("click it");
-            RaycastHit hitInfo = new RaycastHit();
-            bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo);
-
-            if (hit)
-            {
-                Debug.Log("Hit" + hitInfo.transform.gameObject.name);
-                if (hitInfo.transform.gameObject.tag == "Island")
+                if (Input.GetMouseButtonDown(0))
                 {
-                    if (currentIsle != null)
-                    {
-                     currentIsle.GetComponent<IslandMovement>().isMoving = false;
-                     currentIsle.GetComponent<Rigidbody>().isKinematic = true;
-                     particles.Play();
-                     particlesGlow.Play();
-                    }
+                    Debug.Log("click it");
+                    RaycastHit hitInfo = new RaycastHit();
+                    bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo);
 
-                    Debug.Log("Moveable Island Hit");
-                    currentIsle = hitInfo.transform.gameObject;
-                    currentIsle.GetComponent<Rigidbody>().isKinematic = false;
-                    currentIsle.GetComponent<IslandMovement>().isMoving = true;
+                    if (hit)
+                    {
+                        Debug.Log("Hit" + hitInfo.transform.gameObject.name);
+                        if (hitInfo.transform.gameObject.tag == "Island")
+                        {
+                            if (currentIsle != null)
+                            {
+                                currentIsle.GetComponent<IslandMovement>().isMoving = false;
+                                currentIsle.GetComponent<Rigidbody>().isKinematic = true;
+                                particles.Play();
+                                particlesGlow.Play();
+                            }
 
-                    if (currentIsle.GetComponent<IslandMovement>().moveY == true)
-                    {
-                        instructText.GetComponent<TMPro.TextMeshProUGUI>().text = "Click Isle to select \n Use 'W' & 'S' to move Isle \n Press E to exit control";
-                    }
-                    else if (currentIsle.GetComponent<IslandMovement>().moveX == true)
-                    {
-                        instructText.GetComponent<TMPro.TextMeshProUGUI>().text = "Click Isle to select \n Use 'A' & 'D' to move Isle \n Press E to exit control";
-                    }
-                    else if (currentIsle.GetComponent<IslandMovement>().moveZ == true)
-                    {
-                        instructText.GetComponent<TMPro.TextMeshProUGUI>().text = "Click Isle to select \n Use 'W' & 'S' to move Isle \n Press E to exit control";
+                            Debug.Log("Moveable Island Hit");
+                            currentIsle = hitInfo.transform.gameObject;
+                            currentIsle.GetComponent<Rigidbody>().isKinematic = false;
+                            currentIsle.GetComponent<IslandMovement>().isMoving = true;
+
+                            if (currentIsle.GetComponent<IslandMovement>().moveY == true)
+                            {
+                                instructText.GetComponent<TMPro.TextMeshProUGUI>().text = "Click Isle to select \n Use 'W' & 'S' to move Isle \n Press E to exit control";
+                            }
+                            else if (currentIsle.GetComponent<IslandMovement>().moveX == true)
+                            {
+                                instructText.GetComponent<TMPro.TextMeshProUGUI>().text = "Click Isle to select \n Use 'W' & 'S' to move Isle \n Press E to exit control";
+                            }
+                            else if (currentIsle.GetComponent<IslandMovement>().moveZ == true)
+                            {
+                                instructText.GetComponent<TMPro.TextMeshProUGUI>().text = "Click Isle to select \n Use 'W' & 'S' to move Isle \n Press E to exit control";
+                            }
+                            else
+                            {
+                                instructText.GetComponent<TMPro.TextMeshProUGUI>().text = "Click Isle to select \n Press E to exit control";
+                            }
+                        }
+                        else
+                        {
+                            Debug.Log("Not Moveable Island");
+                            if (currentIsle != null)
+                            {
+                                currentIsle.GetComponent<Rigidbody>().isKinematic = true;
+                                currentIsle.GetComponent<IslandMovement>().isMoving = false;
+                                particles.Stop();
+                                particlesGlow.Stop();
+                                instructText.GetComponent<TMPro.TextMeshProUGUI>().text = "Click Isle to select \n Press E to exit control";
+                                currentIsle = emptyIsle;
+                            }
+                        }
                     }
                     else
                     {
-                        instructText.GetComponent<TMPro.TextMeshProUGUI>().text = "Click Isle to select \n Press E to exit control";
+                        Debug.Log("No hit");
                     }
                 }
-                else
-                { 
-                    Debug.Log("Not Moveable Island");
-                    if (currentIsle != null)
-                    {
-                        currentIsle.GetComponent<Rigidbody>().isKinematic = true;
-                        currentIsle.GetComponent<IslandMovement>().isMoving = false;
-                        particles.Stop();
-                        particlesGlow.Stop();
-                        instructText.GetComponent<TMPro.TextMeshProUGUI>().text = "Click Isle to select \n Press E to exit control";
-                        currentIsle = emptyIsle;
-                    }
-                }
-            }
-            else
-            {
-                Debug.Log("No hit");
-            }
         }
     }
     private void LateUpdate()
     {
-
         savedPosition = currentIsle.transform.position;
         particles.transform.position = savedPosition;
         particlesGlow.transform.position = savedPosition;

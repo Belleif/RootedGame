@@ -11,6 +11,7 @@ public class IslandControlPoint : MonoBehaviour
     public EmissionGlow emissionGlow;
     public GameObject ThirdCam;
     public GameObject FirstCam;
+    public GameObject pauseMenuUI;
     public int CamMode;
     public bool triggeractive = false;
     public GameObject triggerguiactive;
@@ -27,7 +28,7 @@ public class IslandControlPoint : MonoBehaviour
 
     void Update()
     {
-        if (triggeractive == true)
+        if (triggeractive == true && pauseMenuUI.activeSelf == false)
         {
             if (Input.GetKeyDown("e") && ThirdCam.activeSelf)
             {

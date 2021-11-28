@@ -9,6 +9,7 @@ public class TimelineTrigger : MonoBehaviour
     public bool playerActive = false;
     public Animator charAnim;
     public AnimationControllerScript charAnimScript;
+    public SC_TPSController charControl;
 
     // Use this for initialization
     void Start()
@@ -20,17 +21,24 @@ public class TimelineTrigger : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            timeline.Play();
-        }
-        if (other.tag == "Player")
-        {
             if (playerActive == false)
             {
+                charControl.canMove = false;
                 charAnim.SetBool("IsRunning", false);
                 playerActive = true;
+                StartCoroutine(PlayTimelineRoutine(timeline));
             }
+        }    
+    }
 
-        }
-        
+    private IEnumerator PlayTimelineRoutine(PlayableDirector playableDirector)
+    {
+        playableDirector.Play();
+        Debug.Log("Timeline is playing");
+        float timelineDuration = (float)timeline.duration;
+        yield return new WaitForSeconds(timelineDuration);
+        Debug.Log("Director is Done.");
+        charControl.canMove = true;
+        Debug.Log("{Player can move.");
     }
 }

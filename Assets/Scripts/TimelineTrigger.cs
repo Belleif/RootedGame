@@ -7,6 +7,8 @@ public class TimelineTrigger : MonoBehaviour
 {
     public PlayableDirector timeline;
     public bool playerActive = false;
+    public bool FreezePlayer = false;
+    //public bool ExitTimeline = false;
     public Animator charAnim;
     public AnimationControllerScript charAnimScript;
     public SC_TPSController charControl;
@@ -23,13 +25,17 @@ public class TimelineTrigger : MonoBehaviour
         {
             if (playerActive == false)
             {
-                charControl.canMove = false;
-                charAnim.SetBool("IsRunning", false);
+                if (FreezePlayer == true)
+                {
+                    charControl.canMove = false;
+                    charAnim.SetBool("IsRunning", false);
+                }
                 playerActive = true;
                 StartCoroutine(PlayTimelineRoutine(timeline));
             }
         }    
     }
+
 
     private IEnumerator PlayTimelineRoutine(PlayableDirector playableDirector)
     {

@@ -7,6 +7,7 @@ public class IslandControlPoint : MonoBehaviour
     public float[] islands;
     private int currentIslandIndex;
     public SC_TPSController characterController;
+    public Animator charAnim;
     public MouseClicker rayClick;
     public EmissionGlow emissionGlow;
     public GameObject ThirdCam;
@@ -36,6 +37,7 @@ public class IslandControlPoint : MonoBehaviour
                 triggerguideactive.SetActive(false);
                 Debug.Log("Player has activated Trigger.");
                 characterController.canMove = false;
+                charAnim.SetBool("IsRunning", false);
                 IslandMovement.islandMove = 1;
                 curseChange.theHandCursor();
                 Cursor.visible = true;
@@ -79,10 +81,13 @@ public class IslandControlPoint : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            triggerguiactive.SetActive(false);
-            triggerguideactive.SetActive(false);
-            triggeractive = false;
-            Debug.Log("Player is on Trigger.");
+            if (ThirdCam.activeSelf)
+            {
+                triggerguiactive.SetActive(false);
+                triggerguideactive.SetActive(false);
+                triggeractive = false;
+                Debug.Log("Player is off Trigger.");
+            }
         }
     }
 }

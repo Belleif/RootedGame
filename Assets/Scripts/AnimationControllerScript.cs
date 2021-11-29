@@ -39,19 +39,19 @@ public class AnimationControllerScript : MonoBehaviour
         {
             if (currentlyFalling == false)
             {
-                if (Input.GetKey("w") || Input.GetKey("a") || Input.GetKey("d") && characterController.isGrounded == true)
+                if (Input.GetKey("w") || Input.GetKey("a") || Input.GetKey("d") || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow) && characterController.isGrounded == true)
                 {
                     animator.SetBool("IsRunning", true);
                 }
-                if (!Input.GetKey("w") && !Input.GetKey("a") && !Input.GetKey("d") )
+                if (!Input.GetKey("w") && !Input.GetKey("a") && !Input.GetKey("d") && !Input.GetKey(KeyCode.UpArrow) && !Input.GetKey(KeyCode.RightArrow) && !Input.GetKey(KeyCode.LeftArrow))
                 {
                     animator.SetBool("IsRunning", false);
                 }
-                if (Input.GetKey("s") && characterController.isGrounded == true)
+                if (Input.GetKey("s") || Input.GetKey(KeyCode.DownArrow) && characterController.isGrounded == true)
                 {
                     animator.SetBool("IsRunback", true);
                 }
-                if (!Input.GetKey("s"))
+                if (!Input.GetKey("s") && !Input.GetKey(KeyCode.DownArrow))
                 {
                     animator.SetBool("IsRunback", false);
                 }
@@ -68,7 +68,21 @@ public class AnimationControllerScript : MonoBehaviour
                         currentlyFalling = true;
                     }
 
-                }
+                } 
+                /*if (player.transform.position.y < player.transform.position.y - 5)
+                {
+                    if (fallTime > 0)
+                    { //Setup Falltimer that counts up as soon as the falling is detected
+                        fallTime -= Time.deltaTime;
+                    }
+                    if (fallTime <= 0)
+                    {
+                        animator.SetBool("IsRunning", false);
+                        animator.SetBool("IsFalling", true);
+                        currentlyFalling = true;
+                    }
+
+                } */
 
 
                 if (Input.GetKey("space") && characterController.isGrounded == true)

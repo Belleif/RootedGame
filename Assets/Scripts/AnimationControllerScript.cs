@@ -41,7 +41,11 @@ public class AnimationControllerScript : MonoBehaviour
                 {
                     animator.SetBool("IsRunning", true);
                 }
-                if (!Input.GetKey("w") && !Input.GetKey("a") && !Input.GetKey("d"))
+                if (characterController.isGrounded == false)
+                {
+                    animator.SetBool("IsRunning", false);
+                }
+                if (!Input.GetKey("w") && !Input.GetKey("a") && !Input.GetKey("d") )
                 {
                     animator.SetBool("IsRunning", false);
                 }

@@ -68,7 +68,21 @@ public class AnimationControllerScript : MonoBehaviour
                         currentlyFalling = true;
                     }
 
-                }
+                } 
+                /*if (player.transform.position.y < player.transform.position.y - 5)
+                {
+                    if (fallTime > 0)
+                    { //Setup Falltimer that counts up as soon as the falling is detected
+                        fallTime -= Time.deltaTime;
+                    }
+                    if (fallTime <= 0)
+                    {
+                        animator.SetBool("IsRunning", false);
+                        animator.SetBool("IsFalling", true);
+                        currentlyFalling = true;
+                    }
+
+                } */
 
 
                 if (Input.GetKey("space") && characterController.isGrounded == true)

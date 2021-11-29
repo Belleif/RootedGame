@@ -51,6 +51,8 @@ public class SC_TPSController : MonoBehaviour
     //Boolean that is meant to say if the character can move or not move.
     public bool canMove = true;
 
+    public Transform followTrans;
+
     //Function meant to initialize anything below on start of the program.
     void Start()
     {
@@ -103,6 +105,10 @@ public class SC_TPSController : MonoBehaviour
             rotation.x = Mathf.Clamp(rotation.x, -lookXLimit, lookXLimit);
             playerCameraParent.localRotation = Quaternion.Euler(rotation.x, 0, 0);
             transform.eulerAngles = new Vector2(0, rotation.y);
+            ////////
+            ///THIS IS THE NEW STUFF FOR ROTATION!
+            float mouse = Input.GetAxis("Mouse Y");
+            followTrans.transform.Rotate(new Vector3(-mouse, 0, 0));
         }
 
        /* if (GetComponent<ThirdPersonCamera>().m_XAxis < 0)

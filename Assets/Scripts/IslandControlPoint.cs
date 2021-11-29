@@ -33,7 +33,7 @@ public class IslandControlPoint : MonoBehaviour
             if (Input.GetKeyDown("e") && ThirdCam.activeSelf)
             {
                 triggerguiactive.SetActive(false);
-                triggerguideactive.SetActive(true);
+                triggerguideactive.SetActive(false);
                 Debug.Log("Player has activated Trigger.");
                 characterController.canMove = false;
                 IslandMovement.islandMove = 1;
@@ -46,7 +46,7 @@ public class IslandControlPoint : MonoBehaviour
             }
             else if (Input.GetKeyDown("e") && FirstCam.activeSelf)
             {
-                triggerguiactive.SetActive(true);
+                triggerguiactive.SetActive(false);
                 triggerguideactive.SetActive(false);
                 Debug.Log("Player has deactivated Trigger.");
                 characterController.canMove = true;

@@ -12,6 +12,7 @@ public class AnimationControllerScript : MonoBehaviour
     public bool canAnimate;
     public bool currentlyFalling;
     public bool isIdle;
+    public double fallTime;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +20,7 @@ public class AnimationControllerScript : MonoBehaviour
         player = GameObject.Find("Player");
         canAnimate = true;
         currentlyFalling = false;
+        fallTime = .6;
     }
 
     // Update is called once per frame
@@ -41,10 +43,6 @@ public class AnimationControllerScript : MonoBehaviour
                 {
                     animator.SetBool("IsRunning", true);
                 }
-                if (characterController.isGrounded == false)
-                {
-                    animator.SetBool("IsRunning", false);
-                }
                 if (!Input.GetKey("w") && !Input.GetKey("a") && !Input.GetKey("d") )
                 {
                     animator.SetBool("IsRunning", false);
@@ -57,6 +55,21 @@ public class AnimationControllerScript : MonoBehaviour
                 {
                     animator.SetBool("IsRunback", false);
                 }
+                if (characterController.isGrounded == false)
+                {
+                    if (fallTime > 0)
+                    {
+                     fallTime -= Time.deltaTime;
+                    }
+                    if (fallTime <= 0)
+                    {
+                        animator.SetBool("IsRunning", false);
+                        animator.SetBool("IsFalling", true);
+                        currentlyFalling = true;
+                    }
+
+                }
+
 
                 if (Input.GetKey("space") && characterController.isGrounded == true)
                 {
@@ -94,17 +107,25 @@ public class AnimationControllerScript : MonoBehaviour
 
                 }
             }
-            if (player.transform.position.y < fallHeight)
-            {
-                animator.SetBool("IsRunning", false);
-                animator.SetBool("IsFalling", true);
-                currentlyFalling = true;
-            }
-            else
+
+            if (characterController.isGrounded == true)
             {
                 animator.SetBool("IsFalling", false);
                 currentlyFalling = false;
+                fallTime = .6;
             }
+            /* if (player.transform.position.y < fallHeight)
+             {
+                 animator.SetBool("IsRunning", false);
+                 animator.SetBool("IsFalling", true);
+                 currentlyFalling = true;
+             }
+             else
+             {
+                 animator.SetBool("IsFalling", false);
+                 currentlyFalling = false;
+             }
+            */
 
         }
     }

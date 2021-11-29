@@ -12,8 +12,6 @@ public class ScoringSystem : MonoBehaviour {
 	void OnTriggerEnter(Collider other)
 	{
 		CollectSound.Play();
-		theScore += 50;
-		scoreText.GetComponent<Text>().text = "SCORE:" + theScore;
 		Destroy(gameObject);
 	}
 

@@ -3,14 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
 
-public class TimelineTriggerGeneric : MonoBehaviour
+public class TimelineTriggerBoss : MonoBehaviour
 {
     public PlayableDirector timeline;
-    public bool Interact = false;
     public bool triggeractive = false;
     public bool AttackTrigger = false;
-    public GameObject triggerguiactive;
-    public GameObject triggerguideactive;
+
 
 
     // Use this for initialization
@@ -29,7 +27,6 @@ public class TimelineTriggerGeneric : MonoBehaviour
                 timeline.Stop();
             }
         }
-
     }
 
     void OnTriggerEnter(Collider other)
@@ -37,15 +34,6 @@ public class TimelineTriggerGeneric : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             timeline.Play();
-        }
-        if (Interact == true)
-        {
-            if (other.tag == "Player")
-            {
-                triggerguiactive.SetActive(true);
-                triggeractive = true;
-                Debug.Log("Player is on Trigger.");
-            }
         }
     }
 }

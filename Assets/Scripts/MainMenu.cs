@@ -74,7 +74,7 @@ public class MainMenu : MonoBehaviour
         mainMenu.SetActive(false);
         controlsMenu.SetActive(true);
     }
-    public  void CreditsMenu()
+    public void CreditsMenu()
     {
         mainMenu.SetActive(false);
         creditsMenu.SetActive(true);

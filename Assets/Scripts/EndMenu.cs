@@ -5,13 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class EndMenu : MonoBehaviour
 {
-    public void MainMenu()
+    public void MainMenu(int level)
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
+        SceneManager.LoadScene(level);
     }
 
     public void QuitGame()
     {
+        Application.OpenURL("https://forms.gle/tAGG6oq7hMpBAWyx8");
         Debug.Log("Program Quitting...");
         Application.Quit();
     }

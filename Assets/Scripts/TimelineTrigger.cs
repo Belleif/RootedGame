@@ -52,7 +52,19 @@ public class TimelineTrigger : MonoBehaviour
             timeline.Play();
         }
     }
-
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            if (Interact == true)
+            {
+                triggerguiactive.SetActive(false);
+                triggerguideactive.SetActive(false);
+                triggeractive = false;
+                Debug.Log("Player is off Trigger.");
+            }
+        }
+    }
 
     private IEnumerator PlayTimelineRoutine(PlayableDirector playableDirector)
     {

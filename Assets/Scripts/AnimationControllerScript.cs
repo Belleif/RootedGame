@@ -14,7 +14,7 @@ public class AnimationControllerScript : MonoBehaviour
     public bool isIdle;
     public double fallTime;
     public float lastY;
-    public float FallingThreshold = -0.01f;
+    public float FallingThreshold = -0.0003f;
     // Start is called before the first frame update
     void Start()
     {

@@ -13,6 +13,8 @@ public class AnimationControllerScript : MonoBehaviour
     public bool currentlyFalling;
     public bool isIdle;
     public double fallTime;
+    public float lastY;
+    public float FallingThreshold = -0.01f;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,12 +22,15 @@ public class AnimationControllerScript : MonoBehaviour
         player = GameObject.Find("Player");
         canAnimate = true;
         currentlyFalling = false;
-        fallTime = .6;
+        fallTime = 0;
+        lastY = player.transform.position.y;
     }
 
     // Update is called once per frame
     void Update()
     {
+        float distanceSinceLastFrame = (player.transform.position.y - lastY) * Time.deltaTime;
+        lastY = player.transform.position.y;
         //Checks if character is controlling islands
         if (characterController.canMove == false)
         {
@@ -55,7 +60,7 @@ public class AnimationControllerScript : MonoBehaviour
                 {
                     animator.SetBool("IsRunback", false);
                 }
-                if (characterController.isGrounded == false)
+                /*if (characterController.isGrounded == false) // Original Simple Grounded Script
                 {
                     if (fallTime > 0)
                     {
@@ -68,21 +73,29 @@ public class AnimationControllerScript : MonoBehaviour
                         currentlyFalling = true;
                     }
 
-                } 
-                /*if (player.transform.position.y < player.transform.position.y - 5)
+                } */
+               /* if (distanceSinceLastFrame < FallingThreshold)  //Backup Advanced Script
                 {
-                    if (fallTime > 0)
-                    { //Setup Falltimer that counts up as soon as the falling is detected
-                        fallTime -= Time.deltaTime;
+                    if (fallTime < 2)
+                    {
+                        fallTime += Time.deltaTime;
                     }
-                    if (fallTime <= 0)
+                    if (fallTime > 2)
                     {
                         animator.SetBool("IsRunning", false);
                         animator.SetBool("IsFalling", true);
                         currentlyFalling = true;
                     }
 
-                } */
+                }*/
+                if (distanceSinceLastFrame < FallingThreshold)
+                {
+                    animator.SetBool("IsRunning", false);
+                    animator.SetBool("IsRunback", false);
+                    animator.SetBool("IsFalling", true);
+                    currentlyFalling = true;
+                }
+
 
 
                 if (Input.GetKey("space") && characterController.isGrounded == true)
@@ -126,20 +139,8 @@ public class AnimationControllerScript : MonoBehaviour
             {
                 animator.SetBool("IsFalling", false);
                 currentlyFalling = false;
-                fallTime = .6;
+                fallTime = 0;
             }
-            /* if (player.transform.position.y < fallHeight)
-             {
-                 animator.SetBool("IsRunning", false);
-                 animator.SetBool("IsFalling", true);
-                 currentlyFalling = true;
-             }
-             else
-             {
-                 animator.SetBool("IsFalling", false);
-                 currentlyFalling = false;
-             }
-            */
 
         }
     }

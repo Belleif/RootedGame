@@ -32,7 +32,7 @@ public class SettingsMenu : MonoBehaviour
     public Slider sensitivity;
 
 
-    void Start()
+    void Awake()
     { 
         resolutions = Screen.resolutions;
         resolutionDropdown.ClearOptions();

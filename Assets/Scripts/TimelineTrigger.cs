@@ -7,8 +7,8 @@ public class TimelineTrigger : MonoBehaviour
 {
     public PlayableDirector timeline;
     public bool playerActive = false;
-    public bool FreezePlayer = false;
-    public bool Interact = false;
+    public bool freezePlayer = false;
+    public bool interact = false;
     public bool triggeractive = false;
     public GameObject triggerguiactive;
     public GameObject triggerguideactive;
@@ -29,11 +29,11 @@ public class TimelineTrigger : MonoBehaviour
         {
             if (playerActive == false)
             {
-                if (FreezePlayer == true)
+                if (freezePlayer == true)
                 {
                     charControl.canMove = false;
                     charAnim.SetBool("IsRunning", false);
-                    if (Interact == true)
+                    if (interact == true)
                     {
                         if (other.tag == "Player")
                         {
@@ -43,20 +43,25 @@ public class TimelineTrigger : MonoBehaviour
                         }
                     }
                 }
-                playerActive = true;
-                StartCoroutine(PlayTimelineRoutine(timeline));
+                if (interact == false)
+                {
+                    playerActive = true;
+                    StartCoroutine(PlayTimelineRoutine(timeline));
+                }
+              
+            }
+            if (interact == false)
+            {
+                timeline.Play();
             }
         }
-        if (other.gameObject.tag == "Player")
-        {
-            timeline.Play();
-        }
     }
-    private void OnTriggerExit(Collider other)
+
+    void OnTriggerExit(Collider other)
     {
         if (other.tag == "Player")
         {
-            if (Interact == true)
+            if (interact == true)
             {
                 triggerguiactive.SetActive(false);
                 triggerguideactive.SetActive(false);
@@ -64,6 +69,18 @@ public class TimelineTrigger : MonoBehaviour
                 Debug.Log("Player is off Trigger.");
             }
         }
+    }
+    private void Update()
+    {
+        if (triggeractive = true && Input.GetKeyDown("e"))
+        {
+            triggerguiactive.SetActive(false);
+            triggerguideactive.SetActive(false);
+            triggeractive = false;
+            playerActive = true;
+            StartCoroutine(PlayTimelineRoutine(timeline));
+        }
+
     }
 
     private IEnumerator PlayTimelineRoutine(PlayableDirector playableDirector)

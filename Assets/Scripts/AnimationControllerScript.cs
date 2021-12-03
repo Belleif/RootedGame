@@ -15,7 +15,20 @@ public class AnimationControllerScript : MonoBehaviour
     public double fallTime;
     public float lastY;
     public float FallingThreshold = -0.0003f;
-    // Start is called before the first frame update
+
+    [SerializeField]
+    private AudioClip[] clips;
+    private AudioSource audioSource;
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
+    private AudioClip GetRandomClip()
+    {
+        return clips[UnityEngine.Random.Range(0, clips.Length)];
+    }
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -25,6 +38,7 @@ public class AnimationControllerScript : MonoBehaviour
         fallTime = 0;
         lastY = player.transform.position.y;
     }
+    
 
     // Update is called once per frame
     void Update()
@@ -60,34 +74,7 @@ public class AnimationControllerScript : MonoBehaviour
                 {
                     animator.SetBool("IsRunback", false);
                 }
-                /*if (characterController.isGrounded == false) // Original Simple Grounded Script
-                {
-                    if (fallTime > 0)
-                    {
-                     fallTime -= Time.deltaTime;
-                    }
-                    if (fallTime <= 0)
-                    {
-                        animator.SetBool("IsRunning", false);
-                        animator.SetBool("IsFalling", true);
-                        currentlyFalling = true;
-                    }
-
-                } */
-               /* if (distanceSinceLastFrame < FallingThreshold)  //Backup Advanced Script
-                {
-                    if (fallTime < 2)
-                    {
-                        fallTime += Time.deltaTime;
-                    }
-                    if (fallTime > 2)
-                    {
-                        animator.SetBool("IsRunning", false);
-                        animator.SetBool("IsFalling", true);
-                        currentlyFalling = true;
-                    }
-
-                }*/
+                //Fall Time Handler
                 if (distanceSinceLastFrame < FallingThreshold)
                 {
                     fallTime += Time.deltaTime;
@@ -100,6 +87,8 @@ public class AnimationControllerScript : MonoBehaviour
                     animator.SetBool("IsRunback", false);
                     animator.SetBool("IsFalling", true);
                     currentlyFalling = true;
+                    AudioClip clip = GetRandomClip();
+                    audioSource.PlayOneShot(clip);
                 }
 
 

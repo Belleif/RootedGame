@@ -9,7 +9,7 @@ public class TimelineTrigger : MonoBehaviour
     public bool playerActive = false;
     public bool freezePlayer = false;
     public bool interact = false;
-    public bool triggeractive = false;
+    private bool triggeractive = false;
     public GameObject triggerguiactive;
     public GameObject triggerguideactive;
     //public bool ExitTimeline = false;
@@ -31,9 +31,12 @@ public class TimelineTrigger : MonoBehaviour
             {
                 if (freezePlayer == true)
                 {
-                    charControl.canMove = false;
-                    charAnim.SetBool("IsRunning", false);
-                    if (interact == true)
+                    if (interact == false)
+                    {
+                        charControl.canMove = false;
+                        charAnim.SetBool("IsRunning", false);
+                    }
+                    else if (interact == true)
                     {
                         if (other.tag == "Player")
                         {
@@ -74,6 +77,8 @@ public class TimelineTrigger : MonoBehaviour
     {
         if (triggeractive = true && Input.GetKeyDown("e"))
         {
+            charControl.canMove = false;
+            charAnim.SetBool("IsRunning", false);
             triggerguiactive.SetActive(false);
             triggerguideactive.SetActive(false);
             triggeractive = false;

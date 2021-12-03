@@ -90,12 +90,17 @@ public class AnimationControllerScript : MonoBehaviour
                 }*/
                 if (distanceSinceLastFrame < FallingThreshold)
                 {
+                    fallTime += Time.deltaTime;
+                    Debug.Log(fallTime);
+                }
+                
+                if (fallTime > 1)
+                {
                     animator.SetBool("IsRunning", false);
                     animator.SetBool("IsRunback", false);
                     animator.SetBool("IsFalling", true);
                     currentlyFalling = true;
                 }
-
 
 
                 if (Input.GetKey("space") && characterController.isGrounded == true)

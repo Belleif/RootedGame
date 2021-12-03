@@ -37,6 +37,7 @@ public class IslandControlPoint : MonoBehaviour
                 triggerguideactive.SetActive(false);
                 Debug.Log("Player has activated Trigger.");
                 characterController.canMove = false;
+                charAnim.SetBool("IsRunback", false);
                 charAnim.SetBool("IsRunning", false);
                 IslandMovement.islandMove = 1;
                 curseChange.theHandCursor();

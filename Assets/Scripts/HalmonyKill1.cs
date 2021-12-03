@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
 
-public class TimelineTrigger : MonoBehaviour
+public class HalmonyKill1 : MonoBehaviour
 {
     public PlayableDirector timeline;
     public bool playerActive = false;

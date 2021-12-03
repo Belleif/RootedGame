@@ -7,11 +7,7 @@ public class TimelineTrigger : MonoBehaviour
 {
     public PlayableDirector timeline;
     public bool playerActive = false;
-    public bool freezePlayer = false;
-    public bool interact = false;
-    private bool triggeractive = false;
-    public GameObject triggerguiactive;
-    public GameObject triggerguideactive;
+    public bool FreezePlayer = false;
     //public bool ExitTimeline = false;
     public Animator charAnim;
     public AnimationControllerScript charAnimScript;
@@ -29,64 +25,17 @@ public class TimelineTrigger : MonoBehaviour
         {
             if (playerActive == false)
             {
-                if (freezePlayer == true)
+                if (FreezePlayer == true)
                 {
-                    if (interact == false)
-                    {
-                        charControl.canMove = false;
-                        charAnim.SetBool("IsRunning", false);
-                    }
-                    else if (interact == true)
-                    {
-                        if (other.tag == "Player")
-                        {
-                            triggerguiactive.SetActive(true);
-                            triggeractive = true;
-                            Debug.Log("Player is on Trigger.");
-                        }
-                    }
+                    charControl.canMove = false;
+                    charAnim.SetBool("IsRunning", false);
                 }
-                if (interact == false)
-                {
-                    playerActive = true;
-                    StartCoroutine(PlayTimelineRoutine(timeline));
-                }
-              
-            }
-            if (interact == false)
-            {
-                timeline.Play();
+                playerActive = true;
+                StartCoroutine(PlayTimelineRoutine(timeline));
             }
         }
     }
 
-    void OnTriggerExit(Collider other)
-    {
-        if (other.tag == "Player")
-        {
-            if (interact == true)
-            {
-                triggerguiactive.SetActive(false);
-                triggerguideactive.SetActive(false);
-                triggeractive = false;
-                Debug.Log("Player is off Trigger.");
-            }
-        }
-    }
-    private void Update()
-    {
-        if (triggeractive = true && Input.GetKeyDown("e"))
-        {
-            charControl.canMove = false;
-            charAnim.SetBool("IsRunning", false);
-            triggerguiactive.SetActive(false);
-            triggerguideactive.SetActive(false);
-            triggeractive = false;
-            playerActive = true;
-            StartCoroutine(PlayTimelineRoutine(timeline));
-        }
-
-    }
 
     private IEnumerator PlayTimelineRoutine(PlayableDirector playableDirector)
     {

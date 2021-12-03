@@ -46,7 +46,7 @@ public class HalmonyKill1 : MonoBehaviour
                         }
                     }
                 }
-                if (interact == false)
+ //               if (interact == false)
                 {
                     playerActive = true;
                     StartCoroutine(PlayTimelineRoutine(timeline));

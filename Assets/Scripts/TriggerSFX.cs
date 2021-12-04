@@ -9,6 +9,9 @@ public class TriggerSFX : MonoBehaviour
 	
 	void OnTriggerEnter(Collider other)
 	{
-		playSound.Play();
+        if (other.tag == "Player")
+        {
+            playSound.Play();
+        }
 	}
 }

@@ -8,6 +8,7 @@ public class TimelineTriggerBoss : MonoBehaviour
     public PlayableDirector timeline;
     public bool triggeractive = false;
     public bool AttackTrigger = false;
+    public GameObject player;
 
 
 
@@ -34,6 +35,14 @@ public class TimelineTriggerBoss : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             timeline.Play();
+        }
+    }
+    private void Update()
+    {
+        if (player.GetComponent<CharacterController>().enabled == false)
+        {
+            Debug.Log("Player is dead");
+            timeline.Stop();
         }
     }
 }

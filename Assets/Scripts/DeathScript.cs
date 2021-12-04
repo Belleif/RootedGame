@@ -6,6 +6,7 @@ public class DeathScript : MonoBehaviour
 {
     public GameObject player;
     public GameObject respawn;
+    public bool playerDead = false;
 
     // Start is called before the first frame update
     void Start()

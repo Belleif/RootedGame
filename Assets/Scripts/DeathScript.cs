@@ -11,8 +11,9 @@ public class DeathScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
+
 
     // Update is called once per frame
     void Update()
@@ -27,6 +28,7 @@ public class DeathScript : MonoBehaviour
             Debug.Log("Player Collided");
             player.GetComponent<CharacterController>().enabled = false;
             player.GetComponent<CharacterController>().transform.position = respawn.transform.position;
+            transform.LookAt(respawn.transform);
             player.GetComponent<CharacterController>().enabled = true;
         }
     }

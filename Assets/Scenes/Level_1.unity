@@ -15450,6 +15450,7 @@ GameObject:
   - component: {fileID: 567545088}
   - component: {fileID: 567545087}
   - component: {fileID: 567545091}
+  - component: {fileID: 567545092}
   m_Layer: 0
   m_Name: D_L1_02
   m_TagString: Untagged
@@ -15501,7 +15502,7 @@ PlayableDirector:
   - key: {fileID: 5079872623591808076, guid: dd6aec77487d42c478258d96e4b02115, type: 2}
     value: {fileID: 2143315964}
   - key: {fileID: -1611180445724991116, guid: 1852d848829aad34fbd65c5bdf22ddd1, type: 2}
-    value: {fileID: 1117288827}
+    value: {fileID: 284453257}
   - key: {fileID: -5367912998034028320, guid: 1852d848829aad34fbd65c5bdf22ddd1, type: 2}
     value: {fileID: 1500406946}
   - key: {fileID: -7349471371715382839, guid: 1852d848829aad34fbd65c5bdf22ddd1, type: 2}
@@ -15616,6 +15617,49 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &567545092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 567545086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 6aea629a2d76b094d9f4bcabcba15763, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 6181503080908251348}
+          m_TargetAssemblyTypeName: TimelineSkip, Assembly-CSharp
+          m_MethodName: GetDirector
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 567545087}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Playables.PlayableDirector,
+              UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 6181503080908251348}
+          m_TargetAssemblyTypeName: TimelineSkip, Assembly-CSharp
+          m_MethodName: GetSkipTime
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 15.46
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &567608064
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27247,6 +27291,7 @@ GameObject:
   - component: {fileID: 910639134}
   - component: {fileID: 910639133}
   - component: {fileID: 910639132}
+  - component: {fileID: 910639136}
   m_Layer: 0
   m_Name: D_L1_03
   m_TagString: Untagged
@@ -27504,6 +27549,49 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 63
   m_LocalEulerAnglesHint: {x: 0, y: -17.628, z: 0}
+--- !u!114 &910639136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910639131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 6aea629a2d76b094d9f4bcabcba15763, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 6181503080908251348}
+          m_TargetAssemblyTypeName: TimelineSkip, Assembly-CSharp
+          m_MethodName: GetDirector
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 910639132}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Playables.PlayableDirector,
+              UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 6181503080908251348}
+          m_TargetAssemblyTypeName: TimelineSkip, Assembly-CSharp
+          m_MethodName: GetSkipTime
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 75.56
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &911347919
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32238,8 +32326,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1153714414}
-  m_LocalRotation: {x: -0.077866696, y: 0.7010928, z: 0.14110015, w: -0.6946197}
-  m_LocalPosition: {x: 156.41446, y: 32.409634, z: -60.486866}
+  m_LocalRotation: {x: -0.019373015, y: 0.9660978, z: 0.07609389, w: -0.69463944}
+  m_LocalPosition: {x: 155.72461, y: 31.820284, z: -55.721603}
   m_LocalScale: {x: 0.29942417, y: 0.39717874, z: 0.18950173}
   m_Children: []
   m_Father: {fileID: 0}
@@ -32389,7 +32477,7 @@ Camera:
     height: 1
   near clip plane: 0.13
   far clip plane: 1000
-  field of view: 60
+  field of view: 53
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -75103,6 +75191,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4995398757073355960, guid: 2a877559d40fb8a4d9cc1d3455ba0456, type: 3}
   m_PrefabInstance: {fileID: 6181503080908251345}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6181503080908251348 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5706806448761877632, guid: 2a877559d40fb8a4d9cc1d3455ba0456, type: 3}
+  m_PrefabInstance: {fileID: 6181503080908251345}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 940298353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f764e2177b61b64c9b217df5952041e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &6181503080908251351 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4995398757073355963, guid: 2a877559d40fb8a4d9cc1d3455ba0456, type: 3}

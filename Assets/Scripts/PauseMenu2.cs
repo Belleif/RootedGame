@@ -12,6 +12,7 @@ public class PauseMenu2 : MonoBehaviour
 
     public void MainMenu()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(0);
         //gameObject.GetComponent<PauseMenu>()
         //gameObject.enabled = false;

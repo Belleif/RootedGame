@@ -7,16 +7,19 @@ public class DeathScript : MonoBehaviour
     public GameObject player;
     public GameObject respawn;
     public bool playerDead = false;
+    //public Transform target;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        
+       // target = respawn.transform; 
     }
 
     // Update is called once per frame
     void Update()
     {
+        
 
     }
 
@@ -24,10 +27,15 @@ public class DeathScript : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Debug.Log("Player Collided");
+            
+            playerDead = true;
+            Debug.Log(playerDead);
+            
             player.GetComponent<CharacterController>().enabled = false;
             player.GetComponent<CharacterController>().transform.position = respawn.transform.position;
             player.GetComponent<CharacterController>().enabled = true;
+            
+
         }
     }
 }

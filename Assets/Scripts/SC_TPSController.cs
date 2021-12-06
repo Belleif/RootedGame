@@ -53,6 +53,8 @@ public class SC_TPSController : MonoBehaviour
 
     public Transform followTrans;
 
+    //public DeathScript dead;
+
     //Function meant to initialize anything below on start of the program.
     void Start()
     {
@@ -102,6 +104,12 @@ public class SC_TPSController : MonoBehaviour
         {
             rotation.y += Input.GetAxis("Mouse X") * lookSpeed;
             rotation.x += -Input.GetAxis("Mouse Y") * lookSpeed;
+            //if (dead.playerDead)
+            //{ 
+                //rotation.x = dead.target.transform.rotation.x ;
+                //rotation.y = (dead.target.transform.rotation.y) + 180;
+                //dead.playerDead = false;
+            //}
             rotation.x = Mathf.Clamp(rotation.x, -lookXLimit, lookXLimit);
             playerCameraParent.localRotation = Quaternion.Euler(rotation.x, 0, 0);
             transform.eulerAngles = new Vector2(0, rotation.y);

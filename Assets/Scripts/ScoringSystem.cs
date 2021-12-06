@@ -14,6 +14,8 @@ public class ScoringSystem : MonoBehaviour {
 		CollectSound.Play();
 		scoreText.GetComponent<Text>().text = "1" +theScore;
 		Destroy(gameObject);
+		theScore++;
+		Debug.Log(theScore);
 	}
 
 }

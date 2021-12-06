@@ -10453,6 +10453,7 @@ MonoBehaviour:
   m_Events:
     m_Signals:
     - {fileID: 11400000, guid: 838824c5fd41ef44fa7aceb78cf57bc3, type: 2}
+    - {fileID: 11400000, guid: 6aea629a2d76b094d9f4bcabcba15763, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -10465,6 +10466,33 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 11
             m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4995398755925754163}
+          m_TargetAssemblyTypeName: TimelineSkip, Assembly-CSharp
+          m_MethodName: GetDirector
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 3145410150853056064}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Playables.PlayableDirector,
+              UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 4995398755925754163}
+          m_TargetAssemblyTypeName: TimelineSkip, Assembly-CSharp
+          m_MethodName: GetSkipTime
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 71.23
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
@@ -56765,7 +56793,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1917344314}
-  m_LocalRotation: {x: 0.24900451, y: -0.010624914, z: -0.0062774774, w: 0.9684237}
+  m_LocalRotation: {x: 0.24900451, y: -0.010624914, z: -0.0062774774, w: 0.9882018}
   m_LocalPosition: {x: 15.740948, y: -31.211473, z: -178.98608}
   m_LocalScale: {x: 0.34866872, y: 0.20994702, z: 0.30150366}
   m_Children: []
@@ -61318,7 +61346,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7958581791748598274, guid: d12734272cf879b48bcf91ad5cbb77d2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.00000034189847
+      value: 0.00000034189844
       objectReference: {fileID: 0}
     - target: {fileID: 7958581791748598274, guid: d12734272cf879b48bcf91ad5cbb77d2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -61358,7 +61386,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7958581792438588474, guid: d12734272cf879b48bcf91ad5cbb77d2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.00000034189847
+      value: 0.00000034189844
       objectReference: {fileID: 0}
     - target: {fileID: 7958581792438588474, guid: d12734272cf879b48bcf91ad5cbb77d2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -64700,6 +64728,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 30808d7d76186784a9af950808127c60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4995398755925754163 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5706806448761877632, guid: 2a877559d40fb8a4d9cc1d3455ba0456, type: 3}
+  m_PrefabInstance: {fileID: 4995398755925754157}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f764e2177b61b64c9b217df5952041e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &5997767855827546991

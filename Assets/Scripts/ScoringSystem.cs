@@ -13,6 +13,8 @@ public class ScoringSystem : MonoBehaviour {
 	{
 		CollectSound.Play();
 		Destroy(gameObject);
+		theScore++;
+		Debug.Log(theScore);
 	}
 
 }

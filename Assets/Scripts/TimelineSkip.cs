@@ -27,7 +27,7 @@ public class TimelineSkip : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) || (Input.GetKeyDown(KeyCode.Escape) && !_sceneSkipped))
+        if (Input.GetKeyDown(KeyCode.E) && !_sceneSkipped)
         {
             _currentDirector.time = _timeToSkipTo;
             _sceneSkipped = true;

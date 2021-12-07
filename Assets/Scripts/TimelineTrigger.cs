@@ -7,7 +7,7 @@ public class TimelineTrigger : MonoBehaviour
 {
     public PlayableDirector timeline;
     public bool playerActive = false;
-    public bool FreezePlayer = false;
+    private bool FreezePlayer = false;
     //public bool ExitTimeline = false;
     public Animator charAnim;
     public AnimationControllerScript charAnimScript;

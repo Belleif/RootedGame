@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class DeathScript : MonoBehaviour
 {
     public GameObject player;
     public GameObject respawn;
+    public Transform target;
     public bool playerDead = false;
     //public Transform target;
     
@@ -13,7 +15,7 @@ public class DeathScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       // target = respawn.transform; 
+       target = respawn.transform; 
     }
 
     // Update is called once per frame
@@ -30,12 +32,9 @@ public class DeathScript : MonoBehaviour
             
             playerDead = true;
             Debug.Log(playerDead);
-            
             player.GetComponent<CharacterController>().enabled = false;
             player.GetComponent<CharacterController>().transform.position = respawn.transform.position;
             player.GetComponent<CharacterController>().enabled = true;
-            
-
         }
     }
 }

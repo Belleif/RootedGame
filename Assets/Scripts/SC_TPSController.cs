@@ -39,6 +39,7 @@ public class SC_TPSController : MonoBehaviour
     public LayerMask Ground;
     public bool isGrounded = true;
     private Transform groundChecker;
+    public DeathScript dead;
 
     //Variables set for the Character Controller and its direction and rotation.
     public static CharacterController characterController;
@@ -104,12 +105,12 @@ public class SC_TPSController : MonoBehaviour
         {
             rotation.y += Input.GetAxis("Mouse X") * lookSpeed;
             rotation.x += -Input.GetAxis("Mouse Y") * lookSpeed;
-            //if (dead.playerDead)
-            //{ 
-                //rotation.x = dead.target.transform.rotation.x ;
-                //rotation.y = (dead.target.transform.rotation.y) + 180;
-                //dead.playerDead = false;
-            //}
+            if (dead.playerDead)
+            { 
+                //rotation.x = dead.target.transform.rotation.x;
+                rotation.y = (dead.target.transform.rotation.y) - 90f;
+                dead.playerDead = false;
+            }
             rotation.x = Mathf.Clamp(rotation.x, -lookXLimit, lookXLimit);
             playerCameraParent.localRotation = Quaternion.Euler(rotation.x, 0, 0);
             transform.eulerAngles = new Vector2(0, rotation.y);

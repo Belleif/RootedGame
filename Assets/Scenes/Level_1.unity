@@ -314,6 +314,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7603026e10f8b884bb92cd4a44de081e, type: 3}
+--- !u!1 &16963488 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7958581791226532798, guid: d12734272cf879b48bcf91ad5cbb77d2, type: 3}
+  m_PrefabInstance: {fileID: 7958581791666276110}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &22804949 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8032928950809231370, guid: 13f9c41588f88fe4c937792fc4895f2b, type: 3}
@@ -1506,6 +1511,14 @@ PrefabInstance:
       propertyPath: respawn
       value: 
       objectReference: {fileID: 620541826}
+    - target: {fileID: 4606536941341310776, guid: 689d0d40c86c5164084c25cb1c5a3945, type: 3}
+      propertyPath: playerCam
+      value: 
+      objectReference: {fileID: 1847104311}
+    - target: {fileID: 4606536941341310776, guid: 689d0d40c86c5164084c25cb1c5a3945, type: 3}
+      propertyPath: playerLookTarget
+      value: 
+      objectReference: {fileID: 16963488}
     - target: {fileID: 4606536941341310777, guid: 689d0d40c86c5164084c25cb1c5a3945, type: 3}
       propertyPath: m_Name
       value: DeathCubeBegin
@@ -80965,7 +80978,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7958581791748598274, guid: d12734272cf879b48bcf91ad5cbb77d2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.00000017094924
+      value: 0.00000017094922
       objectReference: {fileID: 0}
     - target: {fileID: 7958581791748598274, guid: d12734272cf879b48bcf91ad5cbb77d2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -81033,7 +81046,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7958581792438588474, guid: d12734272cf879b48bcf91ad5cbb77d2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.00000017094924
+      value: 0.00000017094922
       objectReference: {fileID: 0}
     - target: {fileID: 7958581792438588474, guid: d12734272cf879b48bcf91ad5cbb77d2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -81164,8 +81177,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7958581793109505005, guid: d12734272cf879b48bcf91ad5cbb77d2, type: 3}
+      propertyPath: dead
+      value: 
+      objectReference: {fileID: 2044100103}
+    - target: {fileID: 7958581793109505005, guid: d12734272cf879b48bcf91ad5cbb77d2, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7958581793109505005, guid: d12734272cf879b48bcf91ad5cbb77d2, type: 3}
+      propertyPath: lookXLimit
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 7958581793109505005, guid: d12734272cf879b48bcf91ad5cbb77d2, type: 3}
       propertyPath: GroundDistance

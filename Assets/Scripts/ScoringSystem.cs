@@ -8,14 +8,17 @@ public class ScoringSystem : MonoBehaviour {
     public GameObject scoreText;
 	public static int theScore = 0;
 	public AudioSource CollectSound;
-	
-	void OnTriggerEnter(Collider Player)
+
+	void OnTriggerEnter(Collider other)
 	{
-		CollectSound.Play();
-		scoreText.GetComponent<Text>().text = "1" +theScore;
-		Destroy(gameObject);
-		theScore++;
-		Debug.Log(theScore);
+		if (other.tag == "Player")
+		{
+			CollectSound.Play();
+			theScore++;
+			scoreText.GetComponent<Text>().text = theScore.ToString();
+			Debug.Log(theScore);
+			Destroy(gameObject);
+		}
 	}
 
 }

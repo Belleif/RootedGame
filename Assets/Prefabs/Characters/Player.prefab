@@ -88,7 +88,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0.713
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -144,7 +144,17 @@ MonoBehaviour:
   - {fileID: 8300000, guid: eca4cebd0c20b1d478950badb259381e, type: 3}
   - {fileID: 8300000, guid: 6ae13b50b18936d4da9abf24d9dd802a, type: 3}
   - {fileID: 8300000, guid: 6369b80ef0abbb748b0a27ea7e7ca349, type: 3}
+  - {fileID: 8300000, guid: 4a5411fa43ab7644aaf060e363ed838d, type: 3}
+  - {fileID: 8300000, guid: 49c5c05ba8560c04a817970ef5cfc099, type: 3}
   - {fileID: 8300000, guid: c702b9f611c91fe4fa303656075ff5f6, type: 3}
+  - {fileID: 8300000, guid: 5415cab0682c4cc478a51ac7194e7883, type: 3}
+  - {fileID: 8300000, guid: 238ee4ed17f45184999a8c2e1a17a86d, type: 3}
+  - {fileID: 8300000, guid: b824671a2d7a8da48a796af70105c64e, type: 3}
+  - {fileID: 8300000, guid: c8820503ffa457b45a93e4701fd0a203, type: 3}
+  - {fileID: 8300000, guid: 85229c5c05cb9e2419b655aa0cb0bd99, type: 3}
+  - {fileID: 8300000, guid: d64713af27b42b249b287e1c5e52153f, type: 3}
+  - {fileID: 8300000, guid: d95d5abbb78789c46afd02cccea19960, type: 3}
+  - {fileID: 8300000, guid: d3560db70950655488b6c5236587f32a, type: 3}
   currentClip: {fileID: 0}
   source: {fileID: 1096484466841492554}
   minWaitBetweenPlays: 4
@@ -395,8 +405,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7958581791748598277}
-  m_LocalRotation: {x: 0.24909595, y: -0, z: -0, w: 0.9684789}
-  m_LocalPosition: {x: 0.00000034189847, y: 9.014293, z: -4.1007905}
+  m_LocalRotation: {x: 0.3001798, y: -0, z: -0, w: 0.9538827}
+  m_LocalPosition: {x: 0.00000017094922, y: 9.014301, z: -3.3699148}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7958581791250888215}
@@ -901,8 +911,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7958581792438588477}
-  m_LocalRotation: {x: 0.24909595, y: -0, z: -0, w: 0.9684789}
-  m_LocalPosition: {x: 0.00000034189847, y: 9.014293, z: -4.1007905}
+  m_LocalRotation: {x: 0.3001798, y: -0, z: -0, w: 0.9538827}
+  m_LocalPosition: {x: 0.00000017094922, y: 9.014301, z: -3.3699148}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7958581792111134688}
@@ -1078,6 +1088,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   isGrounded: 0
+  dead: {fileID: 0}
   canMove: 1
   followTrans: {fileID: 7958581791226532799}
 --- !u!95 &7958581793109505003
@@ -1119,6 +1130,7 @@ MonoBehaviour:
   fallTime: 0
   lastY: 0
   FallingThreshold: -0.01
+  clips: []
 --- !u!82 &284453258
 AudioSource:
   m_ObjectHideFlags: 0

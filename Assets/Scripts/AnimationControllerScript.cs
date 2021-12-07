@@ -78,7 +78,6 @@ public class AnimationControllerScript : MonoBehaviour
                 if (distanceSinceLastFrame < FallingThreshold)
                 {
                     fallTime += Time.deltaTime;
-                    Debug.Log(fallTime);
                 }
                 
                 if (fallTime > 1)

@@ -85,9 +85,10 @@ public class AnimationControllerScript : MonoBehaviour
                     animator.SetBool("IsRunning", false);
                     animator.SetBool("IsRunback", false);
                     animator.SetBool("IsFalling", true);
-                    currentlyFalling = true;
                     AudioClip clip = GetRandomClip();
                     audioSource.PlayOneShot(clip);
+                    currentlyFalling = true;
+
                 }
 
 

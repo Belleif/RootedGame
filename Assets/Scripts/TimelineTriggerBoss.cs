@@ -19,11 +19,11 @@ public class TimelineTriggerBoss : MonoBehaviour
     }
 
 
-    void OnTriggerExit(Collider c)
+    void OnTriggerExit(Collider other)
     {
         if (AttackTrigger == true)
         {
-            if (c.gameObject.tag == "Player")
+            if (other.gameObject.tag == "Player")
             {
                 timeline.Stop();
             }

@@ -29,7 +29,6 @@ public class SettingsMenu : MonoBehaviour
     public int currentResolutionIndex = 0;
     public int fullscreencheck;
     Resolution[] resolutions;
-    public Slider sensitivity;
 
 
     void Awake()
@@ -97,13 +96,6 @@ public class SettingsMenu : MonoBehaviour
         PlayerPrefs.SetInt("FullscreenPreference", fullscreencheck);
     }
 
-    public void SetSensitivity(float sliderSensitivity)
-    {       
-        sensitivity.value = sliderSensitivity;
-        SC_TPSController.lookSpeed = sensitivity.value;
-        PlayerPrefs.SetFloat("SensitivityPreference", sensitivity.value);
-    } 
-
     public void LoadSettings()
     {
         if (PlayerPrefs.HasKey("ResolutionPreference"))
@@ -115,11 +107,6 @@ public class SettingsMenu : MonoBehaviour
            volume.value = PlayerPrefs.GetFloat("VolumePreference");
         else
             volume.value = 1.0f;
-
-        if (PlayerPrefs.HasKey("SensitivityPreference"))
-            sensitivity.value = PlayerPrefs.GetFloat("SensitivityPreference");
-        else
-            sensitivity.value = 1.0f; 
 
         if (PlayerPrefs.HasKey("QualityPreference"))
             qualityDropdown.value = PlayerPrefs.GetInt("QualityPreference");

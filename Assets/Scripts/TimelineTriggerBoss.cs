@@ -37,12 +37,4 @@ public class TimelineTriggerBoss : MonoBehaviour
             timeline.Play();
         }
     }
-    private void Update()
-    {
-        if (player.GetComponent<CharacterController>().enabled == false)
-        {
-            Debug.Log("Player is dead");
-            timeline.Stop();
-        }
-    }
 }

@@ -3,17 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
 
-public class TimelineInitiate : MonoBehaviour
+public class TimelinePlayer : MonoBehaviour
 {
-    private PlayableDirector director;
+    private PlayableDirector currentDirector;
     private GameObject controlPanel;
-
-
-    private void Awake()
+    public void GetDirector(PlayableDirector director)
     {
-        director = GetComponent<PlayableDirector>();
-        director.played += Director_Played;
-        director.stopped += Director_Stopped;
+        currentDirector = director;
+    }
+
+private void Awake()
+    {
+        currentDirector = GetComponent<PlayableDirector>();
+        currentDirector.played += Director_Played;
+        currentDirector.stopped += Director_Stopped;
     }
 
     private void Director_Stopped(PlayableDirector obj)
@@ -28,6 +31,10 @@ public class TimelineInitiate : MonoBehaviour
 
     public void StartTimeline()
     {
-        director.Play();
+        currentDirector.Play();
+    }
+    public void StopTimeline()
+    {
+        currentDirector.Stop();
     }
 }

@@ -113,6 +113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   respawn: {fileID: 0}
+  target: {fileID: 0}
   playerDead: 0
 --- !u!114 &1477718444370739231
 MonoBehaviour:
@@ -412,6 +413,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   respawn: {fileID: 0}
+  target: {fileID: 0}
   playerDead: 0
 --- !u!114 &2113096228867167287
 MonoBehaviour:
@@ -1018,6 +1020,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   respawn: {fileID: 0}
+  target: {fileID: 0}
   playerDead: 0
 --- !u!114 &4253609678449864433
 MonoBehaviour:
@@ -1348,6 +1351,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   respawn: {fileID: 0}
+  target: {fileID: 0}
   playerDead: 0
 --- !u!114 &1239823742017855408
 MonoBehaviour:
@@ -1524,6 +1528,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   respawn: {fileID: 0}
+  target: {fileID: 0}
   playerDead: 0
 --- !u!114 &141191014809669097
 MonoBehaviour:
@@ -1916,6 +1921,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   respawn: {fileID: 0}
+  target: {fileID: 0}
   playerDead: 0
 --- !u!114 &4213173197627540675
 MonoBehaviour:
@@ -2164,6 +2170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   respawn: {fileID: 0}
+  target: {fileID: 0}
   playerDead: 0
 --- !u!114 &1753790709695211969
 MonoBehaviour:
@@ -2505,6 +2512,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   respawn: {fileID: 0}
+  target: {fileID: 0}
   playerDead: 0
 --- !u!114 &8877703828082256225
 MonoBehaviour:
@@ -2867,6 +2875,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   respawn: {fileID: 0}
+  target: {fileID: 0}
   playerDead: 0
 --- !u!114 &1034681352876812581
 MonoBehaviour:
@@ -3261,6 +3270,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   respawn: {fileID: 0}
+  target: {fileID: 0}
   playerDead: 0
 --- !u!114 &5774227477957649691
 MonoBehaviour:
@@ -3497,6 +3507,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   respawn: {fileID: 0}
+  target: {fileID: 0}
   playerDead: 0
 --- !u!114 &5090055672041398361
 MonoBehaviour:
@@ -3889,6 +3900,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   respawn: {fileID: 0}
+  target: {fileID: 0}
   playerDead: 0
 --- !u!114 &1210991713705772856
 MonoBehaviour:
@@ -4359,6 +4371,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   respawn: {fileID: 0}
+  target: {fileID: 0}
   playerDead: 0
 --- !u!114 &997368176792456180
 MonoBehaviour:
@@ -4875,6 +4888,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   respawn: {fileID: 0}
+  target: {fileID: 0}
   playerDead: 0
 --- !u!114 &2885606925714636037
 MonoBehaviour:
@@ -5062,6 +5076,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   respawn: {fileID: 0}
+  target: {fileID: 0}
   playerDead: 0
 --- !u!114 &548484399261469861
 MonoBehaviour:
@@ -5997,6 +6012,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   respawn: {fileID: 0}
+  target: {fileID: 0}
   playerDead: 0
 --- !u!114 &5572091442662030722
 MonoBehaviour:
@@ -6388,6 +6404,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   respawn: {fileID: 0}
+  target: {fileID: 0}
   playerDead: 0
 --- !u!114 &4110837206648863526
 MonoBehaviour:
@@ -8019,6 +8036,7 @@ GameObject:
   - component: {fileID: 215833292967106814}
   - component: {fileID: 448338281837978166}
   - component: {fileID: 3966194312373621646}
+  - component: {fileID: 6856895571534517511}
   m_Layer: 0
   m_Name: Halmony_Hand_R_Collider
   m_TagString: Untagged
@@ -8118,6 +8136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   respawn: {fileID: 0}
+  target: {fileID: 0}
   playerDead: 0
 --- !u!114 &448338281837978166
 MonoBehaviour:
@@ -8181,6 +8200,104 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playSound: {fileID: 0}
+--- !u!96 &6856895571534517511
+TrailRenderer:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5957589048554759585}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 0
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 4446543679dfff14e8c7a8411cfdac14, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Time: 1
+  m_Parameters:
+    serializedVersion: 3
+    widthMultiplier: 1
+    widthCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    colorGradient:
+      serializedVersion: 2
+      key0: {r: 1, g: 0.87365454, b: 0.3254717, a: 1}
+      key1: {r: 1, g: 1, b: 1, a: 1}
+      key2: {r: 0, g: 0, b: 0, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 65535
+      ctime2: 0
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
+    numCornerVertices: 0
+    numCapVertices: 0
+    alignment: 0
+    textureMode: 0
+    shadowBias: 0.5
+    generateLightingData: 1
+  m_MinVertexDistance: 0.1
+  m_Autodestruct: 0
+  m_Emitting: 1
 --- !u!1 &5971161939423296714
 GameObject:
   m_ObjectHideFlags: 0
@@ -8357,6 +8474,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   respawn: {fileID: 0}
+  target: {fileID: 0}
   playerDead: 0
 --- !u!114 &864522456137818720
 MonoBehaviour:
@@ -8656,6 +8774,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   respawn: {fileID: 0}
+  target: {fileID: 0}
   playerDead: 0
 --- !u!114 &4196127015272643154
 MonoBehaviour:
@@ -9048,6 +9167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   respawn: {fileID: 0}
+  target: {fileID: 0}
   playerDead: 0
 --- !u!114 &4491555991893938741
 MonoBehaviour:
@@ -9175,6 +9295,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   respawn: {fileID: 0}
+  target: {fileID: 0}
   playerDead: 0
 --- !u!114 &7077076363824251191
 MonoBehaviour:
@@ -9696,6 +9817,7 @@ GameObject:
   - component: {fileID: 3387942875855650144}
   - component: {fileID: 1054640485745527771}
   - component: {fileID: 4499379544627144526}
+  - component: {fileID: 2982062935983124748}
   m_Layer: 0
   m_Name: Halmony_Hand_L_Collider
   m_TagString: Untagged
@@ -9795,6 +9917,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   respawn: {fileID: 0}
+  target: {fileID: 0}
   playerDead: 0
 --- !u!114 &1054640485745527771
 MonoBehaviour:
@@ -9858,6 +9981,104 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playSound: {fileID: 0}
+--- !u!96 &2982062935983124748
+TrailRenderer:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7091004826058867334}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 0
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 4446543679dfff14e8c7a8411cfdac14, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Time: 1
+  m_Parameters:
+    serializedVersion: 3
+    widthMultiplier: 1
+    widthCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    colorGradient:
+      serializedVersion: 2
+      key0: {r: 1, g: 0.87365454, b: 0.3254717, a: 1}
+      key1: {r: 1, g: 1, b: 1, a: 1}
+      key2: {r: 0, g: 0, b: 0, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 65535
+      ctime2: 0
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
+    numCornerVertices: 0
+    numCapVertices: 0
+    alignment: 0
+    textureMode: 0
+    shadowBias: 0.5
+    generateLightingData: 1
+  m_MinVertexDistance: 0.1
+  m_Autodestruct: 0
+  m_Emitting: 1
 --- !u!1 &7112849560116303781
 GameObject:
   m_ObjectHideFlags: 0
@@ -10095,6 +10316,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   respawn: {fileID: 0}
+  target: {fileID: 0}
   playerDead: 0
 --- !u!114 &8014461762417823
 MonoBehaviour:
@@ -10399,6 +10621,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   respawn: {fileID: 0}
+  target: {fileID: 0}
   playerDead: 0
 --- !u!114 &2940893464261650107
 MonoBehaviour:
@@ -10606,6 +10829,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   respawn: {fileID: 0}
+  target: {fileID: 0}
   playerDead: 0
 --- !u!114 &2344245678189345506
 MonoBehaviour:
@@ -10813,6 +11037,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   respawn: {fileID: 0}
+  target: {fileID: 0}
   playerDead: 0
 --- !u!114 &1526874664480855251
 MonoBehaviour:
@@ -11640,6 +11865,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   respawn: {fileID: 0}
+  target: {fileID: 0}
   playerDead: 0
 --- !u!114 &5574614758593691270
 MonoBehaviour:
@@ -12003,6 +12229,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   respawn: {fileID: 0}
+  target: {fileID: 0}
   playerDead: 0
 --- !u!114 &837137877592761441
 MonoBehaviour:
@@ -12303,6 +12530,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   respawn: {fileID: 0}
+  target: {fileID: 0}
   playerDead: 0
 --- !u!114 &417975595336458797
 MonoBehaviour:
@@ -12826,6 +13054,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   respawn: {fileID: 0}
+  target: {fileID: 0}
   playerDead: 0
 --- !u!114 &8394671762954555571
 MonoBehaviour:

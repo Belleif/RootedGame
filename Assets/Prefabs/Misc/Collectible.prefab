@@ -104,6 +104,7 @@ GameObject:
   - component: {fileID: 1429134807385594430}
   - component: {fileID: 931657982}
   - component: {fileID: 931657981}
+  - component: {fileID: 4439666235582241155}
   m_Layer: 0
   m_Name: Collectible
   m_TagString: Untagged
@@ -141,7 +142,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 0}
-  theScore: 0
   CollectSound: {fileID: 0}
 --- !u!114 &931657981
 MonoBehaviour:
@@ -158,6 +158,19 @@ MonoBehaviour:
   speedX: 0
   speedY: 0.5
   speedZ: 0
+--- !u!65 &4439666235582241155
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2935993040422260837}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &9072859731303181242
 GameObject:
   m_ObjectHideFlags: 0

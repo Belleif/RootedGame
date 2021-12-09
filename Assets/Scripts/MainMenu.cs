@@ -92,7 +92,7 @@ public class MainMenu : MonoBehaviour
 
     public void QuitGame()
     {
-        Application.OpenURL("https://forms.gle/tAGG6oq7hMpBAWyx8");
+        //Application.OpenURL("https://forms.gle/tAGG6oq7hMpBAWyx8");
         Debug.Log("Program Quitting...");
         Application.Quit();
     }

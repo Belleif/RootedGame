@@ -32,6 +32,7 @@ public class SC_TPSController : MonoBehaviour
     public static float lookSpeed = 2.0f;
     public float lookXLimit = 60.0f;
     private float vSpeed = 0f;
+    public float lookRespawn = 90f;
     public bool turnRight;
     public bool turnLeft;
 
@@ -108,7 +109,7 @@ public class SC_TPSController : MonoBehaviour
             if (dead.playerDead)
             { 
                 //rotation.x = dead.target.transform.rotation.x;
-                rotation.y = (dead.target.transform.rotation.y) - 90f;
+                rotation.y = (dead.target.transform.rotation.y) - lookRespawn;
                 dead.playerDead = false;
             }
             rotation.x = Mathf.Clamp(rotation.x, -lookXLimit, lookXLimit);
